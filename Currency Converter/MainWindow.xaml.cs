@@ -101,7 +101,7 @@ namespace Currency_Converter
             Process.GetCurrentProcess().Kill();
         }
 
-        class Loh
+        class Ilya
         {
             int ebatyaloh;
         }
