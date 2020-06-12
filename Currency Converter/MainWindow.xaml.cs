@@ -103,8 +103,11 @@ namespace Currency_Converter
 
         class Ilya
         {
-            int ebatyaloh;
-            int lohebyat;
+            int lohname;
+            public Ilya(int lohname)
+            {
+                this.lohname = lohname;
+            }
         }
     }
 }
