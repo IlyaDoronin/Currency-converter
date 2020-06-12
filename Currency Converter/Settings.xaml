@@ -1,0 +1,202 @@
+﻿<Page x:Class="Currency_Converter.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Currency_Converter"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="550"
+      Title="Settings" FontSize="15"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.FontWeight="Regular"
+      Style="{DynamicResource PageStyle}">
+
+    <Page.Resources>
+        <Style x:Key="PageStyle" TargetType="Page">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <!--Триггер при открытие окна-->
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                Storyboard.TargetProperty="Opacity"
+                                From="0"
+                                To="1"
+                                Duration="0:0:0.3" />
+                                <!--Duration менять время анимации, From (от значения) To (до значения)-->
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="{x:Type Label}">
+            <Setter Property="Label.VerticalAlignment" Value="Center"/>
+            <Setter Property="Label.HorizontalAlignment" Value="Left"/>
+            <Setter Property="Label.Padding" Value="20,0,0,0"/>
+        </Style>
+    </Page.Resources>
+    
+        <Grid MaxWidth="900"  x:Name="loll"
+          MaxHeight="550"
+          Margin="50">
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Height="50" Width="300" 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                  CornerRadius="5"
+                                  Margin="0,-50,0,0">
+            <Label VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="30"
+                   Padding="0"
+                   Content="Настройки валют"/>
+        </materialDesign:ColorZone >
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Margin="0,10,0,0"
+                                  Height="530" Width="400" 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                                  CornerRadius="5">
+        <Grid x:Name="Content">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="70*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ToggleButton x:Name="TUSD"
+                          Grid.Row="0" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TUSD_Checked" Unchecked="TUSD_Unchecked"/>
+            <ToggleButton x:Name="TRUB"
+                          Grid.Row="1" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TRUB_Checked" Unchecked="TRUB_Unchecked"/>
+            <ToggleButton x:Name="TEUR"
+                          Grid.Row="2" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TEUR_Checked" Unchecked="TEUR_Unchecked"/>
+            <ToggleButton x:Name="TUAH"
+                          Grid.Row="3" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TUAH_Checked" Unchecked="TUAH_Unchecked"/>
+            <ToggleButton x:Name="TGBP"
+                          Grid.Row="4" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TGBP_Checked" Unchecked="TGBP_Unchecked"/>
+            <ToggleButton x:Name="TCNY"
+                          Grid.Row="5" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TCNY_Checked" Unchecked="TCNY_Unchecked"/>
+            <ToggleButton x:Name="TJPY"
+                          Grid.Row="6" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TJPY_Checked" Unchecked="TJPY_Unchecked"/>
+            <ToggleButton x:Name="TNOK"
+                          Grid.Row="7" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TNOK_Checked" Unchecked="TNOK_Unchecked"/>
+            <ToggleButton x:Name="TCAD"
+                          Grid.Row="8" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TCAD_Checked" Unchecked="TCAD_Unchecked"/>
+            <ToggleButton x:Name="TPLN"
+                          Grid.Row="9" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TPLN_Checked" Unchecked="TPLN_Unchecked"/>
+            <ToggleButton x:Name="TSEK"
+                          Grid.Row="10" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TSEK_Checked" Unchecked="TSEK_Unchecked"/>
+            <ToggleButton x:Name="TCHF"
+                          Grid.Row="11" Background="#2ecc71"
+                          Cursor="Hand" 
+                          Checked="TCHF_Checked" Unchecked="TCHF_Unchecked"/>
+            <ToggleButton x:Name="TCZK"
+                          Grid.Row="12" Background="#2ecc71"
+                          Cursor="Hand"
+                          Checked="TCZK_Checked" Unchecked="TCZK_Unchecked"/>
+            <Label Content="Доллар США(USD)" 
+                   Grid.Column="1"
+                   Grid.Row="0"/>
+            <Label Content="Российский рубль (RUB)" 
+                   Grid.Column="1"
+                   Grid.Row="1"/>
+            <Label Content="Евро (EUR)" 
+                   Grid.Column="1"
+                   Grid.Row="2"/>
+            <Label Content="Украинская гривна (UAH)" 
+                   Grid.Column="1"
+                   Grid.Row="3"/>
+            <Label Content="Фунт стерлингов (GBP)" 
+                   Grid.Column="1"
+                   Grid.Row="4"/>
+            <Label Content="Китайский юань (CNY)" 
+                   Grid.Column="1"
+                   Grid.Row="5"/>
+            <Label Content="Японская иена (JPY)" 
+                   Grid.Column="1"
+                   Grid.Row="6"/>
+            <Label Content="Норвежская крона (NOK)" 
+                   Grid.Column="1"
+                   Grid.Row="7"/>
+            <Label Content="Канадский доллар (CAD)" 
+                   Grid.Column="1"
+                   Grid.Row="8"/>
+            <Label Content="Польский злотый (PLN)" 
+                   Grid.Column="1"
+                   Grid.Row="9"/>
+            <Label Content="Шведская крона (SEK)" 
+                   Grid.Column="1"
+                   Grid.Row="10"/>
+            <Label Content="Швейцарский франк (CHF)" 
+                   Grid.Column="1"
+                   Grid.Row="11"/>
+            <Label Content="Чешская крона (CZK)" 
+                   Grid.Column="1"
+                   Grid.Row="12"/>
+        </Grid>
+
+        </materialDesign:ColorZone>
+        <Grid VerticalAlignment="Bottom" Margin="0,0,0,-40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Padding="0"
+                    Grid.Column="0"
+                    Background="#2ecc71"
+                   BorderBrush="#2ecc71" Click="Button_Click_2">
+                <Label Content="Сбросить все"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Padding="0"/>
+            </Button>
+            <Button Grid.Column="1"
+                    Padding="0"
+                    Background="#2ecc71"
+                   BorderBrush="#2ecc71" Click="Button_Click_1">
+                <Label Content="Включить все"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Padding="0"/>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
