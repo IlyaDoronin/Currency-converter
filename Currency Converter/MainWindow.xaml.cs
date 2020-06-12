@@ -104,6 +104,7 @@ namespace Currency_Converter
         class Ilya
         {
             int ebatyaloh;
+            int lohebyat;
         }
     }
 }
