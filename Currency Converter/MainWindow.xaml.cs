@@ -100,5 +100,10 @@ namespace Currency_Converter
         {
             Process.GetCurrentProcess().Kill();
         }
+
+        class Loh
+        {
+            int ebatyaloh;
+        }
     }
 }
