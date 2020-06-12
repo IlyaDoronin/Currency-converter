@@ -212,7 +212,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="Calcutator" 
+            <Button x:Name="Calcutator" Visibility="Collapsed" 
                     Height="50"
                     Grid.Row="1" Margin="0"
                     Grid.Column="1"
