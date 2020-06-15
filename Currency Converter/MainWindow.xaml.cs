@@ -100,14 +100,5 @@ namespace Currency_Converter
         {
             Process.GetCurrentProcess().Kill();
         }
-
-        class Ilya
-        {
-            int lohname;
-            public Ilya(int lohname)
-            {
-                this.lohname = lohname;
-            }
-        }
     }
 }
