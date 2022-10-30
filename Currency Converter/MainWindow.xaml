@@ -31,8 +31,7 @@
                                 Storyboard.TargetProperty="Opacity"
                                 From="0"
                                 To="1"
-                                Duration="0:0:0.5" />
-                                <!--Duration менять время анимации, From (от значения) To (до значения)-->
+                                Duration="0:0:0.5"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>

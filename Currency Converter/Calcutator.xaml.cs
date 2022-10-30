@@ -29,7 +29,6 @@ namespace Currency_Converter
         {
             InitializeComponent();          
             Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
-            Content = GetContent();
             Update();
         }
 
@@ -58,6 +57,7 @@ namespace Currency_Converter
                     sek = Reg("\"Шведских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
                     chf = Reg("\"Швейцарский франк\",\"Cur_OfficialRate\":(.*?)}");
                     czk = Reg("\"Чешских крон\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                    Thread.Sleep(10000);
                 }
             });
         }
@@ -77,7 +77,6 @@ namespace Currency_Converter
                 UAH_Field.Text = "";
             }
         }
-        static string Content = "";
         static string GetContent()
         {
             string line = "";
@@ -95,7 +94,7 @@ namespace Currency_Converter
         static double Reg(string expression)
         {
             string result = "";
-            Match value = Regex.Match(Content, expression);
+            Match value = Regex.Match(GetContent(), expression);
             result = value.Groups[1].Value;
             if (result == null)
                 result = "0";

@@ -22,7 +22,6 @@ namespace Currency_Converter
         {
             InitializeComponent();
             Load();
-            //Page_Loader.Navigate(Page_Cources);
         }
         void Load()
         {
