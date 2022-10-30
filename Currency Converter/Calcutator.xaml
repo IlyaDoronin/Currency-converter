@@ -142,7 +142,8 @@
                               HorizontalAlignment="Center" 
                               VerticalAlignment="Center"
                               SelectedIndex="1"
-                              SelectionChanged="Cur_Input_SelectionChanged">
+                              IsEditable="True"
+                              TextBoxBase.TextChanged="Cur_Input_TextChanged">
                         <ComboBoxItem>USD</ComboBoxItem>
                         <ComboBoxItem>BYN</ComboBoxItem>
                         <ComboBoxItem>RUB</ComboBoxItem>
@@ -181,7 +182,8 @@
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
                                SelectedIndex="0"
-                               SelectionChanged="Cur_Output_SelectionChanged">
+                               IsEditable="True"
+                               TextBoxBase.TextChanged="Cur_Output_TextChanged">
                         <ComboBoxItem>USD</ComboBoxItem>
                         <ComboBoxItem>BYN</ComboBoxItem>
                         <ComboBoxItem>RUB</ComboBoxItem>
@@ -224,6 +226,5 @@
                        HorizontalAlignment="Center"
                        FontSize="20"/>
             </materialDesign:ColorZone>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="75,5,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Page>

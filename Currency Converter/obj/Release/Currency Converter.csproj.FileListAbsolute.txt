@@ -852,3 +852,38 @@ D:\Документы\Develop\Серьёзные проекты\Калькуля
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_24\Currency Converter\obj\Release\Currency Converter.exe
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_24\Currency Converter\obj\Release\Currency Converter.pdb
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_24\Currency Converter\obj\Release\Currency Converter.csprojAssemblyReference.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\Currency Converter.exe.config
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\Currency Converter.exe
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\Currency Converter.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.dll
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\MaterialDesignColors.dll
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\MaterialDesignThemes.Wpf.dll
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.xml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\MaterialDesignColors.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\MaterialDesignThemes.Wpf.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\bin\Release\MaterialDesignThemes.Wpf.xml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency Converter.csprojAssemblyReference.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\AppSettings.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Calcutator.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Cities.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Courses.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\MainWindow.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Settings.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\App.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency Converter_MarkupCompile.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency Converter_MarkupCompile.lref
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\App.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\AppSettings.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Calcutator.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Cities.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Courses.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\MainWindow.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Settings.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency Converter.g.resources
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency_Converter.Properties.Resources.resources
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency Converter.csproj.GenerateResource.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency Converter.csproj.CoreCompileInputs.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency Converter.csproj.CopyComplete
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency Converter.exe
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Backups\Currency Converter_25\Currency Converter\obj\Release\Currency Converter.pdb

@@ -171,8 +171,7 @@ namespace Currency_Converter
         }
         static double from = 1;
         static double to = 1;
-        static double BYN_from = 1;
-        static double BYN_to = 1;
+        static double BYN = 1;
         void Input_TextChanged(object sender, TextChangedEventArgs e) // Поле конвертации из
         {
             Correct(Input);
@@ -181,8 +180,10 @@ namespace Currency_Converter
                 if (Input.Text != "")
                 {
                     double content = Convert.ToDouble(Input.Text);
-                    Output.Text = (content * to).ToString("F" + 4);
+                    Output.Text = (content * from / to).ToString("F" + 4);
                 }
+                else
+                    Output.Text = "";
             }
         }
 
@@ -194,8 +195,10 @@ namespace Currency_Converter
                 if (Output.Text != "")
                 {
                     double content = Convert.ToDouble(Output.Text);
-                    content = 0;
+                    Input.Text = (content * to / from).ToString("F" + 4);
                 }
+                else
+                    Input.Text = "";
             }
         }
         void convert(double value = 0, bool BYN = true, bool USD = true, bool RUB = true, bool EUR = true, bool UAH = true)
@@ -330,37 +333,31 @@ namespace Currency_Converter
 
         static bool input_activate = false;
         static bool output_activate = false;
-        private void Input_GotFocus(object sender, RoutedEventArgs e)
+        void Input_GotFocus(object sender, RoutedEventArgs e)
         {
             input_activate = true;
         }
-        private void Input_LostFocus(object sender, RoutedEventArgs e)
+        void Input_LostFocus(object sender, RoutedEventArgs e)
         {
             input_activate = false;
         }
 
-        private void Output_GotFocus(object sender, RoutedEventArgs e)
+        void Output_GotFocus(object sender, RoutedEventArgs e)
         {
             output_activate = true;
         }
-        private void Output_LostFocus(object sender, RoutedEventArgs e)
+        void Output_LostFocus(object sender, RoutedEventArgs e)
         {
             output_activate = false;
         }
         
-        private void Cur_Input_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        void Cur_Input_TextChanged(object sender, TextChangedEventArgs e)
         {
             from = Convert_From();
         }
-        private void Cur_Output_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        void Cur_Output_TextChanged(object sender, TextChangedEventArgs e)
         {
             to = Convert_To();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(from + "\n" + to);
-            //to = usd;
         }
     }
 }
