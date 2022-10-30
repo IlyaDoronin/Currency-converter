@@ -13,23 +13,22 @@ namespace Currency_Converter
 {
     public partial class Calcutator : Page
     {
-        static double usd = 0;
-        static double rub = 0;
-        static double eur = 0;
-        static double uah = 0;
-        static double gbp = 0;
-        static double cny = 0;
-        static double jpy = 0;
-        static double nok = 0;
-        static double cad = 0;
-        static double pln = 0;
-        static double sek = 0;
-        static double chf = 0;
-        static double czk = 0;
+        static double usd = 1;
+        static double rub = 1;
+        static double eur = 1;
+        static double uah = 1;
+        static double gbp = 1;
+        static double cny = 1;
+        static double jpy = 1;
+        static double nok = 1;
+        static double cad = 1;
+        static double pln = 1;
+        static double sek = 1;
+        static double chf = 1;
+        static double czk = 1;
         public Calcutator()
         {
             Update();
-            Thread.Sleep(150);
             InitializeComponent();
             Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
         }
@@ -47,20 +46,24 @@ namespace Currency_Converter
             {
                 while (true)
                 {
-                    line = GetContent();
-                    usd = Reg("\"Доллар США\",\"Cur_OfficialRate\":(.*?)}");
-                    rub = Reg("\"Российских рублей\",\"Cur_OfficialRate\":(.*?)}") / 100;
-                    eur = Reg("\"Евро\",\"Cur_OfficialRate\":(.*?)}");
-                    uah = Reg("\"Гривен\",\"Cur_OfficialRate\":(.*?)}") / 100;
-                    gbp = Reg("\"Фунт стерлингов\",\"Cur_OfficialRate\":(.*?)}");
-                    cny = Reg("\"Китайских юаней\",\"Cur_OfficialRate\":(.*?)}") / 10;
-                    jpy = Reg("\"Йен\",\"Cur_OfficialRate\":(.*?)}") / 100;
-                    nok = Reg("\"Норвежских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
-                    cad = Reg("\"Канадский доллар\",\"Cur_OfficialRate\":(.*?)}");
-                    pln = Reg("\"Злотых\",\"Cur_OfficialRate\":(.*?)}") / 10;
-                    sek = Reg("\"Шведских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
-                    chf = Reg("\"Швейцарский франк\",\"Cur_OfficialRate\":(.*?)}");
-                    czk = Reg("\"Чешских крон\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                    try
+                    {
+                        line = GetContent();
+                        usd = Reg("\"Доллар США\",\"Cur_OfficialRate\":(.*?)}");
+                        to = usd;
+                        rub = Reg("\"Российских рублей\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                        eur = Reg("\"Евро\",\"Cur_OfficialRate\":(.*?)}");
+                        uah = Reg("\"Гривен\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                        gbp = Reg("\"Фунт стерлингов\",\"Cur_OfficialRate\":(.*?)}");
+                        cny = Reg("\"Китайских юаней\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                        jpy = Reg("\"Йен\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                        nok = Reg("\"Норвежских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                        cad = Reg("\"Канадский доллар\",\"Cur_OfficialRate\":(.*?)}");
+                        pln = Reg("\"Злотых\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                        sek = Reg("\"Шведских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                        chf = Reg("\"Швейцарский франк\",\"Cur_OfficialRate\":(.*?)}");
+                        czk = Reg("\"Чешских крон\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                    } catch { }
                     Thread.Sleep(10000);
                 }
             });
@@ -90,6 +93,7 @@ namespace Currency_Converter
                 {
                     wc.Encoding = Encoding.UTF8;
                     l = wc.DownloadString("https://www.nbrb.by/api/exrates/rates?periodicity=0");
+                    Thread.Sleep(1000);
                 }
             }
             catch { }
@@ -438,12 +442,27 @@ namespace Currency_Converter
                             "pln  " + pln.ToString() + "\n" +
                             "sek  " + sek.ToString() + "\n" +
                             "chf  " + chf.ToString() + "\n" +
-                            "czk  " + czk.ToString() + "\n");
+                            "czk  " + czk.ToString() + "\n"+
+                            "from  " + from.ToString() + "\n"+
+                            "to  " + to.ToString() + "\n");
         }
 
         private void Buton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(line );
+            string l = "";
+            try
+            {
+                using (WebClient wc = new WebClient())
+                {
+                    wc.Encoding = Encoding.UTF8;
+                    l = wc.DownloadString("https://www.nbrb.by/api/exrates/rates?periodicity=0");
+                }
+            MessageBox.Show(l);
+            }
+            catch
+            {
+                MessageBox.Show("ЕЕЕ исключение словилось");
+            }
         }
     }
 }

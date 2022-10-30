@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace Currency_Converter
 {
@@ -22,6 +23,12 @@ namespace Currency_Converter
         {
             InitializeComponent();
             Load();
+        }
+        Brush back = (Brush)new BrushConverter().ConvertFromString("#0E1621");
+        public Brush color
+        {
+            get { return back; }
+            set { back = value; }
         }
         void Load()
         {

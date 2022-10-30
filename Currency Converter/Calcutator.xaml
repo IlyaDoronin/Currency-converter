@@ -228,7 +228,7 @@
                                       Width="220" Height="40"
                                       VerticalAlignment="Bottom"
                                       HorizontalAlignment="Center">
-                <Label x:Name="Date" 
+                <Label x:Name="Date" x:FieldModifier="public"
                        Padding="0"
                        Content="00.00.0000"
                        VerticalAlignment="Center"
@@ -237,5 +237,6 @@
             </materialDesign:ColorZone>
         <Button Content="Button" HorizontalAlignment="Left" Margin="88,360,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" RenderTransformOrigin="1.112,0.587"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="163,360,0,0" VerticalAlignment="Top" Width="75" Click="Buton_Click" RenderTransformOrigin="1.112,0.587"/>
+        
     </Grid>
 </Page>

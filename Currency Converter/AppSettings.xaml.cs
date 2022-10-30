@@ -6,6 +6,7 @@ using System.Windows.Input;
 using MainWindow;
 using System.Windows.Media;
 using System.Threading.Tasks;
+using System;
 
 namespace Currency_Converter
 {
@@ -25,7 +26,7 @@ namespace Currency_Converter
         private void ColorZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             //MW.Visibility = Visibility.Hidden;
-            city.Show();
+            city.ShowDialog();
         }
         void Reg()
         {

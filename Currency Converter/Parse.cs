@@ -23,6 +23,7 @@ namespace Currency_Converter
             Link = $"https://belarusbank.by/api/kursExchange?city={town}";
             content = GetContent();
             City_Update(town);
+            Update();
         }
         public static string city
         {
@@ -56,6 +57,18 @@ namespace Currency_Converter
                 result = "—";
             return result;
         }
+        async void Update()
+        {
+            await Task.Run(() =>
+            {
+                while (true)
+                {
+                    Thread.Sleep(5000);
+                    usd_in = Usd_In();
+                }
+            });
+        }
+
         public static string usd_in // Доллар
         {
             get { return Usd_In(); }
@@ -68,7 +81,6 @@ namespace Currency_Converter
         public static string usd_out
         {
             get { return Usd_Out(); }
-            set { Usd_Out(); }  
         }
         public static string Usd_Out()
         {
@@ -78,7 +90,6 @@ namespace Currency_Converter
         public static string rub_in // Рос рубль
         {
             get { return Rub_In(); }
-            set { Rub_In(); }
         }
         static string Rub_In()
         {
@@ -87,7 +98,6 @@ namespace Currency_Converter
         public static string rub_out
         {
             get { return Rub_Out(); }
-            set { Rub_Out(); }
         }
         public static string Rub_Out()
         {
@@ -97,7 +107,6 @@ namespace Currency_Converter
         public static string eur_in // Евро
         {
             get { return Eur_In(); }
-            set { Eur_In(); }
         }
         static string Eur_In()
         {
@@ -106,7 +115,6 @@ namespace Currency_Converter
         public static string eur_out
         {
             get { return Eur_Out(); }
-            set { Eur_Out(); }
         }
         public static string Eur_Out()
         {
@@ -116,7 +124,6 @@ namespace Currency_Converter
         public static string uah_in // Грыуни
         {
             get { return Uah_In(); }
-            set { Uah_In(); }
         }
         static string Uah_In()
         {
@@ -125,7 +132,6 @@ namespace Currency_Converter
         public static string uah_out
         {
             get { return Uah_Out(); }
-            set { Uah_Out(); }
         }
         public static string Uah_Out()
         {
@@ -135,7 +141,6 @@ namespace Currency_Converter
         public static string gbp_in // Фунты стерлингов
         {
             get { return Gbp_In(); }
-            set { Gbp_In(); }
         }
         static string Gbp_In()
         {
@@ -144,7 +149,6 @@ namespace Currency_Converter
         public static string gbp_out
         {
             get { return Gbp_Out(); }
-            set { Gbp_Out(); }
         }
         public static string Gbp_Out()
         {
@@ -154,7 +158,6 @@ namespace Currency_Converter
         public static string cny_in // Китайский юань
         {
             get { return Cny_In(); }
-            set { Cny_In(); }
         }
         static string Cny_In()
         {
@@ -163,7 +166,6 @@ namespace Currency_Converter
         public static string cny_out
         {
             get { return Cny_Out(); }
-            set { Cny_Out(); }
         }
         public static string Cny_Out()
         {
@@ -173,7 +175,6 @@ namespace Currency_Converter
         public static string jpy_in // Японская иена
         {
             get { return Jpy_In(); }
-            set { Jpy_In(); }
         }
         static string Jpy_In()
         {
@@ -182,7 +183,6 @@ namespace Currency_Converter
         public static string jpy_out
         {
             get { return Jpy_Out(); }
-            set { Jpy_Out(); }
         }
         public static string Jpy_Out()
         {
@@ -192,7 +192,6 @@ namespace Currency_Converter
         public static string nok_in // Норвежская крона
         {
             get { return Nok_In(); }
-            set { Nok_In(); }
         }
         static string Nok_In()
         {
@@ -201,7 +200,6 @@ namespace Currency_Converter
         public static string nok_out
         {
             get { return Nok_Out(); }
-            set { Nok_Out(); }
         }
         public static string Nok_Out()
         {
@@ -211,7 +209,6 @@ namespace Currency_Converter
         public static string cad_in // Канадский доллар
         {
             get { return Cad_In(); }
-            set { Cad_In(); }
         }
         static string Cad_In()
         {
@@ -220,7 +217,6 @@ namespace Currency_Converter
         public static string cad_out
         {
             get { return Cad_Out(); }
-            set { Cad_Out(); }
         }
         public static string Cad_Out()
         {
@@ -230,7 +226,6 @@ namespace Currency_Converter
         public static string pln_in // Польский злотый
         {
             get { return Pln_In(); }
-            set { Pln_In(); }
         }
         static string Pln_In()
         {
@@ -239,7 +234,6 @@ namespace Currency_Converter
         public static string pln_out
         {
             get { return Pln_Out(); }
-            set { Pln_Out(); }
         }
         public static string Pln_Out()
         {
@@ -249,7 +243,6 @@ namespace Currency_Converter
         public static string sek_in // Шведская крона
         {
             get { return Sek_In(); }
-            set { Sek_In(); }
         }
         static string Sek_In()
         {
@@ -258,7 +251,6 @@ namespace Currency_Converter
         public static string sek_out
         {
             get { return Sek_Out(); }
-            set { Sek_Out(); }
         }
         public static string Sek_Out()
         {
@@ -268,7 +260,6 @@ namespace Currency_Converter
         public static string chf_in // Швейцарский франк
         {
             get { return Chf_In(); }
-            set { Chf_In(); }
         }
         static string Chf_In()
         {
@@ -277,7 +268,6 @@ namespace Currency_Converter
         public static string chf_out
         {
             get { return Chf_Out(); }
-            set { Chf_Out(); }
         }
         public static string Chf_Out()
         {
@@ -287,7 +277,6 @@ namespace Currency_Converter
         public static string czk_in // Чешская крона
         {
             get { return Czk_In(); }
-            set { Czk_In(); }
         }
         static string Czk_In()
         {
@@ -296,7 +285,6 @@ namespace Currency_Converter
         public static string czk_out
         {
             get { return Czk_Out(); }
-            set { Czk_Out(); }
         }
         public static string Czk_Out()
         {

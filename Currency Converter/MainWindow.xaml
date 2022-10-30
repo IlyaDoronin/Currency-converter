@@ -76,8 +76,9 @@
                     <MenuItem Header="Выход"  Click="Close"/>
                 </ContextMenu>
             </tb:TaskbarIcon.ContextMenu>
-        </tb:TaskbarIcon> 
-        <Border CornerRadius="20" Background="White"/>
+        </tb:TaskbarIcon>
+        <!--Задний фон-->
+        <Rectangle x:Name="Back" RadiusX="20" RadiusY="20" Fill="{Binding color}"/>
 
         <!--Верхняя панель-->
         <!--Кнопки-->
