@@ -58,7 +58,8 @@
         <DropShadowEffect BlurRadius="15" RenderingBias="Quality" ShadowDepth="0" Opacity="0.5"/>
     </Window.Effect>
 
-    <Grid MouseLeftButtonDown="DragForm" Margin="15">
+    <Grid x:Name="MainGrid" x:FieldModifier="public"
+          MouseLeftButtonDown="DragForm" Margin="15">
         <!--Сворачивание в трей-->
         <tb:TaskbarIcon x:Name="Tray"
                         Visibility="Hidden"

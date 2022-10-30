@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using MainWindow;
+using System.Windows.Media;
 
 namespace Currency_Converter
 {
@@ -53,9 +54,14 @@ namespace Currency_Converter
             try
             {
                 if (Theme.IsChecked == true)
+                {
                     Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").SetValue("Theme", "Dark");
+                    MainWindow.Page_Cources.Background = new SolidColorBrush(Color.FromRgb(50, 50, 50));
+                }
                 else
+                {
                     Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").SetValue("Theme", "Light");
+                }
             }
             catch { }
         }

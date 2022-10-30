@@ -20,10 +20,10 @@ namespace Currency_Converter
             GC.Collect();
         }
 
-        private void Change_City_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        void Change_City_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Hide();
-            string town = "Старые дороги";
+            string town = "Орша";
             MainWindow.Page_Cources.Update(town);
             MainWindow.Page_Calcutator.Update(town);
             Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").SetValue("City", town);

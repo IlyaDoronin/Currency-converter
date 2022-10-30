@@ -63,7 +63,8 @@
                         <TextBox x:Name="BYN_Field"
                                  FontSize="18"
                                  Margin="15,8,15,8"
-                                 TextChanged="BYN_Field_TextChanged"/>
+                                 TextChanged="BYN_Field_TextChanged"
+                                 GotFocus="BYN_Field_GotFocus" LostFocus="BYN_Field_LostFocus"/>
                     </materialDesign:ColorZone>
                 </Grid>
                 <Grid>
@@ -76,7 +77,8 @@
                         <TextBox x:Name="USD_Field"
                                  FontSize="18"
                                  Margin="15,8,15,8"
-                                 TextChanged="USD_Field_TextChanged"/>
+                                 TextChanged="USD_Field_TextChanged"
+                                 GotFocus="USD_Field_GotFocus" LostFocus="USD_Field_LostFocus"/>
                     </materialDesign:ColorZone>
                 </Grid>
                 <Grid>
@@ -88,7 +90,9 @@
                                               Height="50" Width="170">
                         <TextBox x:Name="RUB_Field"
                                  FontSize="18"
-                                 Margin="15,8,15,8" TextChanged="RUB_Field_TextChanged"/>
+                                 Margin="15,8,15,8"
+                                 TextChanged="RUB_Field_TextChanged"
+                                 GotFocus="RUB_Field_GotFocus" LostFocus="RUB_Field_LostFocus"/>
                     </materialDesign:ColorZone>
                 </Grid>
                 <Grid>
@@ -100,7 +104,9 @@
                                               Height="50" Width="170">
                         <TextBox x:Name="EUR_Field"
                                  FontSize="18"
-                                 Margin="15,8,15,8" TextChanged="EUR_Field_TextChanged"/>
+                                 Margin="15,8,15,8"
+                                 TextChanged="EUR_Field_TextChanged"
+                                 GotFocus="EUR_Field_GotFocus" LostFocus="EUR_Field_LostFocus"/>
                     </materialDesign:ColorZone>
                 </Grid>
                 <Grid>
@@ -112,7 +118,9 @@
                                               Height="50" Width="170">
                         <TextBox x:Name="UAH_Field"
                                  FontSize="18"
-                                 Margin="15,8,15,8" TextChanged="UAH_Field_TextChanged"/>
+                                 Margin="15,8,15,8"
+                                 TextChanged="UAH_Field_TextChanged"
+                                 GotFocus="UAH_Field_GotFocus" LostFocus="UAH_Field_LostFocus"/>
                     </materialDesign:ColorZone>
                 </Grid>
             </UniformGrid>
@@ -129,7 +137,8 @@
                                           VerticalAlignment="Top"
                                           HorizontalAlignment="Left"
                                           Height="50" Width="170">
-                    <ComboBox Width="140"
+                    <ComboBox x:Name="Cur_Input"
+                              Width="140"
                               HorizontalAlignment="Center" 
                               VerticalAlignment="Center" SelectedIndex="1">
                         <ComboBoxItem>USD</ComboBoxItem>
@@ -165,9 +174,10 @@
                                           VerticalAlignment="Top"
                                           HorizontalAlignment="Right"
                                           Height="50" Width="170">
-                    <ComboBox Width="140"
-                              HorizontalAlignment="Center"
-                              VerticalAlignment="Center" SelectedIndex="0">
+                    <ComboBox  x:Name="Cur_Output"
+                               Width="140"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" SelectedIndex="0">
                         <ComboBoxItem>USD</ComboBoxItem>
                         <ComboBoxItem>BYN</ComboBoxItem>
                         <ComboBoxItem>RUB</ComboBoxItem>

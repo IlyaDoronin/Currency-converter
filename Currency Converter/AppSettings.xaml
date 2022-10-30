@@ -54,7 +54,7 @@
                                   materialDesign:ShadowAssist.ShadowDepth="Depth3"
                                   CornerRadius="5">
             
-            <UniformGrid MaxHeight="300" Width="350"
+            <UniformGrid MaxHeight="400" Width="350"
                          Columns="1"
                          VerticalAlignment="Top">
             <Grid>
@@ -111,9 +111,22 @@
                                       HorizontalAlignment="Right"
                                       Margin="0,0,10,0" Click="AutoRun_Click"/>
                 </Grid>
-                </materialDesign:ColorZone>
+            </materialDesign:ColorZone>
             </Grid>
-        </UniformGrid>
+
+            <materialDesign:ColorZone Grid.Row="2" Grid.ColumnSpan="2"
+                                      Height="60" Width="200" 
+                                      materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                      CornerRadius="5"
+                                      VerticalAlignment="Center">
+                <Grid VerticalAlignment="Center">
+                    <Label Content="О приложении"
+                        VerticalAlignment="Center"
+                            Margin="10,0,0,0"
+                        HorizontalAlignment="Center"/>
+                </Grid>
+            </materialDesign:ColorZone>
+            </UniformGrid>
         </materialDesign:ColorZone>
     </Grid>
 </Page>

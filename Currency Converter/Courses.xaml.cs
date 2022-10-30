@@ -15,12 +15,12 @@ namespace Currency_Converter
             InitializeComponent();
             Currency_Check();
             Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
-            Update();
+            Update(Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").GetValue("City").ToString());
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
         }
-        Parse p;
+        public static Parse p = new Parse("Минск");
         async public void Update(string town = "Минск")
         {
             //Parallel.Invoke(() =>
@@ -28,10 +28,8 @@ namespace Currency_Converter
             //});
             while (true)
             {
-                await Task.Delay(5000);
-                p = null;
-                p = new Parse("Минск");
                 DataContext = p;
+                await Task.Delay(5000);
             }
         }
         string currency_path = @"Software\Currency converter\Currency";
