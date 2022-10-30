@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.IO;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -27,23 +28,26 @@ namespace Currency_Converter
         static double czk = 0;
         public Calcutator()
         {
-            InitializeComponent();          
-            Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
             Update();
+            Thread.Sleep(150);
+            InitializeComponent();
+            Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
         }
 
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            BYN_Field.Focus();
             Registry.CurrentUser.CreateSubKey("Software\\Currency converter").SetValue("LastPage", "Calcutator");
         }
-
         Parse pr = Courses.p;
+        static string line = "";
         async void Update()
         {
             await Task.Run(() =>
             {
                 while (true)
                 {
+                    line = GetContent();
                     usd = Reg("\"Доллар США\",\"Cur_OfficialRate\":(.*?)}");
                     rub = Reg("\"Российских рублей\",\"Cur_OfficialRate\":(.*?)}") / 100;
                     eur = Reg("\"Евро\",\"Cur_OfficialRate\":(.*?)}");
@@ -63,12 +67,12 @@ namespace Currency_Converter
         }
         void Correct(TextBox Input)
         {
-            if (Regex.IsMatch(Input.Text, "[^0-9-,]"))
+            if (Regex.IsMatch(Input.Text, "[^0-9-.]"))
             {
                 Input.Text = Input.Text.Remove(Input.Text.Length - 1);
                 Input.SelectionStart = Input.Text.Length;
             }
-            if(Input.Text == "")
+            if (Input.Text == "")
             {
                 BYN_Field.Text = "";
                 USD_Field.Text = "";
@@ -79,59 +83,73 @@ namespace Currency_Converter
         }
         static string GetContent()
         {
-            string line = "";
+            string l = "";
             try
             {
                 using (WebClient wc = new WebClient())
                 {
                     wc.Encoding = Encoding.UTF8;
-                    line = wc.DownloadString("https://www.nbrb.by/api/exrates/rates?periodicity=0");
+                    l = wc.DownloadString("https://www.nbrb.by/api/exrates/rates?periodicity=0");
                 }
             }
             catch { }
-            return line;
+            return l;
         }
         static double Reg(string expression)
         {
             string result = "";
-            Match value = Regex.Match(GetContent(), expression);
+            Match value = Regex.Match(line, expression);
             result = value.Groups[1].Value;
             if (result == null)
                 result = "0";
-            return Convert.ToDouble(result.Replace(".",","));
+            return Convert.ToDouble(result.Replace(".", ","));
         }
         double Convert_From()
         {
             double currency = 1;
             switch (Cur_Input.Text)
             {
-                case "BYN": currency = 1;
+                case "BYN":
+                    currency = 1;
                     break;
-                case "USD": currency = usd;
+                case "USD":
+                    currency = usd;
                     break;
-                case "RUB": currency = rub;
+                case "RUB":
+                    currency = rub;
                     break;
-                case "EUR": currency = eur;
+                case "EUR":
+                    currency = eur;
                     break;
-                case "UAH": currency = uah;
+                case "UAH":
+                    currency = uah;
                     break;
-                case "GBP": currency = gbp;
+                case "GBP":
+                    currency = gbp;
                     break;
-                case "CNY": currency = cny;
+                case "CNY":
+                    currency = cny;
                     break;
-                case "JPY": currency = jpy;
+                case "JPY":
+                    currency = jpy;
                     break;
-                case "NOK": currency = nok;
+                case "NOK":
+                    currency = nok;
                     break;
-                case "CAD": currency = cad;
+                case "CAD":
+                    currency = cad;
                     break;
-                case "PLN": currency = pln;
+                case "PLN":
+                    currency = pln;
                     break;
-                case "SEK": currency = sek;
+                case "SEK":
+                    currency = sek;
                     break;
-                case "CHF": currency = chf;
+                case "CHF":
+                    currency = chf;
                     break;
-                case "CZK": currency = czk;
+                case "CZK":
+                    currency = czk;
                     break;
             }
             return currency;
@@ -141,33 +159,47 @@ namespace Currency_Converter
             double currency = 1;
             switch (Cur_Output.Text)
             {
-                case "BYN": currency = 1;
+                case "BYN":
+                    currency = 1;
                     break;
-                case "USD": currency = usd;
+                case "USD":
+                    currency = usd;
                     break;
-                case "RUB": currency = rub;
+                case "RUB":
+                    currency = rub;
                     break;
-                case "EUR": currency = eur;
+                case "EUR":
+                    currency = eur;
                     break;
-                case "UAH": currency = uah;
+                case "UAH":
+                    currency = uah;
                     break;
-                case "GBP": currency = gbp;
+                case "GBP":
+                    currency = gbp;
                     break;
-                case "CNY": currency = cny;
+                case "CNY":
+                    currency = cny;
                     break;
-                case "JPY": currency = jpy;
+                case "JPY":
+                    currency = jpy;
                     break;
-                case "NOK": currency = nok;
+                case "NOK":
+                    currency = nok;
                     break;
-                case "CAD": currency = cad;
+                case "CAD":
+                    currency = cad;
                     break;
-                case "PLN": currency = pln;
+                case "PLN":
+                    currency = pln;
                     break;
-                case "SEK": currency = sek;
+                case "SEK":
+                    currency = sek;
                     break;
-                case "CHF": currency = chf;
+                case "CHF":
+                    currency = chf;
                     break;
-                case "CZK": currency = czk;
+                case "CZK":
+                    currency = czk;
                     break;
             }
             return currency;
@@ -179,13 +211,17 @@ namespace Currency_Converter
             Correct(Input);
             if (input_activate != false)
             {
-                if (Input.Text != "")
+                try
                 {
-                    double content = Convert.ToDouble(Input.Text) * from / to;
-                    Output.Text = string.Format("{0:0.####}", content);
+                    if (Input.Text != "")
+                    {
+                        double content = Convert.ToDouble(Input.Text.Replace(".", ",")) * from / to;
+                        Output.Text = string.Format("{0:0.####}", content).Replace(",", ".");
+                    }
+                    else
+                        Output.Text = "";
                 }
-                else
-                    Output.Text = "";
+                catch { }
             }
         }
 
@@ -194,13 +230,17 @@ namespace Currency_Converter
             Correct(Output);
             if (output_activate != false)
             {
-                if (Output.Text != "")
+                try
                 {
-                    double content = Convert.ToDouble(Output.Text) * to / from;
-                    Input.Text = string.Format("{0:0.####}", content);
+                    if (Output.Text != "")
+                    {
+                        double content = Convert.ToDouble(Output.Text.Replace(".", ",")) * to / from;
+                        Input.Text = string.Format("{0:0.####}", content).Replace(",", ".");
+                    }
+                    else
+                        Input.Text = "";
                 }
-                else
-                    Input.Text = "";
+                catch { }
             }
         }
         void convert(double value = 0, bool BYN = true, bool USD = true, bool RUB = true, bool EUR = true, bool UAH = true)
@@ -209,47 +249,55 @@ namespace Currency_Converter
             {
                 double content = Convert.ToDouble(value);
                 if (BYN == true)
-                    BYN_Field.Text = string.Format("{0:0.####}", value);
+                    BYN_Field.Text = string.Format("{0:0.####}", value).Replace(",", ".");
                 if (USD == true)
-                    USD_Field.Text = string.Format("{0:0.####}", content / usd);
+                    USD_Field.Text = string.Format("{0:0.####}", content / usd).Replace(",", ".");
                 if (RUB == true)
-                    RUB_Field.Text = string.Format("{0:0.####}", content / rub);
+                    RUB_Field.Text = string.Format("{0:0.####}", content / rub).Replace(",", ".");
                 if (EUR == true)
-                    EUR_Field.Text = string.Format("{0:0.####}", content / eur);
+                    EUR_Field.Text = string.Format("{0:0.####}", content / eur).Replace(",", ".");
                 if (UAH == true)
-                    UAH_Field.Text = string.Format("{0:0.####}", content / uah);
+                    UAH_Field.Text = string.Format("{0:0.####}", content / uah).Replace(",", ".");
             }
             catch { }
         }
         void BYN_Field_TextChanged(object sender, TextChangedEventArgs e)// Конвертация из поля для BYN
         {
             Correct(BYN_Field);
-            if(byn_activate != false)
+            if (byn_activate != false)
             {
-                if(BYN_Field.Text != "")
-                    convert(Convert.ToDouble(BYN_Field.Text), false);
+                try
+                {
+                    if (BYN_Field.Text != "")
+                        convert(Convert.ToDouble(BYN_Field.Text.Replace(".", ",")), false);
+                }
+                catch { }
             }
         }
 
         void USD_Field_TextChanged(object sender, TextChangedEventArgs e) // Конвертация из поля для USD
         {
-            Correct(USD_Field);
-            if(usd_activate != false)
+            if (usd_activate != false)
             {
-                if (USD_Field.Text != "")
-                    convert(Convert.ToDouble(USD_Field.Text) * usd, true, false);
+                try
+                {
+                    Correct(USD_Field);
+                    if (USD_Field.Text != "")
+                        convert(Convert.ToDouble(USD_Field.Text.Replace(".", ",")) * usd, true, false);
+                }
+                catch { }
             }
         }
 
         void RUB_Field_TextChanged(object sender, TextChangedEventArgs e)// Конвертация из поля для RUB
         {
             Correct(RUB_Field);
-            if(rub_activate != false)
+            if (rub_activate != false)
             {
                 try
                 {
                     if (RUB_Field.Text != "")
-                        convert(Convert.ToDouble(RUB_Field.Text) * rub, true, true, false);
+                        convert(Convert.ToDouble(RUB_Field.Text.Replace(".", ",")) * rub, true, true, false);
                 }
                 catch { }
             }
@@ -263,7 +311,7 @@ namespace Currency_Converter
                 try
                 {
                     if (EUR_Field.Text != "")
-                        convert(Convert.ToDouble(EUR_Field.Text) * eur, true, true, true, false);
+                        convert(Convert.ToDouble(EUR_Field.Text.Replace(".", ",")) * eur, true, true, true, false);
                 }
                 catch { }
             }
@@ -277,7 +325,7 @@ namespace Currency_Converter
                 try
                 {
                     if (UAH_Field.Text != "")
-                        convert(Convert.ToDouble(UAH_Field.Text) * uah, true, true, true, true, false);
+                        convert(Convert.ToDouble(UAH_Field.Text.Replace(".", ",")) * uah, true, true, true, true, false);
                 }
                 catch { }
             }
@@ -352,14 +400,14 @@ namespace Currency_Converter
         {
             output_activate = false;
         }
-        
+
         void Cur_Input_TextChanged(object sender, TextChangedEventArgs e)
         {
             from = Convert_From();
             if (Output.Text != "")
             {
-                double content = Convert.ToDouble(Output.Text) * to / from;
-                Input.Text = string.Format("{0:0.####}", content);
+                double content = Convert.ToDouble(Output.Text.Replace(".", ",")) * to / from;
+                Input.Text = string.Format("{0:0.####}", content).Replace(",", ".");
             }
             else
                 Input.Text = "";
@@ -369,11 +417,33 @@ namespace Currency_Converter
             to = Convert_To();
             if (Input.Text != "")
             {
-                double content = Convert.ToDouble(Input.Text) * from / to;
-                Output.Text = string.Format("{0:0.####}", content);
+                double content = Convert.ToDouble(Input.Text.Replace(".", ",")) * from / to;
+                Output.Text = string.Format("{0:0.####}", content).Replace(",", ".");
             }
             else
                 Output.Text = "";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("usd  " + usd.ToString() + "\n" +
+                            "rub  " + rub.ToString() + "\n" +
+                            "eur  " + eur.ToString() + "\n" +
+                            "uah  " + uah.ToString() + "\n" +
+                            "gbp  " + gbp.ToString() + "\n" +
+                            "cny  " + cny.ToString() + "\n" +
+                            "jpy  " + jpy.ToString() + "\n" +
+                            "nok  " + nok.ToString() + "\n" +
+                            "cad  " + cad.ToString() + "\n" +
+                            "pln  " + pln.ToString() + "\n" +
+                            "sek  " + sek.ToString() + "\n" +
+                            "chf  " + chf.ToString() + "\n" +
+                            "czk  " + czk.ToString() + "\n");
+        }
+
+        private void Buton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(line );
         }
     }
 }

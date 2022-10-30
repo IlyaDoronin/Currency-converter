@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using MainWindow;
 using System.Windows.Media;
+using System.Threading.Tasks;
 
 namespace Currency_Converter
 {
@@ -12,28 +13,36 @@ namespace Currency_Converter
     {
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            if (Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").GetValue("Currency Converter")?.ToString() != null)
-                AutoRun.IsChecked = true;
-            else
-                AutoRun.IsChecked = false;
-
-            if (Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").GetValue("Theme")?.ToString() == "Dark")
-                Theme.IsChecked = true;
-            else
-                Theme.IsChecked = false;
-            //static Cities c = new Cities();
         }
         Cities city;
         public AppSettings()
         {
-            InitializeComponent();
+            Reg();
             city = new Cities();
+            InitializeComponent();
         }
 
         private void ColorZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            //MainWindow.MainForm.Visibility = Visibility.Hidden;
+            //MW.Visibility = Visibility.Hidden;
             city.Show();
+        }
+        void Reg()
+        {
+            try
+            {
+                if (Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").GetValue("Currency Converter")?.ToString() != null)
+                    AutoRun.IsChecked = true;
+                else
+                    AutoRun.IsChecked = false;
+            } catch { }
+            try
+            {
+                if (Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").GetValue("Theme")?.ToString() == "Dark")
+                    Theme.IsChecked = true;
+                else
+                    Theme.IsChecked = false;
+            } catch { }
         }
 
             string path = "\"" + Assembly.GetExecutingAssembly().Location + "\"";

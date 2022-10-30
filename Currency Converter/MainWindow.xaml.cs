@@ -89,18 +89,13 @@ namespace Currency_Converter
             Page_Loader.Navigate(Page_Calcutator);
         }
 
-        private void AppSettings(object sender, RoutedEventArgs e)
+        void AppSettings(object sender, RoutedEventArgs e)
         {
             TrayOff();
             Page_Loader.Navigate(Page_AppSettings);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(Parse.city);
-        }
-
-        private void MainForm_Closed(object sender, EventArgs e)
+        void MainForm_Closed(object sender, EventArgs e)
         {
             Process.GetCurrentProcess().Kill();
         }
