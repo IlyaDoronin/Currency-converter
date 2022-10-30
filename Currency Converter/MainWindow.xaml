@@ -330,7 +330,6 @@
                    HorizontalAlignment="Center"
                    FontSize="18"></Label>
             <Button x:Name="Course"
-                    Content="Курсы валют"
                     Grid.Row="1" Grid.Column="0"
                     MaxWidth="500"
                     Click="Course_Click">
@@ -339,12 +338,18 @@
                         <Border CornerRadius="20,0,0,20"
                                 BorderThickness="0,0,1,0"
                                 BorderBrush="Black"
-                                Background="#6D6D6D"/>
+                                Background="#C0FFE5">
+                            <Label
+                                Foreground="Black"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                FontSize="20">Курсы валют
+                            </Label>
+                        </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
             <Button x:Name="Calcutater"
-                    Content="Калькулятор валют"
                     Grid.Row="1" Margin="0"
                     Grid.Column="1"
                     MaxWidth="500"
@@ -354,7 +359,14 @@
                         <Border CornerRadius="0,20,20,0"
                                 BorderThickness="1,0,0,0"
                                 BorderBrush="Black"
-                                Background="#6D6D6D"/>
+                                Background="#C0FFE5">
+                            <Label
+                                Foreground="Black"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                FontSize="20">Калькулятор валют
+                            </Label>
+                        </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>

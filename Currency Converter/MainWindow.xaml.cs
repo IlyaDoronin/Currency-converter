@@ -26,12 +26,15 @@ namespace Currency_Converter
         }
         async void date()
         {
-            while (true)
+            try
             {
-                Date.Content = (DateTime.Now).ToString().Remove(11, 7);
-                await Task.Delay(60000);
-                GC.Collect();
-            }
+                while (true)
+                {
+                    Date.Content = (DateTime.Now).ToString().Remove(11, 8);
+                    await Task.Delay(60000);
+                    GC.Collect();
+                }
+            } catch { }
         }
         void TrayOff()
         {
@@ -101,6 +104,7 @@ namespace Currency_Converter
         }
         void Calcutater_Click(object sender, RoutedEventArgs e)
         {
+            Calcutater.Content = "4ddtgf";
             TrayOff();
             Table.Visibility = Visibility.Hidden;
         }
