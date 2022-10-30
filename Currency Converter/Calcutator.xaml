@@ -62,6 +62,7 @@
                                               Height="50" Width="170">
                         <TextBox x:Name="BYN_Field"
                                  FontSize="18"
+                                 TabIndex="0"
                                  Margin="15,8,15,8"
                                  TextChanged="BYN_Field_TextChanged"
                                  GotFocus="BYN_Field_GotFocus" LostFocus="BYN_Field_LostFocus"/>
@@ -77,6 +78,7 @@
                         <TextBox x:Name="USD_Field"
                                  FontSize="18"
                                  Margin="15,8,15,8"
+                                 TabIndex="1"
                                  TextChanged="USD_Field_TextChanged"
                                  GotFocus="USD_Field_GotFocus" LostFocus="USD_Field_LostFocus"/>
                     </materialDesign:ColorZone>
@@ -91,6 +93,7 @@
                         <TextBox x:Name="RUB_Field"
                                  FontSize="18"
                                  Margin="15,8,15,8"
+                                 TabIndex="2"
                                  TextChanged="RUB_Field_TextChanged"
                                  GotFocus="RUB_Field_GotFocus" LostFocus="RUB_Field_LostFocus"/>
                     </materialDesign:ColorZone>
@@ -105,6 +108,7 @@
                         <TextBox x:Name="EUR_Field"
                                  FontSize="18"
                                  Margin="15,8,15,8"
+                                 TabIndex="3"
                                  TextChanged="EUR_Field_TextChanged"
                                  GotFocus="EUR_Field_GotFocus" LostFocus="EUR_Field_LostFocus"/>
                     </materialDesign:ColorZone>
@@ -119,6 +123,7 @@
                         <TextBox x:Name="UAH_Field"
                                  FontSize="18"
                                  Margin="15,8,15,8"
+                                 TabIndex="4"
                                  TextChanged="UAH_Field_TextChanged"
                                  GotFocus="UAH_Field_GotFocus" LostFocus="UAH_Field_LostFocus"/>
                     </materialDesign:ColorZone>
@@ -141,6 +146,7 @@
                               Width="140"
                               HorizontalAlignment="Center" 
                               VerticalAlignment="Center"
+                              TabIndex="5"
                               SelectedIndex="1"
                               IsEditable="True"
                               TextBoxBase.TextChanged="Cur_Input_TextChanged">
@@ -168,6 +174,7 @@
                     <TextBox x:Name="Input"
                              FontSize="18"
                              Margin="15,8,15,8"
+                               TabIndex="7"
                              TextChanged="Input_TextChanged"
                              GotFocus="Input_GotFocus" LostFocus="Input_LostFocus"/>
                 </materialDesign:ColorZone>
@@ -181,6 +188,7 @@
                                Width="140"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
+                               TabIndex="6"
                                SelectedIndex="0"
                                IsEditable="True"
                                TextBoxBase.TextChanged="Cur_Output_TextChanged">
@@ -208,6 +216,7 @@
                     <TextBox x:Name="Output"
                              FontSize="18"
                              Margin="15,8,15,8"
+                               TabIndex="8"
                              TextChanged="Output_TextChanged"
                              GotFocus="Output_GotFocus" LostFocus="Output_LostFocus"/>
                 </materialDesign:ColorZone>

@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿
+using Microsoft.Win32;
 using System;
 using System.Diagnostics;
 using System.Net;
@@ -15,12 +16,27 @@ namespace Currency_Converter
         //Создание экземпляров классов
         public static Courses Page_Cources = new Courses();
         public static Calcutator Page_Calcutator = new Calcutator();
-        public Settings Page_Settings = new Settings();
-        public AppSettings Page_AppSettings = new AppSettings();
+        public static Settings Page_Settings = new Settings();
+        public static AppSettings Page_AppSettings = new AppSettings();
         public MainWindow()
         {
             InitializeComponent();
-            Page_Loader.Navigate(Page_Cources);
+            Load();
+            //Page_Loader.Navigate(Page_Cources);
+        }
+        void Load()
+        {
+            try
+            {
+                if(Registry.CurrentUser.CreateSubKey("Software\\Currency converter").GetValue("LastPage").ToString() == "Calcutator")
+                    Page_Loader.Navigate(Page_Calcutator);
+                else
+                    Page_Loader.Navigate(Page_Cources);
+            }
+            catch
+            {
+                Page_Loader.Navigate(Page_Cources);
+            }
         }
         void TrayOff()
         {

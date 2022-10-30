@@ -3,6 +3,7 @@ using System;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,27 +35,30 @@ namespace Currency_Converter
 
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            //Update();
+            Registry.CurrentUser.CreateSubKey("Software\\Currency converter").SetValue("LastPage", "Calcutator");
         }
 
         Parse pr = Courses.p;
-        void Update(string town = "Минск")
+        async void Update()
         {
-            Task.Factory.StartNew(() =>
-            {                 
-                usd = Reg("\"Доллар США\",\"Cur_OfficialRate\":(.*?)}");
-                rub = Reg("\"Российских рублей\",\"Cur_OfficialRate\":(.*?)}") / 100;
-                eur = Reg("\"Евро\",\"Cur_OfficialRate\":(.*?)}");
-                uah = Reg("\"Гривен\",\"Cur_OfficialRate\":(.*?)}") / 100;
-                gbp = Reg("\"Фунт стерлингов\",\"Cur_OfficialRate\":(.*?)}");
-                cny = Reg("\"Китайских юаней\",\"Cur_OfficialRate\":(.*?)}") / 10;
-                jpy = Reg("\"Йен\",\"Cur_OfficialRate\":(.*?)}") / 100;
-                nok = Reg("\"Норвежских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
-                cad = Reg("\"Канадский доллар\",\"Cur_OfficialRate\":(.*?)}");
-                pln = Reg("\"Злотых\",\"Cur_OfficialRate\":(.*?)}") / 10;
-                sek = Reg("\"Шведских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
-                chf = Reg("\"Швейцарский франк\",\"Cur_OfficialRate\":(.*?)}");
-                czk = Reg("\"Чешских крон\",\"Cur_OfficialRate\":(.*?)}") / 100;
+            await Task.Run(() =>
+            {
+                while (true)
+                {
+                    usd = Reg("\"Доллар США\",\"Cur_OfficialRate\":(.*?)}");
+                    rub = Reg("\"Российских рублей\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                    eur = Reg("\"Евро\",\"Cur_OfficialRate\":(.*?)}");
+                    uah = Reg("\"Гривен\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                    gbp = Reg("\"Фунт стерлингов\",\"Cur_OfficialRate\":(.*?)}");
+                    cny = Reg("\"Китайских юаней\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                    jpy = Reg("\"Йен\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                    nok = Reg("\"Норвежских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                    cad = Reg("\"Канадский доллар\",\"Cur_OfficialRate\":(.*?)}");
+                    pln = Reg("\"Злотых\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                    sek = Reg("\"Шведских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                    chf = Reg("\"Швейцарский франк\",\"Cur_OfficialRate\":(.*?)}");
+                    czk = Reg("\"Чешских крон\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                }
             });
         }
         void Correct(TextBox Input)
@@ -171,7 +175,6 @@ namespace Currency_Converter
         }
         static double from = 1;
         static double to = 1;
-        static double BYN = 1;
         void Input_TextChanged(object sender, TextChangedEventArgs e) // Поле конвертации из
         {
             Correct(Input);
@@ -179,8 +182,8 @@ namespace Currency_Converter
             {
                 if (Input.Text != "")
                 {
-                    double content = Convert.ToDouble(Input.Text);
-                    Output.Text = (content * from / to).ToString("F" + 4);
+                    double content = Convert.ToDouble(Input.Text) * from / to;
+                    Output.Text = string.Format("{0:0.####}", content);
                 }
                 else
                     Output.Text = "";
@@ -194,8 +197,8 @@ namespace Currency_Converter
             {
                 if (Output.Text != "")
                 {
-                    double content = Convert.ToDouble(Output.Text);
-                    Input.Text = (content * to / from).ToString("F" + 4);
+                    double content = Convert.ToDouble(Output.Text) * to / from;
+                    Input.Text = string.Format("{0:0.####}", content);
                 }
                 else
                     Input.Text = "";
@@ -207,15 +210,15 @@ namespace Currency_Converter
             {
                 double content = Convert.ToDouble(value);
                 if (BYN == true)
-                    BYN_Field.Text = value.ToString("F" + 4);
+                    BYN_Field.Text = string.Format("{0:0.####}", value);
                 if (USD == true)
-                    USD_Field.Text = (content / usd).ToString("F" + 4);
+                    USD_Field.Text = string.Format("{0:0.####}", content / usd);
                 if (RUB == true)
-                    RUB_Field.Text = (content / rub).ToString("F" + 4);
+                    RUB_Field.Text = string.Format("{0:0.####}", content / rub);
                 if (EUR == true)
-                    EUR_Field.Text = (content / eur).ToString("F" + 4);
+                    EUR_Field.Text = string.Format("{0:0.####}", content / eur);
                 if (UAH == true)
-                    UAH_Field.Text = (content / uah).ToString("F" + 4);
+                    UAH_Field.Text = string.Format("{0:0.####}", content / uah);
             }
             catch { }
         }
@@ -354,10 +357,24 @@ namespace Currency_Converter
         void Cur_Input_TextChanged(object sender, TextChangedEventArgs e)
         {
             from = Convert_From();
+            if (Output.Text != "")
+            {
+                double content = Convert.ToDouble(Output.Text) * to / from;
+                Input.Text = string.Format("{0:0.####}", content);
+            }
+            else
+                Input.Text = "";
         }
         void Cur_Output_TextChanged(object sender, TextChangedEventArgs e)
         {
             to = Convert_To();
+            if (Input.Text != "")
+            {
+                double content = Convert.ToDouble(Input.Text) * from / to;
+                Output.Text = string.Format("{0:0.####}", content);
+            }
+            else
+                Output.Text = "";
         }
     }
 }

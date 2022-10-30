@@ -10,17 +10,22 @@ namespace Currency_Converter
 {
     public partial class Courses
     {
+        public static Parse p = new Parse("Минск");
         public Courses()
         {
             InitializeComponent();
             Currency_Check();
             Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
-            Update(Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").GetValue("City").ToString());
+            try
+            {
+                Update(Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").GetValue("City").ToString());
+            }
+            catch { Update("Минск"); }
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            Registry.CurrentUser.CreateSubKey("Software\\Currency converter").SetValue("LastPage", "Courses");
         }
-        public static Parse p = new Parse("Минск");
         async public void Update(string town = "Минск")
         {
             //Parallel.Invoke(() =>

@@ -56,7 +56,7 @@ namespace Currency_Converter
                 if (Theme.IsChecked == true)
                 {
                     Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").SetValue("Theme", "Dark");
-                    MainWindow.Page_Cources.Background = new SolidColorBrush(Color.FromRgb(50, 50, 50));
+                    //MainWindow.MainForm = new SolidColorBrush(Color.FromRgb(50, 50, 50));
                 }
                 else
                 {
