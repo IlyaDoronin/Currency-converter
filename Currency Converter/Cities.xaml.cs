@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Windows;
 
 namespace Currency_Converter
 {
-    /// <summary>
-    /// Логика взаимодействия для Cities.xaml
-    /// </summary>
     public partial class Cities : Window
     {
         public Cities()
@@ -25,7 +23,10 @@ namespace Currency_Converter
         private void Change_City_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Hide();
-            Date_City.City = "Жлобин";
+            string town = "Старые дороги";
+            MainWindow.Page_Cources.Update(town);
+            MainWindow.Page_Calcutator.Update(town);
+            Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").SetValue("City", town);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -11,15 +12,28 @@ namespace Currency_Converter
 
     public class Parse
     {
-        static string city = "";
+        static string town = "Минск";
         static string Link = "";
         static string content = "";
         public Parse() : this("Минск") { }
-        public Parse(string town)
+        public Parse(string t)
         {
-            city = town;
-            Link = $"https://belarusbank.by/api/kursExchange?city={city}";
+            if(t != null)
+                town = t;
+            Link = $"https://belarusbank.by/api/kursExchange?city={town}";
             content = GetContent();
+            City_Update(town);
+        }
+        public static string city
+        {
+            get
+            { return City_Update(town); }
+            set
+            { City_Update(town); }
+        }
+        public static string City_Update(string c = "Минск")
+        {
+            return c;
         }
         static string GetContent()
         {
@@ -54,7 +68,7 @@ namespace Currency_Converter
         public static string usd_out
         {
             get { return Usd_Out(); }
-            set { Usd_Out(); }
+            set { Usd_Out(); }  
         }
         public static string Usd_Out()
         {

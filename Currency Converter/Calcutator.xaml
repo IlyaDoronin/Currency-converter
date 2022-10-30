@@ -208,7 +208,7 @@
                                 Width="220" Height="40" Grid.Column="0">
                 <Label x:Name="City"
                         Padding="0"
-                        Content="{Binding city, Mode=OneWay,FallbackValue=Минск}"
+                        Content="{Binding city,FallbackValue=Минск}"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
                         FontSize="20"/>

@@ -22,16 +22,16 @@ namespace Currency_Converter
                 Theme.IsChecked = false;
             //static Cities c = new Cities();
         }
+        Cities city;
         public AppSettings()
         {
             InitializeComponent();
+            city = new Cities();
         }
 
-         Cities city = new Cities();
         private void ColorZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            //c = null;
-            //MainWindow.Visibility = Visibility.Hidden;
+            //MainWindow.MainForm.Visibility = Visibility.Hidden;
             city.Show();
         }
 

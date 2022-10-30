@@ -14,7 +14,7 @@ namespace Currency_Converter
     {
         //Создание экземпляров классов
         public static Courses Page_Cources = new Courses();
-        public Calcutator Page_Calcutator = new Calcutator();
+        public static Calcutator Page_Calcutator = new Calcutator();
         public Settings Page_Settings = new Settings();
         public AppSettings Page_AppSettings = new AppSettings();
         public MainWindow()
@@ -40,8 +40,7 @@ namespace Currency_Converter
 
         private void Close(object sender, RoutedEventArgs e)
         {
-            //Close();
-            Process.GetCurrentProcess().Kill();
+            Close();
         }
         private void Minimized(object sender, RoutedEventArgs e)
         {
@@ -79,6 +78,16 @@ namespace Currency_Converter
         {
             TrayOff();
             Page_Loader.Navigate(Page_AppSettings);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(Parse.city);
+        }
+
+        private void MainForm_Closed(object sender, EventArgs e)
+        {
+            Process.GetCurrentProcess().Kill();
         }
     }
 }

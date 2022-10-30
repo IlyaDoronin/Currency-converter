@@ -80,11 +80,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G0_L1"
-                                   Content="{Binding usd_in}"></Label>
+                                   Content="{Binding usd_in, IsAsync=True}"></Label>
                         </Border>
                         <Border BorderBrush="Black">
                             <Label x:Name="G0_L2" x:FieldModifier="public"
-                                   Content="{Binding usd_out}"></Label>
+                                   Content="{Binding usd_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -101,11 +101,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G1_L1"
-                                   Content="{Binding rub_in}"></Label>
+                                   Content="{Binding rub_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G1_L2"
-                                   Content="{Binding rub_out}"></Label>
+                                   Content="{Binding rub_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -117,11 +117,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G2_L1"
-                                   Content="{Binding eur_in}"></Label>
+                                   Content="{Binding eur_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G2_L2"
-                                   Content="{Binding eur_out}"></Label>
+                                   Content="{Binding eur_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -138,11 +138,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G3_L1"
-                                   Content="{Binding uah_in}"></Label>
+                                   Content="{Binding uah_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G3_L2"
-                                   Content="{Binding uah_out}"></Label>
+                                   Content="{Binding uah_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -154,11 +154,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G4_L1"
-                                   Content="{Binding gbp_in}"></Label>
+                                   Content="{Binding gbp_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G4_L2"
-                                   Content="{Binding gbp_out}"></Label>
+                                   Content="{Binding gbp_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -175,11 +175,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G5_L1"
-                                   Content="{Binding cny_in}"></Label>
+                                   Content="{Binding cny_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G5_L2"
-                                   Content="{Binding cny_out}"></Label>
+                                   Content="{Binding cny_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -196,11 +196,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G6_L1"
-                                   Content="{Binding jpy_in}"></Label>
+                                   Content="{Binding jpy_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G6_L2"
-                                   Content="{Binding jpy_out}"></Label>
+                                   Content="{Binding jpy_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -217,11 +217,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G7_L1"
-                                   Content="{Binding nok_in}"></Label>
+                                   Content="{Binding nok_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G7_L2"
-                                   Content="{Binding nok_out}"></Label>
+                                   Content="{Binding nok_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -233,11 +233,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G8_L1"
-                                   Content="{Binding cad_in}"></Label>
+                                   Content="{Binding cad_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G8_L2"
-                                   Content="{Binding cad_out}"></Label>
+                                   Content="{Binding cad_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -249,11 +249,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G9_L1"
-                                   Content="{Binding pln_in}"></Label>
+                                   Content="{Binding pln_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G9_L2"
-                                   Content="{Binding pln_out}"></Label>
+                                   Content="{Binding pln_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -270,11 +270,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G10_L1"
-                                   Content="{Binding sek_in}"></Label>
+                                   Content="{Binding sek_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G10_L2"
-                                   Content="{Binding sek_out}"></Label>
+                                   Content="{Binding sek_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -291,11 +291,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G11_L1"
-                                   Content="{Binding chf_in}"></Label>
+                                   Content="{Binding chf_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G11_L2"
-                                   Content="{Binding chf_out}"></Label>
+                                   Content="{Binding chf_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -311,11 +311,11 @@
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                             <Label x:Name="G12_L1"
-                                   Content="{Binding czk_in}"></Label>
+                                   Content="{Binding czk_in, IsAsync=True}"></Label>
                         </Border>
                         <Border>
                             <Label x:Name="G12_L2"
-                                   Content="{Binding czk_out}"></Label>
+                                   Content="{Binding czk_out, IsAsync=True}"></Label>
                         </Border>
                     </UniformGrid>
                 </materialDesign:ColorZone>
@@ -331,7 +331,7 @@
             <materialDesign:ColorZone HorizontalAlignment="Right" Margin="0,5,5,0"
                                 Width="220" Height="40" Grid.Column="0">
                 <Label x:Name="City"
-                    Content="{Binding city, FallbackValue=Минск}"/>
+                    Content="{Binding city, FallbackValue=Минск, IsAsync=True}"/>
             </materialDesign:ColorZone>
             <materialDesign:ColorZone HorizontalAlignment="Left" Margin="5,5,0,0"
                                 Width="220" Height="40" Grid.Column="1">

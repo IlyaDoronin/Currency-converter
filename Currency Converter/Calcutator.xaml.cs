@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -10,16 +11,25 @@ namespace Currency_Converter
     {
         public Calcutator()
         {
-            InitializeComponent();
+            InitializeComponent();          
+            Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
         }
-
+        
         private void Page_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            Date_City dc = new Date_City();
-            Date.Content = Date_City.Date;
-            City.Content = Date_City.City;
+            //Update();
         }
-
+        async public void Update(string town = "Минск")
+        {
+            Parallel.Invoke(() =>
+            {
+                while (true)
+                {
+                    Parse p = new Parse(town);
+                    DataContext = p;
+                }
+            });
+        }
         void Correct(TextBox Input)
         {
             if (Regex.IsMatch(Input.Text, "[^0-9-.]"))

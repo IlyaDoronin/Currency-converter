@@ -18,7 +18,7 @@
         Title="MainForm" Height="780" Width="580"
         Background="{x:Null}" MinWidth="550"
         MinHeight="750" WindowStartupLocation="CenterScreen"
-        Visibility="Visible" Activated="MainForm_Activated">
+        Visibility="Visible" Activated="MainForm_Activated" Closed="MainForm_Closed">
     <Window.Resources>
         <Style x:Key="WindowStyle" TargetType="Window">
             <Style.Triggers>

@@ -31,3 +31,38 @@ D:\Документы\Develop\Серьёзные проекты\Калькуля
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Debug\Currency Converter.csproj.CopyComplete
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Debug\Currency Converter.exe
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Debug\Currency Converter.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\Currency Converter.exe.config
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\Currency Converter.exe
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\Currency Converter.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\MaterialDesignColors.dll
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\Hardcodet.Wpf.TaskbarNotification.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\Hardcodet.Wpf.TaskbarNotification.xml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\MaterialDesignColors.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency Converter.csprojAssemblyReference.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\AppSettings.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Calcutator.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Cities.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Courses.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\MainWindow.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Settings.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\App.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency Converter_MarkupCompile.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency Converter_MarkupCompile.lref
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\App.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\AppSettings.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Calcutator.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Cities.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Courses.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\MainWindow.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Settings.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency Converter.g.resources
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency_Converter.Properties.Resources.resources
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency Converter.csproj.GenerateResource.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency Converter.csproj.CoreCompileInputs.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency Converter.csproj.CopyComplete
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency Converter.exe
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_19\Currency Converter\obj\Debug\Currency Converter.pdb

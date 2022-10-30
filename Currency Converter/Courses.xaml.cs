@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading;
@@ -12,43 +13,29 @@ namespace Currency_Converter
         public Courses()
         {
             InitializeComponent();
-            Update();
             Currency_Check();
+            Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
+            Update();
         }
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Date_City dc = new Date_City();
-            Date.Content = Date_City.Date;
-            City.Content = Date_City.City;
-            //EndLess();
         }
-        async void EndLess()
+        Parse p;
+        async public void Update(string town = "Минск")
         {
+            //Parallel.Invoke(() =>
+            //{
+            //});
             while (true)
             {
-                await Task.Delay(60000);
-                Update();
+                await Task.Delay(5000);
+                p = null;
+                p = new Parse("Минск");
+                DataContext = p;
             }
         }
-        void Update()
-        {
-            Parse p = new Parse(City.Content.ToString());
-            DataContext = p;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            G0_L1.Content   = "";
-        }
-
-        private void Button_Click2(object sender, RoutedEventArgs e)
-        {
-            Update();
-        }
-
         string currency_path = @"Software\Currency converter\Currency";
-        void Currency_Check()
+        public void Currency_Check()
         {
             try
             {
