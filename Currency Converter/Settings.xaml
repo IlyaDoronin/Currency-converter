@@ -58,7 +58,7 @@
                                   Height="530" Width="400" 
                                   materialDesign:ShadowAssist.ShadowDepth="Depth3"
                                   CornerRadius="5">
-        <Grid>
+        <Grid x:Name="Content">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="30*"/>
                 <ColumnDefinition Width="70*"/>
@@ -80,80 +80,93 @@
             </Grid.RowDefinitions>
             <ToggleButton x:Name="TUSD"
                           Grid.Row="0" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TUSD_Checked" Unchecked="TUSD_Unchecked"/>
             <ToggleButton x:Name="TRUB"
                           Grid.Row="1" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TRUB_Checked" Unchecked="TRUB_Unchecked"/>
             <ToggleButton x:Name="TEUR"
                           Grid.Row="2" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TEUR_Checked" Unchecked="TEUR_Unchecked"/>
             <ToggleButton x:Name="TUAH"
                           Grid.Row="3" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TUAH_Checked" Unchecked="TUAH_Unchecked"/>
             <ToggleButton x:Name="TGBP"
                           Grid.Row="4" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TGBP_Checked" Unchecked="TGBP_Unchecked"/>
             <ToggleButton x:Name="TCNY"
                           Grid.Row="5" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TCNY_Checked" Unchecked="TCNY_Unchecked"/>
             <ToggleButton x:Name="TJPY"
                           Grid.Row="6" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TJPY_Checked" Unchecked="TJPY_Unchecked"/>
             <ToggleButton x:Name="TNOK"
                           Grid.Row="7" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TNOK_Checked" Unchecked="TNOK_Unchecked"/>
             <ToggleButton x:Name="TCAD"
                           Grid.Row="8" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TCAD_Checked" Unchecked="TCAD_Unchecked"/>
             <ToggleButton x:Name="TPLN"
                           Grid.Row="9" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TPLN_Checked" Unchecked="TPLN_Unchecked"/>
             <ToggleButton x:Name="TSEK"
                           Grid.Row="10" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TSEK_Checked" Unchecked="TSEK_Unchecked"/>
             <ToggleButton x:Name="TCHF"
                           Grid.Row="11" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand" 
+                          Checked="TCHF_Checked" Unchecked="TCHF_Unchecked"/>
             <ToggleButton x:Name="TCZK"
                           Grid.Row="12" Background="#2ecc71"
-                          Cursor="Hand"/>
+                          Cursor="Hand"
+                          Checked="TCZK_Checked" Unchecked="TCZK_Unchecked"/>
             <Label Content="Доллар США(USD)" 
                    Grid.Column="1"
                    Grid.Row="0"/>
-            <Label Content="Российский рубль(RUB)" 
+            <Label Content="Российский рубль (RUB)" 
                    Grid.Column="1"
                    Grid.Row="1"/>
-            <Label Content="Евро(EUR)" 
+            <Label Content="Евро (EUR)" 
                    Grid.Column="1"
                    Grid.Row="2"/>
-            <Label Content="Украинская гривна(UAH)" 
+            <Label Content="Украинская гривна (UAH)" 
                    Grid.Column="1"
                    Grid.Row="3"/>
-            <Label Content="Фунт стерлингов(GBP)" 
+            <Label Content="Фунт стерлингов (GBP)" 
                    Grid.Column="1"
                    Grid.Row="4"/>
-            <Label Content="Китайский юань(CNY)" 
+            <Label Content="Китайский юань (CNY)" 
                    Grid.Column="1"
                    Grid.Row="5"/>
-            <Label Content="Японская иена(JPY)" 
+            <Label Content="Японская иена (JPY)" 
                    Grid.Column="1"
                    Grid.Row="6"/>
-            <Label Content="Норвежская крона(NOK)" 
+            <Label Content="Норвежская крона (NOK)" 
                    Grid.Column="1"
                    Grid.Row="7"/>
-            <Label Content="Канадский доллар(CAD)" 
+            <Label Content="Канадский доллар (CAD)" 
                    Grid.Column="1"
                    Grid.Row="8"/>
-            <Label Content="Польский злотый(PLN)" 
+            <Label Content="Польский злотый (PLN)" 
                    Grid.Column="1"
                    Grid.Row="9"/>
-            <Label Content="Шведская крона(SEK)" 
+            <Label Content="Шведская крона (SEK)" 
                    Grid.Column="1"
                    Grid.Row="10"/>
-            <Label Content="Швейцарский франк(CHF)" 
+            <Label Content="Швейцарский франк (CHF)" 
                    Grid.Column="1"
                    Grid.Row="11"/>
-            <Label Content="Чешская крона(CZK)" 
+            <Label Content="Чешская крона (CZK)" 
                    Grid.Column="1"
                    Grid.Row="12"/>
         </Grid>
