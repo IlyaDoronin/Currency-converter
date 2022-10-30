@@ -6,9 +6,6 @@ using System.Windows.Input;
 
 namespace Currency_Converter
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -36,6 +33,7 @@ namespace Currency_Converter
                 }
             } catch { }
         }
+        
         void TrayOff()
         {
             Show();
@@ -47,10 +45,9 @@ namespace Currency_Converter
         {
             time();
             date();
-        }
+    }
         private void DragForm(object sender, MouseButtonEventArgs e)
         {
-
             try
             {
                 DragMove();
@@ -104,7 +101,6 @@ namespace Currency_Converter
         }
         void Calcutater_Click(object sender, RoutedEventArgs e)
         {
-            Calcutater.Content = "4ddtgf";
             TrayOff();
             Table.Visibility = Visibility.Hidden;
         }

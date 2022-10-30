@@ -174,140 +174,275 @@
                     </ColumnDefinition>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,1" Grid.Column="0">
                     <Label FontSize="18" HorizontalAlignment="Center">Валюта</Label>
                 </Border>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,1" Grid.Column="1">
-                    <Label FontSize="18" HorizontalAlignment="Center">Курс</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,1" Grid.Column="2">
                     <Label FontSize="18" HorizontalAlignment="Center">Покупка</Label>
                 </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,0,1" Grid.Column="3">
+                <Border BorderBrush="Black" BorderThickness="0,0,0,1" Grid.Column="2">
                     <Label FontSize="18" HorizontalAlignment="Center">Продажа</Label>
                 </Border>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,50,0,0">
+            <Grid x:Name="Grid_0" Height="50" VerticalAlignment="Top" Margin="0,50,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G0_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G0_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G0_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,100,0,0">
+            <Grid x:Name="Grid_1" 
+                  Height="50" VerticalAlignment="Top" Margin="0,100,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G1_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G1_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G1_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,150,0,0">
+            <Grid x:Name="Grid_2"
+                  Height="50" VerticalAlignment="Top" Margin="0,150,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G2_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G2_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G2_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,200,0,0">
+            <Grid x:Name="Grid_3"
+                  Height="50" VerticalAlignment="Top" Margin="0,200,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G3_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G3_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G3_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,250,0,0">
+            <Grid x:Name="Grid_4"
+                  Height="50" VerticalAlignment="Top" Margin="0,250,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G4_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G4_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G4_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,300,0,0">
+            <Grid x:Name="Grid_5"
+                  Height="50" VerticalAlignment="Top" Margin="0,300,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G5_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G5_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G5_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,350,0,0">
+            <Grid x:Name="Grid_6"
+                  Height="50" VerticalAlignment="Top" Margin="0,350,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G6_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G6_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G6_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,400,0,0">
+            <Grid x:Name="Grid_7"
+                  Height="50" VerticalAlignment="Top" Margin="0,400,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G7_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G7_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G7_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,450,0,0">
+            <Grid x:Name="Grid_8"
+                  Height="50" VerticalAlignment="Top" Margin="0,450,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G8_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G8_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G8_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
-            <Grid Height="50" VerticalAlignment="Top" Margin="0,500,0,0">
+            <Grid x:Name="Grid_9"
+                  Height="50" VerticalAlignment="Top" Margin="0,500,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0"/>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1"/>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2"/>
+                <Label x:Name="G9_L0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">USD</Label>
+                <Label x:Name="G9_L1"
+                       Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+                <Label x:Name="G9_L2"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
             </Grid>
         </Grid>
         <Grid Height="100" MaxWidth="1000" VerticalAlignment="Bottom" Background="Transparent">
