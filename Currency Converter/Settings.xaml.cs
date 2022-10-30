@@ -46,9 +46,9 @@ namespace Currency_Converter
             TNOK.IsChecked = true;
             TCAD.IsChecked = true;
             TPLN.IsChecked = true;
-            TSEK.IsChecked = false;
-            TCHF.IsChecked = false;
-            TCZK.IsChecked = false;
+            TSEK.IsChecked = true;
+            TCHF.IsChecked = true;
+            TCZK.IsChecked = true;
         }
 
         void Button_Click_2(object sender, RoutedEventArgs e)

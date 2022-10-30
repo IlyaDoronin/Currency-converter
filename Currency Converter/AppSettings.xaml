@@ -13,24 +13,29 @@
     
     <Grid MaxWidth="900" 
           MaxHeight="550"
-          Margin="100">
-        <Label VerticalAlignment="Top"
+          Margin="50">
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Height="50" Width="350" 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                                  CornerRadius="5"
+                                  Margin="0,-50,0,0">
+            
+            <Label VerticalAlignment="Top"
                HorizontalAlignment="Center"
                FontSize="30"
-               Margin="0,-50,0,0"
                Content="Настройки приложения"/>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="85*"/>
-                <ColumnDefinition Width="15*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+        </materialDesign:ColorZone>
+
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Margin="0,10,0,0"
+                                  Height="530" Width="400" 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                  CornerRadius="5">
+            
+            <UniformGrid MaxHeight="300" Width="350"
+                         Columns="1"
+                         VerticalAlignment="Top">
+            <Grid>
             <Label Content="Выбор города"
                    Grid.ColumnSpan="2"
                    Grid.Row="0"                   
@@ -43,76 +48,160 @@
                                       materialDesign:ShadowAssist.ShadowDepth="Depth2"
                                       CornerRadius="5"
                                       Margin="0,50,0,0">
-                <ComboBox Width="170"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"
-                     Text="Старые дороги">
-                    <ComboBoxItem>Минск</ComboBoxItem>
-                    <ComboBoxItem>Брест</ComboBoxItem>
-                    <ComboBoxItem>Гродно</ComboBoxItem>
-                    <ComboBoxItem>Гомель</ComboBoxItem>
-                    <ComboBoxItem>Витебск</ComboBoxItem>
-                    <ComboBoxItem>Могилёв</ComboBoxItem>
-                    <ComboBoxItem>Бобруйск</ComboBoxItem>
-                    <ComboBoxItem>Борисов</ComboBoxItem>
-                    <ComboBoxItem>Гомель</ComboBoxItem>
-                    <ComboBoxItem>Мозырь</ComboBoxItem>
-                    <ComboBoxItem>Орша</ComboBoxItem>
-                    <ComboBoxItem>Полоцк</ComboBoxItem>
-                    <ComboBoxItem>Речица</ComboBoxItem>
-                    <ComboBoxItem>Слуцк</ComboBoxItem>
-                    <ComboBoxItem>Быхов</ComboBoxItem>
-                    <ComboBoxItem>Ветка</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                    <ComboBoxItem>ДАААААААА</ComboBoxItem>
-                </ComboBox>
-            </materialDesign:ColorZone>
-            <Label Content="Тёмная тема"
-                   Grid.Column="0"
-                   Grid.Row="1"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"/>
-            <ToggleButton Height="30"
-                                 Grid.Column="1"
-                                 Grid.Row="1"/>
-            <Label Content="Автозапуск приложения в трее"
-                   Grid.Column="0"
-                   Grid.Row="2"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"/>
-            <ToggleButton Height="30"
-                                 Grid.Column="1"
-                                 Grid.Row="2"/>
-            <Label Content="Изменить иконку сворачивания в трей"
-                   Grid.Column="0"
-                   Grid.Row="3"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"/>
-            <ToggleButton Height="30"
-                                 Grid.Column="1"
-                                 Grid.Row="3"/>
-            <Label Content="Сброс настроек"
-                   Background="Red"
-                   Grid.Column="0"
-                   Grid.Row="4"
-                   VerticalAlignment="Center" 
-                   HorizontalAlignment="Left"/>
-            <ToggleButton  Height="30"
-                            Grid.Column="1"
-                            Grid.Row="4"/>
-        </Grid>
+                    <ComboBox Width="170"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center" SelectedIndex="0"
+                          Text="ДааД">
+                        <ComboBoxItem Background="#E1E1E1">Минск</ComboBoxItem>
+                        <ComboBoxItem Background="#E1E1E1">Брест</ComboBoxItem>
+                        <ComboBoxItem Background="#E1E1E1">Гродно</ComboBoxItem>
+                        <ComboBoxItem Background="#E1E1E1">Гомель</ComboBoxItem>
+                        <ComboBoxItem Background="#E1E1E1">Витебск</ComboBoxItem>
+                        <ComboBoxItem Background="#E1E1E1">Могилёв</ComboBoxItem>
+                        <ComboBoxItem>Бобруйск</ComboBoxItem>
+                        <ComboBoxItem>Барановичи</ComboBoxItem>
+                        <ComboBoxItem>Борисов</ComboBoxItem>
+                        <ComboBoxItem>Барань</ComboBoxItem>
+                        <ComboBoxItem>Белоозерск</ComboBoxItem>
+                        <ComboBoxItem>Береза</ComboBoxItem>
+                        <ComboBoxItem>Березино</ComboBoxItem>
+                        <ComboBoxItem>Березовка</ComboBoxItem>
+                        <ComboBoxItem>Браслав</ComboBoxItem>
+                        <ComboBoxItem>Буда-Кошелево</ComboBoxItem>
+                        <ComboBoxItem>Быхов</ComboBoxItem>
+                        <ComboBoxItem>Верхнедвинск</ComboBoxItem>
+                        <ComboBoxItem>Ветка</ComboBoxItem>
+                        <ComboBoxItem>Вилейка</ComboBoxItem>
+                        <ComboBoxItem>Волковыск</ComboBoxItem>
+                        <ComboBoxItem>Воложин</ComboBoxItem>
+                        <ComboBoxItem>Высокое</ComboBoxItem>
+                        <ComboBoxItem>Ганцевичи</ComboBoxItem>
+                        <ComboBoxItem>Глубокое</ComboBoxItem>
+                        <ComboBoxItem>Горки</ComboBoxItem>
+                        <ComboBoxItem>Городок</ComboBoxItem>
+                        <ComboBoxItem>Давид-Городок</ComboBoxItem>
+                        <ComboBoxItem>Дзержинск</ComboBoxItem>
+                        <ComboBoxItem>Добруш</ComboBoxItem>
+                        <ComboBoxItem>Докшицы</ComboBoxItem>
+                        <ComboBoxItem>Дрогичин</ComboBoxItem>
+                        <ComboBoxItem>Дубровно</ComboBoxItem>
+                        <ComboBoxItem>Дятлово</ComboBoxItem>
+                        <ComboBoxItem>Ельск</ComboBoxItem>
+                        <ComboBoxItem>Жодино</ComboBoxItem>
+                        <ComboBoxItem>Жабинка</ComboBoxItem>
+                        <ComboBoxItem>Житковичи</ComboBoxItem>
+                        <ComboBoxItem>Жлобин</ComboBoxItem>
+                        <ComboBoxItem>Заславль</ComboBoxItem>
+                        <ComboBoxItem>Иваново</ComboBoxItem>
+                        <ComboBoxItem>Ивацевичи</ComboBoxItem>
+                        <ComboBoxItem>Ивье</ComboBoxItem>
+                        <ComboBoxItem>Калинковичи</ComboBoxItem>
+                        <ComboBoxItem>Каменец</ComboBoxItem>
+                        <ComboBoxItem>Кировск</ComboBoxItem>
+                        <ComboBoxItem>Клецк</ComboBoxItem>
+                        <ComboBoxItem>Климовичи</ComboBoxItem>
+                        <ComboBoxItem>Кличев</ComboBoxItem>
+                        <ComboBoxItem>Кобрин</ComboBoxItem>
+                        <ComboBoxItem>Копыль</ComboBoxItem>
+                        <ComboBoxItem>Костюковичи</ComboBoxItem>
+                        <ComboBoxItem>Кричев</ComboBoxItem>
+                        <ComboBoxItem>Крупки</ComboBoxItem>
+                        <ComboBoxItem>Лепель</ComboBoxItem>
+                        <ComboBoxItem>Лида</ComboBoxItem>
+                        <ComboBoxItem>Логойск</ComboBoxItem>
+                        <ComboBoxItem>Лунинец</ComboBoxItem>
+                        <ComboBoxItem>Любань</ComboBoxItem>
+                        <ComboBoxItem>Ляховичи</ComboBoxItem>
+                        <ComboBoxItem>Мозырь</ComboBoxItem>
+                        <ComboBoxItem>Малорита</ComboBoxItem>
+                        <ComboBoxItem>Марьина Горка</ComboBoxItem>
+                        <ComboBoxItem>Микашевичи</ComboBoxItem>
+                        <ComboBoxItem>Миоры</ComboBoxItem>
+                        <ComboBoxItem>Молодечно</ComboBoxItem>
+                        <ComboBoxItem>Мосты</ComboBoxItem>
+                        <ComboBoxItem>Мстиславль</ComboBoxItem>
+                        <ComboBoxItem>Мядель</ComboBoxItem>
+                        <ComboBoxItem>Новополоцк</ComboBoxItem>
+                        <ComboBoxItem>Наровля</ComboBoxItem>
+                        <ComboBoxItem>Несвиж</ComboBoxItem>
+                        <ComboBoxItem>Новогрудок</ComboBoxItem>
+                        <ComboBoxItem>Новолукомль</ComboBoxItem>
+                        <ComboBoxItem>Орша</ComboBoxItem>
+                        <ComboBoxItem>Осиповичи</ComboBoxItem>
+                        <ComboBoxItem>Ошмяны</ComboBoxItem>
+                        <ComboBoxItem>Пинск</ComboBoxItem>
+                        <ComboBoxItem>Полоцк</ComboBoxItem>
+                        <ComboBoxItem>Петриков</ComboBoxItem>
+                        <ComboBoxItem>Поставы</ComboBoxItem>
+                        <ComboBoxItem>Пружаны</ComboBoxItem>
+                        <ComboBoxItem>Речица</ComboBoxItem>
+                        <ComboBoxItem>Рогачев</ComboBoxItem>
+                        <ComboBoxItem>Светлогорск</ComboBoxItem>
+                        <ComboBoxItem>Свислочь</ComboBoxItem>
+                        <ComboBoxItem>Сенно</ComboBoxItem>
+                        <ComboBoxItem>Скидель</ComboBoxItem>
+                        <ComboBoxItem>Славгород</ComboBoxItem>
+                        <ComboBoxItem>Слоним</ComboBoxItem>
+                        <ComboBoxItem>Слуцк</ComboBoxItem>
+                        <ComboBoxItem>Смолевичи</ComboBoxItem>
+                        <ComboBoxItem>Сморгонь</ComboBoxItem>
+                        <ComboBoxItem>Солигорск</ComboBoxItem>
+                        <ComboBoxItem>Старые Дороги</ComboBoxItem>
+                        <ComboBoxItem>Столбцы</ComboBoxItem>
+                        <ComboBoxItem>Столин</ComboBoxItem>
+                        <ComboBoxItem>Толочин</ComboBoxItem>
+                        <ComboBoxItem>Туров</ComboBoxItem>
+                        <ComboBoxItem>Узда</ComboBoxItem>
+                        <ComboBoxItem>Фаниполь</ComboBoxItem>
+                        <ComboBoxItem>Хойники</ComboBoxItem>
+                        <ComboBoxItem>Чаусы</ComboBoxItem>
+                        <ComboBoxItem>Чашники</ComboBoxItem>
+                        <ComboBoxItem>Червень</ComboBoxItem>
+                        <ComboBoxItem>Чериков</ComboBoxItem>
+                        <ComboBoxItem>Чечерск</ComboBoxItem>
+                        <ComboBoxItem>Шклов</ComboBoxItem>
+                        <ComboBoxItem>Щучин</ComboBoxItem>
+                    </ComboBox>
+                </materialDesign:ColorZone>
+            </Grid>
+            <Grid>                        
+                <materialDesign:ColorZone Grid.Row="2" Grid.ColumnSpan="2"
+                                          Height="70" Width="350" 
+                                          materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                          CornerRadius="5"
+                                          VerticalAlignment="Center">                        
+                        <Grid VerticalAlignment="Center">
+                            <Label Content="Тёмная тема"
+                               Grid.Column="0"
+                               Grid.Row="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"/>
+                            <ToggleButton Height="30"
+                                          HorizontalAlignment="Right"
+                                          Margin="0,0,10,0"/>
+                        </Grid>
+                    </materialDesign:ColorZone>
+            </Grid>
+            <Grid>
+            <materialDesign:ColorZone Grid.Row="2" Grid.ColumnSpan="2"
+                                  Height="70" Width="350" 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                  CornerRadius="5"
+                                      VerticalAlignment="Center">
+                    <Grid VerticalAlignment="Center">
+                        <Label Content="Автозапуск приложения в трее"
+                           VerticalAlignment="Center"
+                               Margin="10,0,0,0"
+                           HorizontalAlignment="Left"/>
+                        <ToggleButton Height="30"
+                                      HorizontalAlignment="Right"
+                                      Margin="0,0,10,0"/>
+                </Grid>
+                </materialDesign:ColorZone>
+            </Grid>
+        </UniformGrid>
+        </materialDesign:ColorZone>
+
     </Grid>
 </Page>

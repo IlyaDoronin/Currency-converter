@@ -22,18 +22,18 @@ namespace Currency_Converter
         }
         void date()
         {
-            //Task.Factory.StartNew(() =>
-            //{
-                try
-                {
-                    //while (true)
-                    //{
-                        Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
-                        Task.Delay(60000);
-                        GC.Collect();
-                //    }
-                } catch { }
-            //});
+            ////Task.Factory.StartNew(() =>
+            ////{
+            //    try
+            //    {
+            //        //while (true)
+            //        //{
+            //            Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
+            //            Task.Delay(60000);
+            //            GC.Collect();
+            //    //    }
+            //    } catch { }
+            ////});
         }
         void TrayOff()
         {
@@ -43,7 +43,6 @@ namespace Currency_Converter
         
         void MainForm_Activated(object sender, EventArgs e)
         {
-            City.Content = "Минск"; //Реестр
             date();
 
         }

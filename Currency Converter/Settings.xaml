@@ -10,20 +10,33 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       TextElement.FontWeight="Regular">
 
-    <Grid MaxWidth="900"  x:Name="loll"
+    <Page.Resources>
+        <Style x:Key="{x:Type Label}">
+            <Setter Property="Label.VerticalAlignment" Value="Center"/>
+            <Setter Property="Label.HorizontalAlignment" Value="Left"/>
+            <Setter Property="Label.Padding" Value="20,0,0,0"/>
+        </Style>
+    </Page.Resources>
+    
+        <Grid MaxWidth="900"  x:Name="loll"
           MaxHeight="550"
-          Margin="100">
+          Margin="50">
         <materialDesign:ColorZone Grid.Row="0"
                                   Height="50" Width="300" 
-                                  materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth1"
                                   CornerRadius="5"
                                   Margin="0,-50,0,0">
             <Label VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="30"
                    Content="Настройки валют"/>
-        </materialDesign:ColorZone> 
-        <Grid Margin="0,0,0,50">
+        </materialDesign:ColorZone >
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Margin="0,10,0,0"
+                                  Height="530" Width="400" 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                  CornerRadius="5">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="30*"/>
                 <ColumnDefinition Width="70*"/>
@@ -44,112 +57,87 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <ToggleButton x:Name="TUSD"
-                          Grid.Row="0" Background="#2ecc71"/>
+                          Grid.Row="0" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TRUB"
-                          Grid.Row="1" Background="#2ecc71"/>
+                          Grid.Row="1" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TEUR"
-                          Grid.Row="2" Background="#2ecc71"/>
+                          Grid.Row="2" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TUAH"
-                          Grid.Row="3" Background="#2ecc71"/>
+                          Grid.Row="3" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TGBP"
-                          Grid.Row="4" Background="#2ecc71"/>
+                          Grid.Row="4" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TCNY"
-                          Grid.Row="5" Background="#2ecc71"/>
+                          Grid.Row="5" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TJPY"
-                          Grid.Row="6" Background="#2ecc71"/>
+                          Grid.Row="6" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TNOK"
-                          Grid.Row="7" Background="#2ecc71"/>
+                          Grid.Row="7" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TCAD"
-                          Grid.Row="8" Background="#2ecc71"/>
+                          Grid.Row="8" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TPLN"
-                          Grid.Row="9" Background="#2ecc71"/>
+                          Grid.Row="9" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TSEK"
-                          Grid.Row="10" Background="#2ecc71"/>
+                          Grid.Row="10" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TCHF"
-                          Grid.Row="11" Background="#2ecc71"/>
+                          Grid.Row="11" Background="#2ecc71"
+                          Cursor="Hand"/>
             <ToggleButton x:Name="TCZK"
-                          Grid.Row="12" Background="#2ecc71"/>
+                          Grid.Row="12" Background="#2ecc71"
+                          Cursor="Hand"/>
             <Label Content="Доллар США(USD)" 
                    Grid.Column="1"
-                   Grid.Row="0"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="0"/>
             <Label Content="Российский рубль(RUB)" 
                    Grid.Column="1"
-                   Grid.Row="1"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="1"/>
             <Label Content="Евро(EUR)" 
                    Grid.Column="1"
-                   Grid.Row="2"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="2"/>
             <Label Content="Украинская гривна(UAH)" 
                    Grid.Column="1"
-                   Grid.Row="3"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="3"/>
             <Label Content="Фунт стерлингов(GBP)" 
                    Grid.Column="1"
-                   Grid.Row="4"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="4"/>
             <Label Content="Китайский юань(CNY)" 
                    Grid.Column="1"
-                   Grid.Row="5"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="5"/>
             <Label Content="Японская иена(JPY)" 
                    Grid.Column="1"
-                   Grid.Row="6"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="6"/>
             <Label Content="Норвежская крона(NOK)" 
                    Grid.Column="1"
-                   Grid.Row="7"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="7"/>
             <Label Content="Канадский доллар(CAD)" 
                    Grid.Column="1"
-                   Grid.Row="8"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="8"/>
             <Label Content="Польский злотый(PLN)" 
                    Grid.Column="1"
-                   Grid.Row="9"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="9"/>
             <Label Content="Шведская крона(SEK)" 
                    Grid.Column="1"
-                   Grid.Row="10"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="10"/>
             <Label Content="Швейцарский франк(CHF)" 
                    Grid.Column="1"
-                   Grid.Row="11"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="11"/>
             <Label Content="Чешская крона(CZK)" 
                    Grid.Column="1"
-                   Grid.Row="12"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Padding="20,0,0,0"/>
+                   Grid.Row="12"/>
         </Grid>
 
-        <Grid VerticalAlignment="Bottom">
+        </materialDesign:ColorZone>
+        <Grid VerticalAlignment="Bottom" Margin="0,0,0,-40">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -161,16 +149,18 @@
                 <Label Content="Сбросить все"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   FontSize="17"/>
+                   FontSize="20"
+                   Padding="0"/>
             </Button>
             <Button Grid.Column="1"
                     Padding="0"
                     Background="#2ecc71"
                    BorderBrush="#2ecc71" Click="Button_Click_1">
-                <Label Content="Показать все"
+                <Label Content="Включить все"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   FontSize="17"/>
+                   FontSize="20"
+                   Padding="0"/>
             </Button>
         </Grid>
     </Grid>

@@ -14,7 +14,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="MainForm" Height="750" Width="550"
+        Title="MainForm" Height="780" Width="580"
         Background="{x:Null}" MinWidth="550"
         MinHeight="750" WindowStartupLocation="CenterScreen"
         Visibility="Visible" Activated="MainForm_Activated"
@@ -34,8 +34,11 @@
             </Setter>
         </Style>
     </Window.Resources>
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="15" RenderingBias="Quality" ShadowDepth="0" Opacity="0.5"/>
+    </Window.Effect>
 
-    <Grid MouseLeftButtonDown="DragForm" Opacity="0.97">
+    <Grid MouseLeftButtonDown="DragForm" Margin="15">
         <!--Сворачивание в трей-->
         <tb:TaskbarIcon x:Name="Tray"
                         Visibility="Hidden"
@@ -58,11 +61,13 @@
 
         <!--Верхняя панель-->
         <!--Кнопки-->
-        <Border Margin="30,0,120,720"
-                Height="30"
-                Background="#2ecc71"
-                VerticalAlignment="Top">
-        </Border>
+        <Border Background="#2ecc71"
+                CornerRadius="20,0,0,0"
+                BorderThickness="0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Height="30" Width="405"
+                Margin="0,0,0,0"/>
         <Button BorderBrush="Black"
                 Cursor="Hand"
                 Grid.Column="1" Click="Settings"
@@ -147,39 +152,19 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Border Background="#2ecc71"
-                CornerRadius="20,0,0,0"
-                BorderThickness="0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Height="30" Width="30"
-                Margin="0,0,0,0"/>
 
         <!--Таблица-->
         <Grid x:FieldModifier="public" x:Name="Loader">
             <Frame x:FieldModifier="public" x:Name="Page_Loader" NavigationUIVisibility="Hidden"/>
         </Grid>
         <!--Сюда загружаются все страницы-->
-        <Grid Height="100" MaxWidth="1000" VerticalAlignment="Bottom" Background="Transparent">
+        <Grid Height="50" VerticalAlignment="Bottom" Background="Transparent">
 
             <!--Нжний кусок-->
-            <Grid.RowDefinitions >
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="City" Content="{Binding Path=USD}"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   FontSize="18"></Label>
-            <Label x:Name="Date" Grid.Column="1"
-                   Content="Дата"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   FontSize="18"></Label>
             <Button x:Name="Course"
                     Height="50"
                     Grid.Row="1" Grid.Column="0"
@@ -187,21 +172,24 @@
                     Click="Course_Click">
                 <Button.Template>
                     <ControlTemplate>
-                        <Border CornerRadius="20,0,0,20"
-                                BorderThickness="0,0,1,0"
-                                BorderBrush="Black"
-                                Background="#2ecc71">
-                            <Label
-                                Foreground="Black"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                FontSize="20">Курсы валют
-                            </Label>
-                        </Border>
+                        <materialDesign:ColorZone HorizontalAlignment="Left"
+                                                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                                    CornerRadius="20,0,0,20"
+                                                    Background="#2ecc71"
+                                                    BorderThickness="0,0,1,0"
+                                                    BorderBrush="Black"
+                                                    Width="275" Height="50" Grid.Column="1">
+                                <Label
+                                    Foreground="Black"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    FontSize="20">Курсы валют
+                                </Label>
+                            </materialDesign:ColorZone>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="Calcutator"
+            <Button x:Name="Calcutator" 
                     Height="50"
                     Grid.Row="1" Margin="0"
                     Grid.Column="1"
@@ -209,18 +197,20 @@
                     Click="Calcutator_Click">
                 <Button.Template>
                     <ControlTemplate>
-                        <Border 
+                        <materialDesign:ColorZone HorizontalAlignment="Left"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth2"
                                 CornerRadius="0,20,20,0"
+                                Background="#2ecc71"
                                 BorderThickness="1,0,0,0"
                                 BorderBrush="Black"
-                                Background="#2ecc71">
+                                Width="275" Height="50" Grid.Column="1">                            
                             <Label
                                 Foreground="Black"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
                                 FontSize="20">Калькулятор валют
                             </Label>
-                        </Border>
+                        </materialDesign:ColorZone>
                     </ControlTemplate>
                 </Button.Template>
             </Button>

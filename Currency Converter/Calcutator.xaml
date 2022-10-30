@@ -6,11 +6,42 @@
       xmlns:local="clr-namespace:Currency_Converter"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="550"
-      Title="Calcutator">
+      Title="Calcutator"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.FontWeight="Regular">
 
     <Grid Background="Red"
                       MaxWidth="900"
                       MaxHeight="550">
         <Label FontSize="50" Content="Куркуратор"/>
+
+        <Grid Height="50" VerticalAlignment="Bottom"
+                  Margin="0,0,0,-50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <materialDesign:ColorZone HorizontalAlignment="Right" Margin="0,5,5,0"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                CornerRadius="5"
+                                Width="220" Height="40" Grid.Column="0">
+                <Label x:Name="City"
+                    Content="Минск"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="20"/>
+            </materialDesign:ColorZone>
+            <materialDesign:ColorZone HorizontalAlignment="Left" Margin="5,5,0,0"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                CornerRadius="5"
+                                Width="220" Height="40" Grid.Column="1">
+                <Label x:Name="Date"
+                    Content="Дата"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="20"/>
+            </materialDesign:ColorZone>
+            
+        </Grid>
     </Grid>
 </Page>
