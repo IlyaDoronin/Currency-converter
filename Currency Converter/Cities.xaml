@@ -17,7 +17,7 @@
         AllowsTransparency="True" WindowStyle="None"
         WindowState="Maximized"
         Topmost="True"
-        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Unloaded="Window_Unloaded">
         <!--Style="{DynamicResource WindowStyle}"-->
 
     <Window.Resources>

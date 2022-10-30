@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace Currency_Converter
 {
@@ -21,6 +22,11 @@ namespace Currency_Converter
         {
             //сlose();
             Hide();
+        }
+
+        private void Window_Unloaded(object sender, RoutedEventArgs e)
+        {
+            GC.Collect();
         }
     }
 }

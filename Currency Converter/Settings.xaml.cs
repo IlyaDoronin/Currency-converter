@@ -41,100 +41,83 @@ namespace Currency_Converter
 
         void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            TUSD.IsChecked = true;
-            TRUB.IsChecked = true;
-            TEUR.IsChecked = true;
-            TUAH.IsChecked = true;
-            TGBP.IsChecked = true;
-            TCNY.IsChecked = true;
-            TJPY.IsChecked = true;
-            TNOK.IsChecked = true;
-            TCAD.IsChecked = true;
-            TPLN.IsChecked = true;
-            TSEK.IsChecked = true;
-            TCHF.IsChecked = true;
-            TCZK.IsChecked = true;
+            foreach (UIElement toggle in Content.Children)
+            {
+                if ((toggle as ToggleButton) != null)
+                {
+                    (toggle as ToggleButton).IsChecked = true;
+                }
+            }
         }
 
         void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            TUSD.IsChecked = false;
-            TRUB.IsChecked = false;
-            TEUR.IsChecked = false;
-            TUAH.IsChecked = false;
-            TGBP.IsChecked = false;
-            TCNY.IsChecked = false;
-            TJPY.IsChecked = false;
-            TNOK.IsChecked = false;
-            TCAD.IsChecked = false;
-            TPLN.IsChecked = false;
-            TSEK.IsChecked = false;
-            TCHF.IsChecked = false;
-            TCZK.IsChecked = false;
-            //foreach (UIElement toggle in Content.Children)
-            //{
-            //    if (toggle is ToggleButton)
-            //        toggle.IsChecked = True;
-            //}
+            foreach (UIElement toggle in Content.Children)
+            {
+                if ((toggle as ToggleButton) != null)
+                {
+                    (toggle as ToggleButton).IsChecked = false;
+                }
+            }
         }
 
         void Currency_Check()
         {
             try
             {
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("USD")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("USD")?.ToString() == "False")
                     TUSD.IsChecked = false;
                 else
                     TUSD.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("RUB")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("RUB")?.ToString() == "False")
                     TRUB.IsChecked = false;
                 else
                     TRUB.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("EUR")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("EUR")?.ToString() == "False")
                     TEUR.IsChecked = false;
                 else
                     TEUR.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("UAH")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("UAH")?.ToString() == "False")
                     TUAH.IsChecked = false;
                 else
                     TUAH.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("GBP")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("GBP")?.ToString() == "False")
                     TGBP.IsChecked = false;
                 else
                     TGBP.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("CNY")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("CNY")?.ToString() == "False")
                     TCNY.IsChecked = false;
                 else
                     TCNY.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("JPY")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("JPY")?.ToString() == "False")
                     TJPY.IsChecked = false;
                 else
                     TJPY.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("NOK")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("NOK")?.ToString() == "False")
                     TNOK.IsChecked = false;
                 else
                     TNOK.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("CAD")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("CAD")?.ToString() == "False")
                     TCAD.IsChecked = false;
                 else
                     TCAD.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("PLN")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("PLN")?.ToString() == "False")
                     TPLN.IsChecked = false;
                 else
                     TPLN.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("SEK")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("SEK")?.ToString() == "False")
                     TSEK.IsChecked = false;
                 else
                     TSEK.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("CHF")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("CHF")?.ToString() == "False")
                     TCHF.IsChecked = false;
                 else
                     TCHF.IsChecked = true;
-                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("CZK")?.ToString().ToLower() == "false")
+                if (Registry.CurrentUser.CreateSubKey(currency_path).GetValue("CZK")?.ToString() == "False")
                     TCZK.IsChecked = false;
                 else
                     TCZK.IsChecked = true;
-            } catch { MessageBox.Show("ды"); }
+            } catch { }
         }
         void Currency_Activate(string Currency)
         {

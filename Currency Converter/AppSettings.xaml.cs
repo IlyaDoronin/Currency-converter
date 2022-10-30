@@ -11,15 +11,19 @@ namespace Currency_Converter
     {
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
-        }
-        public AppSettings()
-        {
-            InitializeComponent();
             if (Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").GetValue("Currency Converter")?.ToString() != null)
                 AutoRun.IsChecked = true;
             else
                 AutoRun.IsChecked = false;
+
+            if (Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").GetValue("Theme")?.ToString() == "Dark")
+                Theme.IsChecked = true;
+            else
+                Theme.IsChecked = false;
+        }
+        public AppSettings()
+        {
+            InitializeComponent();
         }
 
          Cities city = new Cities();
@@ -39,16 +43,19 @@ namespace Currency_Converter
                     Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").SetValue("Currency Converter", path);
                 else
                     Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").DeleteValue("Currency Converter");
-            }
-            catch
-            {
-                MessageBox.Show("Что-то пошло не так", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            } catch { }
         }
 
         private void Theme_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                if (Theme.IsChecked == true)
+                    Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").SetValue("Theme", "Dark");
+                else
+                    Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").SetValue("Theme", "Light");
+            }
+            catch { }
         }
     }
 }

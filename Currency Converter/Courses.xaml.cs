@@ -10,13 +10,13 @@ namespace Currency_Converter
         public Courses()
         {
             InitializeComponent();
-            Date_City dc = new Date_City();
-            Date.Content = Date_City.Date;
-            City.Content = Date_City.City;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            Date_City dc = new Date_City();
+            Date.Content = Date_City.Date;
+            City.Content = Date_City.City;
             Parse p = new Parse("Орша");
             G0_L1.Content = Parse.usd_in;
             G0_L2.Content = Parse.Usd_Out();

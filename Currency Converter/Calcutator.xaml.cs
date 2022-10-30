@@ -11,6 +11,10 @@ namespace Currency_Converter
         public Calcutator()
         {
             InitializeComponent();
+        }
+
+        private void Page_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
             Date_City dc = new Date_City();
             Date.Content = Date_City.Date;
             City.Content = Date_City.City;
