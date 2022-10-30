@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -55,7 +56,8 @@ namespace Currency_Converter
 
         private void Close(object sender, RoutedEventArgs e)
         {
-            Close();
+            //Close();
+            Process.GetCurrentProcess().Kill();
         }
         private void Minimized(object sender, RoutedEventArgs e)
         {

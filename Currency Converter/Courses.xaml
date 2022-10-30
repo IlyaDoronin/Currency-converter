@@ -5,11 +5,33 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Currency_Converter"
       mc:Ignorable="d" 
-      d:DesignHeight="650" d:DesignWidth="550"
+      d:DesignHeight="900" d:DesignWidth="550"
       Title="Courses"
+      Style="{DynamicResource PageStyle}"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       TextElement.FontWeight="Regular">
+    
     <Page.Resources>
+        <Style x:Key="PageStyle" TargetType="Page">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <!--Триггер при открытие окна-->
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                Storyboard.TargetProperty="Opacity"
+                                From="0"
+                                To="1"
+                                Duration="0:0:0.3" />
+                                <!--Duration менять время анимации, From (от значения) To (до значения)-->
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        
         <Style x:Key="{x:Type Label}">
             <Setter Property="Label.HorizontalAlignment" Value="Center"/>
             <Setter Property="Label.VerticalAlignment" Value="Center"/>

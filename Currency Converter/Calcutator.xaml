@@ -6,15 +6,180 @@
       xmlns:local="clr-namespace:Currency_Converter"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="550"
-      Title="Calcutator"
+      Title="Calcutator" FontSize="20"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      TextElement.FontWeight="Regular">
+      TextElement.FontWeight="Regular"
+      Style="{DynamicResource PageStyle}">
+    
+    <Page.Resources>
+        <Style x:Key="PageStyle" TargetType="Page">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <!--Триггер при открытие окна-->
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                Storyboard.TargetProperty="Opacity"
+                                From="0"
+                                To="1"
+                                Duration="0:0:0.3" />
+                                <!--Duration менять время анимации, From (от значения) To (до значения)-->
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="{x:Type Label}">
+            <Setter Property="Label.VerticalAlignment" Value="Center"/>
+            <Setter Property="Label.HorizontalAlignment" Value="Left"/>
+        </Style>
+        
+        <Style x:Key="{x:Type materialDesign:ColorZone}">
+            <Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth2"/>
+            <Setter Property="materialDesign:ColorZone.CornerRadius" Value="5"/>
+        </Style>
+    </Page.Resources>
 
-    <Grid Background="Red"
-                      MaxWidth="900"
-                      MaxHeight="550">
-        <Label FontSize="50" Content="Куркуратор"/>
 
+    <Grid MaxWidth="900"
+          MaxHeight="550">
+
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Margin="0,-40,0,0"
+                                  Height="380" Width="300" 
+                                  VerticalAlignment="Top"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth4">
+            <UniformGrid Columns="1">
+                <Grid>
+                    <Label Content="BYN"
+                           Margin="20,0"/>
+                    <materialDesign:ColorZone Grid.Row="0"
+                                              Margin="50,0,0,0"
+                                              VerticalAlignment="Center"
+                                              Height="50" Width="170">
+                        <TextBox Margin="15,10,15,10"/>
+                    </materialDesign:ColorZone>
+                </Grid>
+                <Grid>
+                    <Label Content="USD"
+                           Margin="20,0"/>
+                    <materialDesign:ColorZone Grid.Row="0"
+                                              Margin="50,0,0,0"
+                                              VerticalAlignment="Center"
+                                              Height="50" Width="170">
+                        <TextBox Margin="15,10,15,10"/>
+                    </materialDesign:ColorZone>
+                </Grid>
+                <Grid>
+                    <Label Content="RUB"
+                           Margin="20,0"/>
+                    <materialDesign:ColorZone Grid.Row="0"
+                                              Margin="50,0,0,0"
+                                              VerticalAlignment="Center"
+                                              Height="50" Width="170">
+                        <TextBox Margin="15,10,15,10"/>
+                    </materialDesign:ColorZone>
+                </Grid>
+                <Grid>
+                    <Label Content="EUR"
+                           Margin="20,0"/>
+                    <materialDesign:ColorZone Grid.Row="0"
+                                              Margin="50,0,0,0"
+                                              VerticalAlignment="Center"
+                                              Height="50" Width="170">
+                        <TextBox Margin="15,10,15,10"/>
+                    </materialDesign:ColorZone>
+                </Grid>
+                <Grid>
+                    <Label Content="UAH"
+                           Margin="20,0"/>
+                    <materialDesign:ColorZone Grid.Row="0"
+                                              Margin="50,0,0,0"
+                                              VerticalAlignment="Center"
+                                              Height="50" Width="170">
+                        <TextBox Margin="15,10,15,10"/>
+                    </materialDesign:ColorZone>
+                </Grid>
+            </UniformGrid>
+        </materialDesign:ColorZone>
+
+            <materialDesign:ColorZone Grid.Row="0"
+                                  Height="170" Width="400" 
+                                  VerticalAlignment="Bottom"
+                                  Margin="0,0,0,20"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth4">
+            <Grid>
+                <materialDesign:ColorZone Grid.Row="0"
+                                          Margin="20,20,0,0"
+                                          VerticalAlignment="Top"
+                                          HorizontalAlignment="Left"
+                                          Height="50" Width="170">
+                    <ComboBox Width="140"
+                              HorizontalAlignment="Center" 
+                              VerticalAlignment="Center" SelectedIndex="1">
+                        <ComboBoxItem>USD</ComboBoxItem>
+                        <ComboBoxItem>BYN</ComboBoxItem>
+                        <ComboBoxItem>RUB</ComboBoxItem>
+                        <ComboBoxItem>EUR</ComboBoxItem>
+                        <ComboBoxItem>UAH</ComboBoxItem>
+                        <ComboBoxItem>GBP</ComboBoxItem>
+                        <ComboBoxItem>CNY</ComboBoxItem>
+                        <ComboBoxItem>JPY</ComboBoxItem>
+                        <ComboBoxItem>NOK</ComboBoxItem>
+                        <ComboBoxItem>CAD</ComboBoxItem>
+                        <ComboBoxItem>PLN</ComboBoxItem>
+                        <ComboBoxItem>SEK</ComboBoxItem>
+                        <ComboBoxItem>CHF</ComboBoxItem>
+                        <ComboBoxItem>CZK</ComboBoxItem>
+                    </ComboBox>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone Grid.Row="0"
+                                          Margin="20,0,0,20"
+                                          VerticalAlignment="Bottom"
+                                          HorizontalAlignment="Left"
+                                          Height="50" Width="170">
+                    <TextBox Margin="15,10,15,10"/>
+                </materialDesign:ColorZone>
+                
+
+                <materialDesign:ColorZone Grid.Row="0"
+                                          Margin="0,20,20,0"
+                                          VerticalAlignment="Top"
+                                          HorizontalAlignment="Right"
+                                          Height="50" Width="170">
+                    <ComboBox Width="140"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center" SelectedIndex="0">
+                        <ComboBoxItem>USD</ComboBoxItem>
+                        <ComboBoxItem>BYN</ComboBoxItem>
+                        <ComboBoxItem>RUB</ComboBoxItem>
+                        <ComboBoxItem>EUR</ComboBoxItem>
+                        <ComboBoxItem>UAH</ComboBoxItem>
+                        <ComboBoxItem>GBP</ComboBoxItem>
+                        <ComboBoxItem>CNY</ComboBoxItem>
+                        <ComboBoxItem>JPY</ComboBoxItem>
+                        <ComboBoxItem>NOK</ComboBoxItem>
+                        <ComboBoxItem>CAD</ComboBoxItem>
+                        <ComboBoxItem>PLN</ComboBoxItem>
+                        <ComboBoxItem>SEK</ComboBoxItem>
+                        <ComboBoxItem>CHF</ComboBoxItem>
+                        <ComboBoxItem>CZK</ComboBoxItem>
+                    </ComboBox>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone Grid.Row="0"
+                                          Margin="0,0,20,20"
+                                          VerticalAlignment="Bottom"
+                                          HorizontalAlignment="Right"
+                                          Height="50" Width="170">
+                    <TextBox Margin="15,10,15,10"/>
+                </materialDesign:ColorZone>
+            </Grid>
+        </materialDesign:ColorZone>
+
+<!--Нижние куски-->
         <Grid Height="50" VerticalAlignment="Bottom"
                   Margin="0,0,0,-50">
             <Grid.ColumnDefinitions>
@@ -22,24 +187,22 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <materialDesign:ColorZone HorizontalAlignment="Right" Margin="0,5,5,0"
-                                materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                                CornerRadius="5"
                                 Width="220" Height="40" Grid.Column="0">
                 <Label x:Name="City"
-                    Content="Минск"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    FontSize="20"/>
+                        Padding="0"
+                        Content="Минск"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontSize="20"/>
             </materialDesign:ColorZone>
             <materialDesign:ColorZone HorizontalAlignment="Left" Margin="5,5,0,0"
-                                materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                                CornerRadius="5"
                                 Width="220" Height="40" Grid.Column="1">
-                <Label x:Name="Date"
-                    Content="Дата"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    FontSize="20"/>
+                <Label x:Name="Date" 
+                        Padding="0"
+                        Content="Дата"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontSize="20"/>
             </materialDesign:ColorZone>
             
         </Grid>

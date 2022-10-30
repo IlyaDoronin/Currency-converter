@@ -1,35 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Currency_Converter
 {
-    /// <summary>
-    /// Логика взаимодействия для AppSettings.xaml
-    /// </summary>
     public partial class AppSettings : Page
     {
-        Settings Page_Settings = new Settings();
         public AppSettings()
         {
             InitializeComponent();
+            if (Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").GetValue("Currency Converter")?.ToString() != null)
+                AutoRun.IsChecked = true;
+            else
+                AutoRun.IsChecked = false;
+        }
+        Cities city = new Cities();
+
+        private void ColorZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            city.Show();
+            //MainWindow.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click(object sender,RoutedEventArgs e)
+            string path = "\"" + Assembly.GetExecutingAssembly().Location + "\"";
+
+        private void AutoRun_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow MW = new MainWindow();   
-           MW.Page_Loader.Navigate(MW.Page_Settings);
+            try
+            {
+                if (AutoRun.IsChecked == true)
+                    Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").SetValue("Currency Converter", path);
+                else
+                    Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").DeleteValue("Currency Converter");
+            }
+            catch
+            {
+                MessageBox.Show("Что-то пошло не так", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

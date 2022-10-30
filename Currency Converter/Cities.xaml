@@ -1,0 +1,569 @@
+﻿<Window x:Class="Currency_Converter.Cities"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Currency_Converter"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Background="Transparent"
+        Title="MainWindow" Height="855" Width="1200"
+        AllowsTransparency="True" WindowStyle="None"
+        WindowState="Maximized"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        <!--Style="{DynamicResource WindowStyle}"-->
+
+    <Window.Resources>
+        <Style x:Key="WindowStyle" TargetType="Window">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.4"
+                                To="1"
+                                Duration="0:0:0.25"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="{x:Type Label}">
+            <Setter Property="Label.HorizontalAlignment" Value="Center"/>
+            <Setter Property="Label.VerticalAlignment" Value="Center"/>
+            <Setter Property="Label.FontSize" Value="20"/>
+        </Style>
+
+        <Style x:Key="{x:Type materialDesign:ColorZone}">
+            <Setter Property="materialDesign:ColorZone.CornerRadius" Value="5"/>
+            <Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth2"/>
+            <Setter Property="materialDesign:ColorZone.Width" Value="160"/>
+            <Setter Property="materialDesign:ColorZone.Height" Value="30"/>
+            <Setter Property="materialDesign:ColorZone.Padding" Value="10,0,0,0"/>
+            <Setter Property="materialDesign:ColorZone.FontSize" Value="15"/>
+            <Setter Property="materialDesign:ColorZone.HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="materialDesign:ColorZone.VerticalContentAlignment" Value="Center"/>
+            <Setter Property="materialDesign:ColorZone.Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid>
+            <Grid Background="Black" Opacity="0.7"/>
+            <materialDesign:ColorZone Height="855" Width="1200"
+                                    HorizontalContentAlignment="Stretch"
+                                    VerticalContentAlignment="Stretch"
+                                    CornerRadius="15"
+                                    VerticalAlignment="Center"
+                                    Margin="0"
+                                    Padding="0"
+                                    Cursor="Arrow">
+                <UniformGrid Rows="1" VerticalAlignment="Center" Height="855">
+                    <Grid>
+                        <materialDesign:ColorZone Height="400" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,10,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Б"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Бобруйск"/>
+                                    <materialDesign:ColorZone Content="Барановичи"/>
+                                    <materialDesign:ColorZone Content="Борисов"/>
+                                    <materialDesign:ColorZone Content="Барань"/>
+                                    <materialDesign:ColorZone Content="Белоозерск"/>
+                                    <materialDesign:ColorZone Content="Береза"/>
+                                    <materialDesign:ColorZone Content="Березино"/>
+                                    <materialDesign:ColorZone Content="Березовка"/>
+                                    <materialDesign:ColorZone Content="Браслав"/>
+                                    <materialDesign:ColorZone Content="Буда-Кошелево"/>
+                                    <materialDesign:ColorZone Content="Быхов"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                        
+                        <materialDesign:ColorZone Height="245" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,430,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="В"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Верхнедвинск"/>
+                                    <materialDesign:ColorZone Content="Ветка"/>
+                                    <materialDesign:ColorZone Content="Вилейка"/>
+                                    <materialDesign:ColorZone Content="Волковыск"/>
+                                    <materialDesign:ColorZone Content="Воложин"/>
+                                    <materialDesign:ColorZone Content="Высокое"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="80" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,695,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Ш"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Шклов"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                    </Grid>
+                    <Grid>
+                        <materialDesign:ColorZone Height="175" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,10,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Г"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Ганцевичи"/>
+                                    <materialDesign:ColorZone Content="Глубокое"/>
+                                    <materialDesign:ColorZone Content="Горки"/>
+                                    <materialDesign:ColorZone Content="Городок"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                        
+                        <materialDesign:ColorZone Height="275" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,205,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Д"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Давид-Городок"/>
+                                    <materialDesign:ColorZone Content="Дзержинск"/>
+                                    <materialDesign:ColorZone Content="Добруш"/>
+                                    <materialDesign:ColorZone Content="Докшицы"/>
+                                    <materialDesign:ColorZone Content="Дрогичин"/>
+                                    <materialDesign:ColorZone Content="Дубровно"/>
+                                    <materialDesign:ColorZone Content="Дятлово"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="80" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,500,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Е"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Ельск"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="180" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,600,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Ж"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Жодино"/>
+                                    <materialDesign:ColorZone Content="Жабинка"/>
+                                    <materialDesign:ColorZone Content="Житковичи"/>
+                                    <materialDesign:ColorZone Content="Жлобин"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                    </Grid>
+                    
+                    <Grid>
+                        <materialDesign:ColorZone Height="80" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,10,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="З"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Заславль"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="145" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,110,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="И"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Иваново"/>
+                                    <materialDesign:ColorZone Content="Ивацевичи"/>
+                                    <materialDesign:ColorZone Content="Ивье"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="405" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,275,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="К"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Калинковичи"/>
+                                    <materialDesign:ColorZone Content="Каменец"/>
+                                    <materialDesign:ColorZone Content="Кировск"/>
+                                    <materialDesign:ColorZone Content="Клецк"/>
+                                    <materialDesign:ColorZone Content="Климовичи"/>
+                                    <materialDesign:ColorZone Content="Кличев"/>
+                                    <materialDesign:ColorZone Content="Кобрин"/>
+                                    <materialDesign:ColorZone Content="Копыль"/>
+                                    <materialDesign:ColorZone Content="Костюковичи"/>
+                                    <materialDesign:ColorZone Content="Кричев"/>
+                                    <materialDesign:ColorZone Content="Крупки"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="80" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,700,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Щ"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Щучин"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                    </Grid>
+                    <Grid>
+                        <materialDesign:ColorZone Height="245" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,10,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Л"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Лепель"/>
+                                    <materialDesign:ColorZone Content="Лида"/>
+                                    <materialDesign:ColorZone Content="Логойск"/>
+                                    <materialDesign:ColorZone Content="Лунинец"/>
+                                    <materialDesign:ColorZone Content="Любань"/>
+                                    <materialDesign:ColorZone Content="Ляховичи"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="340" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,275,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="М"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Мозырь"/>
+                                    <materialDesign:ColorZone Content="Малорита"/>
+                                    <materialDesign:ColorZone Content="Марьина Горка"/>
+                                    <materialDesign:ColorZone Content="Микашевичи"/>
+                                    <materialDesign:ColorZone Content="Миоры"/>
+                                    <materialDesign:ColorZone Content="Молодечно"/>
+                                    <materialDesign:ColorZone Content="Мосты"/>
+                                    <materialDesign:ColorZone Content="Мстиславль"/>
+                                    <materialDesign:ColorZone Content="Мядель"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="210" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,635,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Н"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Новополоцк"/>
+                                    <materialDesign:ColorZone Content="Наровля"/>
+                                    <materialDesign:ColorZone Content="Несвиж"/>
+                                    <materialDesign:ColorZone Content="Новогрудок"/>
+                                    <materialDesign:ColorZone Content="Новолукомль"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                    </Grid>
+                    <Grid>
+                        <materialDesign:ColorZone Height="145" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,10,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="О"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Орша"/>
+                                    <materialDesign:ColorZone Content="Осиповичи"/>
+                                    <materialDesign:ColorZone Content="Ошмяны"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                        
+                        <materialDesign:ColorZone Height="210" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,175,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="П"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Пинск"/>
+                                    <materialDesign:ColorZone Content="Полоцк"/>
+                                    <materialDesign:ColorZone Content="Петриков"/>
+                                    <materialDesign:ColorZone Content="Поставы"/>
+                                    <materialDesign:ColorZone Content="Пружаны"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="110" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,405,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Р"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Речица"/>
+                                    <materialDesign:ColorZone Content="Рогачев"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="110" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,535,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Т"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Толочин"/>
+                                    <materialDesign:ColorZone Content="Туров"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="80" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,665,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="У"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Узда"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="80" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,765,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Ф"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Фаниполь"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                    </Grid>
+                    <Grid>
+                        <materialDesign:ColorZone Height="470" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,10,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="С"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Светлогорск"/>
+                                    <materialDesign:ColorZone Content="Свислочь"/>
+                                    <materialDesign:ColorZone Content="Сенно"/>
+                                    <materialDesign:ColorZone Content="Скидель"/>
+                                    <materialDesign:ColorZone Content="Славгород"/>
+                                    <materialDesign:ColorZone Content="Слоним"/>
+                                    <materialDesign:ColorZone Content="Слуцк"/>
+                                    <materialDesign:ColorZone Content="Смолевичи"/>
+                                    <materialDesign:ColorZone Content="Сморгонь"/>
+                                    <materialDesign:ColorZone Content="Солигорск"/>
+                                    <materialDesign:ColorZone Content="Старые Дороги"/>
+                                    <materialDesign:ColorZone Content="Столбцы"/>
+                                    <materialDesign:ColorZone Content="Столин"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                        
+                        <materialDesign:ColorZone Height="80" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,500,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Х"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Хойники"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                        <materialDesign:ColorZone Height="210" Width="180"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                                                Cursor="Arrow" Margin="0,600,0,0" Padding="0"
+                                                CornerRadius="10">
+                            <Grid>
+                                <Label Content="Ч"
+                                    Panel.ZIndex="1"
+                                    VerticalAlignment="Top"
+                                    Margin="5"/>
+                                <UniformGrid Columns="1" Margin="0,40,0,5">
+                                    <materialDesign:ColorZone Content="Чаусы"/>
+                                    <materialDesign:ColorZone Content="Чашники"/>
+                                    <materialDesign:ColorZone Content="Червень"/>
+                                    <materialDesign:ColorZone Content="Чериков"/>
+                                    <materialDesign:ColorZone Content="Чечерск"/>
+                                </UniformGrid>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                    </Grid>
+                </UniformGrid>
+            </materialDesign:ColorZone>
+
+        </Grid>
+        <Button Background="Black"
+            Opacity="0.7"
+            Height="80" Width="80"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            BorderBrush="Black" Click="Button_Click">
+            <materialDesign:PackIcon Kind="Close"
+                                    Opacity="0.8"
+                                    Foreground="White"
+                                    Height="60"
+                                    Width="60"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+        </Button>
+    </Grid>
+</Window>
