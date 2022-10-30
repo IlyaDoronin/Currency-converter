@@ -6,6 +6,13 @@
         xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:local="clr-namespace:Currency_Converter"
         mc:Ignorable="d" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainForm" Height="750" Width="550"
         Background="{x:Null}" MinWidth="550"
         MinHeight="750" WindowStartupLocation="CenterScreen"
@@ -18,7 +25,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="0" Background="#C0FFE5"
+                        <Border CornerRadius="0" Background="#2ecc71"
                                 BorderThickness="0" Height="30" Width="30">
                             <ContentPresenter x:Name="contentPresenter"/>
                         </Border>
@@ -48,7 +55,7 @@
         </tb:TaskbarIcon>
         <Border CornerRadius="20" Background="White">
             <!--Триггер-->
-                <!--<Button.Style>
+            <!--<Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Margin" Value="100"/>
                         <Style.Triggers>
@@ -59,12 +66,12 @@
                     </Style>
                 </Button.Style>-->
         </Border>
-        
+
         <!--Верхняя панель-->
         <!--Кнопки-->
         <Border Margin="30,0,150,720"
                 Height="30"
-                Background="#C0FFE5"
+                Background="#2ecc71"
                 VerticalAlignment="Top">
         </Border>
         <Button BorderBrush="Black"
@@ -74,7 +81,7 @@
                 Margin="0,0,120,0"
                 Style="{StaticResource TabButton}">
             <Border BorderBrush="Black" BorderThickness="1,0,1,0">
-            <Label FontSize="14"
+                <Label FontSize="14"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center">⚙</Label>
             </Border>
@@ -144,7 +151,7 @@
                 HorizontalAlignment="Right">
             <Button.Template>
                 <ControlTemplate>
-                    <Border CornerRadius="0,20,0,0" Background="#C0FFE5">
+                    <Border CornerRadius="0,20,0,0" Background="#2ecc71">
                         <Grid  Panel.ZIndex="1"
                               VerticalAlignment="Bottom"
                               HorizontalAlignment="Left"
@@ -156,20 +163,21 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Border Background="#C0FFE5"
+        <Border Background="#2ecc71"
                 CornerRadius="20,0,0,0"
                 BorderThickness="0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Height="30" Width="30"
                 Margin="0,0,0,0"/>
+
         <!--Таблица-->
-        <Grid x:Name="Loader">
-            <Frame x:Name="Page_Loader" NavigationUIVisibility="Hidden"/>
+        <Grid x:FieldModifier="public" x:Name="Loader">
+            <Frame x:FieldModifier="public" x:Name="Page_Loader" NavigationUIVisibility="Hidden"/>
         </Grid>
         <!--Сюда загружаются все страницы-->
         <Grid Height="100" MaxWidth="1000" VerticalAlignment="Bottom" Background="Transparent">
-            
+
             <!--Нжний кусок-->
             <Grid.RowDefinitions >
                 <RowDefinition/>
@@ -189,6 +197,7 @@
                    HorizontalAlignment="Center"
                    FontSize="18"></Label>
             <Button x:Name="Course"
+                    Height="50"
                     Grid.Row="1" Grid.Column="0"
                     MaxWidth="500"
                     Click="Course_Click">
@@ -197,7 +206,7 @@
                         <Border CornerRadius="20,0,0,20"
                                 BorderThickness="0,0,1,0"
                                 BorderBrush="Black"
-                                Background="#C0FFE5">
+                                Background="#2ecc71">
                             <Label
                                 Foreground="Black"
                                 VerticalAlignment="Center"
@@ -209,16 +218,18 @@
                 </Button.Template>
             </Button>
             <Button x:Name="Calcutator"
+                    Height="50"
                     Grid.Row="1" Margin="0"
                     Grid.Column="1"
                     MaxWidth="500"
                     Click="Calcutator_Click">
                 <Button.Template>
                     <ControlTemplate>
-                        <Border CornerRadius="0,20,20,0"
+                        <Border 
+                                CornerRadius="0,20,20,0"
                                 BorderThickness="1,0,0,0"
                                 BorderBrush="Black"
-                                Background="#C0FFE5">
+                                Background="#2ecc71">
                             <Label
                                 Foreground="Black"
                                 VerticalAlignment="Center"
@@ -253,8 +264,8 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>-->
-    
-    
+
+
 <!--
     
     Гардиент

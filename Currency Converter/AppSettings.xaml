@@ -1,0 +1,81 @@
+﻿<Page x:Class="Currency_Converter.AppSettings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Currency_Converter"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="550"
+      Title="Settings" FontSize="15">
+
+    <Grid MaxWidth="900" 
+          MaxHeight="550"
+          Margin="100">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Выбор города"
+                   Background="Red"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 Grid.Column="1"
+                                 Grid.Row="0"/>
+            <Label Content="Выбор показываемых валют"
+                   Background="Red"
+                   Grid.Column="0"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 Grid.Column="1"
+                                 Grid.Row="1"/>
+            <Label Content="Тёмная тема"
+                   Grid.Column="0"
+                   Grid.Row="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 Grid.Column="1"
+                                 Grid.Row="2"/>
+            <Label Content="Автозапуск приложения в трее"
+                   Grid.Column="0"
+                   Grid.Row="3"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 Grid.Column="1"
+                                 Grid.Row="3"/>
+            <Label Content="Изменить иконку сворачивания в трей"
+                   Grid.Column="0"
+                   Grid.Row="4"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 Grid.Column="1"
+                                 Grid.Row="4"/>
+            <Label Content="Сброс настроек"
+                   Background="Red"
+                   Grid.Column="0"
+                   Grid.Row="5"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 IsEnabled="False"
+                                 Grid.Column="1"
+                                 Grid.Row="5"/>
+        </Grid>
+    </Grid>
+</Page>

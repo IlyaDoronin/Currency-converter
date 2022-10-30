@@ -8,18 +8,39 @@
       d:DesignHeight="900" d:DesignWidth="550"
       Title="Settings" FontSize="15">
 
-    <Grid MaxWidth="900" 
+    <Grid MaxWidth="900"  x:Name="loll"
           MaxHeight="550"
           Margin="100">
-        <Label Content="Настройки приложения"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Top"
-               Margin="0,-40,0,0"
-               FontSize="30"/>
-        <Grid>
+        <Grid VerticalAlignment="Top" Margin="0,-40,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="85*"/>
-                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Padding="0"
+                    Grid.Column="0"
+                    Background="#2ecc71"
+                   BorderBrush="#2ecc71">
+                <Label Content="Настройки валют"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="13"/>
+            </Button>
+            <Button Click="Button_Click"
+                    Grid.Column="1"
+                    Padding="0"
+                    Background="#2ecc71"
+                   BorderBrush="#2ecc71">
+                <Label Content="Настройки приложения"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="13"/>
+            </Button>
+        </Grid>
+
+        <Grid Margin="0,0,0,50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="70*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -28,59 +49,143 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <!--<Label Content="Выбор города"
-                   Background="Red"
-                   Grid.Column="0"
+            <ToggleButton x:Name="TUSD"
+                          Grid.Row="0" Background="#2ecc71"/>
+            <ToggleButton x:Name="TRUB"
+                          Grid.Row="1" Background="#2ecc71"/>
+            <ToggleButton x:Name="TEUR"
+                          Grid.Row="2" Background="#2ecc71"/>
+            <ToggleButton x:Name="TUAH"
+                          Grid.Row="3" Background="#2ecc71"/>
+            <ToggleButton x:Name="TGBP"
+                          Grid.Row="4" Background="#2ecc71"/>
+            <ToggleButton x:Name="TCNY"
+                          Grid.Row="5" Background="#2ecc71"/>
+            <ToggleButton x:Name="TJPY"
+                          Grid.Row="6" Background="#2ecc71"/>
+            <ToggleButton x:Name="TNOK"
+                          Grid.Row="7" Background="#2ecc71"/>
+            <ToggleButton x:Name="TCAD"
+                          Grid.Row="8" Background="#2ecc71"/>
+            <ToggleButton x:Name="TPLN"
+                          Grid.Row="9" Background="#2ecc71"/>
+            <ToggleButton x:Name="TSEK"
+                          Grid.Row="10" Background="#2ecc71"/>
+            <ToggleButton x:Name="TCHF"
+                          Grid.Row="11" Background="#2ecc71"/>
+            <ToggleButton x:Name="TCZK"
+                          Grid.Row="12" Background="#2ecc71"/>
+            <Label Content="Доллар США(USD)" 
+                   Grid.Column="1"
                    Grid.Row="0"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left"/>
-            <local:TuggleButton  Height="30"
-                                 Grid.Column="1"
-                                 Grid.Row="0"/>
-            <Label Content="Выбор показываемых валют"
-                   Background="Red"
-                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Российский рубль(RUB)" 
+                   Grid.Column="1"
                    Grid.Row="1"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left"/>
-            <local:TuggleButton  Height="30"
-                                 Grid.Column="1"
-                                 Grid.Row="1"/>
-            <Label Content="Тёмная тема"
-                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Евро(EUR)" 
+                   Grid.Column="1"
                    Grid.Row="2"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left"/>
-            <local:TuggleButton  Height="30"
-                                 Grid.Column="1"
-                                 Grid.Row="2"/>
-            <Label Content="Автозапуск приложения в трее"
-                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Украинская гривна(UAH)" 
+                   Grid.Column="1"
                    Grid.Row="3"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left"/>
-            <local:TuggleButton  Height="30"
-                                 Grid.Column="1"
-                                 Grid.Row="3"/>
-            <Label Content="Изменить иконку сворачивания в трей"
-                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Фунт стерлингов(GBP)" 
+                   Grid.Column="1"
                    Grid.Row="4"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left"/>
-            <local:TuggleButton  Height="30"
-                                 Grid.Column="1"
-                                 Grid.Row="4"/>
-            <Label Content="Сброс настроек"
-                   Background="Red"
-                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Китайский юань(CNY)" 
+                   Grid.Column="1"
                    Grid.Row="5"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left"/>-->
-            <local:TuggleButton  Height="30"
-                                 IsEnabled="False"
-                                 Grid.Column="1"
-                                 Grid.Row="5"/>
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Японская иена(JPY)" 
+                   Grid.Column="1"
+                   Grid.Row="6"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Норвежская крона(NOK)" 
+                   Grid.Column="1"
+                   Grid.Row="7"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Канадский доллар(CAD)" 
+                   Grid.Column="1"
+                   Grid.Row="8"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Польский злотый(PLN)" 
+                   Grid.Column="1"
+                   Grid.Row="9"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Шведская крона(SEK)" 
+                   Grid.Column="1"
+                   Grid.Row="10"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Швейцарский франк(CHF)" 
+                   Grid.Column="1"
+                   Grid.Row="11"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+            <Label Content="Чешская крона(CZK)" 
+                   Grid.Column="1"
+                   Grid.Row="12"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Padding="20,0,0,0"/>
+        </Grid>
+
+        <Grid VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Padding="0"
+                    Grid.Column="0"
+                    Background="#2ecc71"
+                   BorderBrush="#2ecc71" Click="Button_Click_2">
+                <Label Content="Сбросить все"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="17"/>
+            </Button>
+            <Button Grid.Column="1"
+                    Padding="0"
+                    Background="#2ecc71"
+                   BorderBrush="#2ecc71" Click="Button_Click_1">
+                <Label Content="Показать все"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="17"/>
+            </Button>
         </Grid>
     </Grid>
 </Page>

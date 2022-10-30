@@ -13,6 +13,7 @@ namespace Currency_Converter
         Courses Page_Cources = new Courses();
         Settings Page_Settings = new Settings();
         Calcutator Page_Calcutator = new Calcutator();
+        public static AppSettings Page_AppSettings = new AppSettings();
         public MainWindow()
         {
             InitializeComponent();
