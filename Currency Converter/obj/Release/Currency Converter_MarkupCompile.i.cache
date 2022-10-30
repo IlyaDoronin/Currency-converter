@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_30\Currency Converter\obj\Release\
+D:\Docs\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_31\Currency Converter\obj\Release\
 Currency_Converter
 none
 false
 TRACE
-D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_30\Currency Converter\App.xaml
+D:\Docs\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_31\Currency Converter\App.xaml
 6-1061478627
 
-16324722618
-171462847537
+161641888473
+17758660879
 AppSettings.xaml;Calcutator.xaml;Cities.xaml;Courses.xaml;MainWindow.xaml;Settings.xaml;
 resources\splashscreen.png
-True
+False
 
