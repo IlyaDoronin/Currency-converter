@@ -27,10 +27,11 @@ namespace Currency_Converter
             InitializeComponent();
         }
 
+        public int siss;
         void Button_Click(object sender, RoutedEventArgs e)
         {
-            //MainWindow MW = new MainWindow();
-            //MainWindow.Page_Loader.Navigate(Page_AppSettings);
+            MainWindow MW = new MainWindow();
+            MW.Page_Loader.Navigate(MW.Page_AppSettings);
         }
 
         void Button_Click_1(object sender, RoutedEventArgs e)
@@ -65,7 +66,6 @@ namespace Currency_Converter
             TSEK.IsChecked = false;
             TCHF.IsChecked = false;
             TCZK.IsChecked = false;
-     
             //foreach (ToggleButton toggle in Settings.)
             //{
             //    if (toggle.IsChecked == true)

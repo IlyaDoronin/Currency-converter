@@ -20,9 +20,16 @@ namespace Currency_Converter
     /// </summary>
     public partial class AppSettings : Page
     {
+        Settings Page_Settings = new Settings();
         public AppSettings()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender,RoutedEventArgs e)
+        {
+            MainWindow MW = new MainWindow();   
+           MW.Page_Loader.Navigate(MW.Page_Settings);
         }
     }
 }

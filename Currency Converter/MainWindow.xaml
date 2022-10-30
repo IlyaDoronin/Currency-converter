@@ -6,6 +6,7 @@
         xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:local="clr-namespace:Currency_Converter"
         mc:Ignorable="d" 
+        AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -16,7 +17,6 @@
         Title="MainForm" Height="750" Width="550"
         Background="{x:Null}" MinWidth="550"
         MinHeight="750" WindowStartupLocation="CenterScreen"
-        AllowsTransparency="True" WindowStyle="None"
         Visibility="Visible" Activated="MainForm_Activated"
         KeyDown="MainForm_KeyDown">
     <Window.Resources>
@@ -47,38 +47,43 @@
                     <MenuItem Header="Курсы валют" Click="Course_Click" />
                     <MenuItem Header="Калькулятор валют" Click="Calcutator_Click" />
                     <Separator />
-                    <MenuItem Header="Настройки" Click="Settings" />
+                    <MenuItem Header="Настройки валют" Click="Settings" />
+                    <MenuItem Header="Настройки приложения" Click="AppSettings" />
                     <Separator />
                     <MenuItem Header="Выход"  Click="Close"/>
                 </ContextMenu>
             </tb:TaskbarIcon.ContextMenu>
         </tb:TaskbarIcon>
-        <Border CornerRadius="20" Background="White">
-            <!--Триггер-->
-            <!--<Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Margin" Value="100"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Margin" Value="10"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>-->
-        </Border>
+        <Border CornerRadius="20" Background="White"/>
 
         <!--Верхняя панель-->
         <!--Кнопки-->
-        <Border Margin="30,0,150,720"
+        <Border Margin="30,0,120,720"
                 Height="30"
                 Background="#2ecc71"
                 VerticalAlignment="Top">
         </Border>
         <Button BorderBrush="Black"
+                Cursor="Hand"
                 Grid.Column="1" Click="Settings"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
                 Margin="0,0,120,0"
+                Style="{StaticResource TabButton}">
+            <Border BorderBrush="Black" BorderThickness="1,0,0,0">
+                <Label FontSize="14"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                    <materialDesign:PackIcon Kind="Money" Height="20" Width="20"/>
+                </Label>
+            </Border>
+        </Button>
+        <Button BorderBrush="Black"
+                Cursor="Hand"
+                Grid.Column="1" Click="AppSettings"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0,0,90,0"
                 Style="{StaticResource TabButton}">
             <Border BorderBrush="Black" BorderThickness="1,0,1,0">
                 <Label FontSize="14"
@@ -87,10 +92,11 @@
             </Border>
         </Button>
         <Button BorderThickness="0"
+                Cursor="Hand"
                 Grid.Column="2" Click="TrayMinimized"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
-                Margin="0,0,90,0"
+                Margin="0,0,60,0"
                 Style="{StaticResource TabButton}">
             <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                 <Grid Panel.ZIndex="1"
@@ -106,24 +112,9 @@
             </Border>
         </Button>
         <Button BorderThickness="0"
+                Cursor="Hand"
                 Grid.Column="3"
                 Click="Minimized"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right"
-                Margin="0,0,60,0"
-                Style="{StaticResource TabButton}">
-            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Grid Panel.ZIndex="1"
-                      VerticalAlignment="Top"
-                      HorizontalAlignment="Left"
-                      Height="30" Width="30">
-                    <Line X1="8" Y1="15" X2="22" Y2="15" Stroke="Black"/>
-                </Grid>
-            </Border>
-        </Button>
-        <Button BorderThickness="0"
-                Grid.Column="4"
-                Click="FullScreen"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
                 Margin="0,0,30,0"
@@ -133,14 +124,7 @@
                       VerticalAlignment="Top"
                       HorizontalAlignment="Left"
                       Height="30" Width="30">
-                    <Line X1="10" Y1="8" X2="22" Y2="8" Stroke="Black"/>
-                    <Line X1="22" Y1="8" X2="22" Y2="20" Stroke="Black"/>
-                    <Line X1="22" Y1="20" X2="18" Y2="20" Stroke="Black"/>
-                    <Line X1="10" Y1="8" X2="10" Y2="12" Stroke="Black"/>
-                    <Line X1="8" Y1="12" X2="18" Y2="12" Stroke="Black"/>
-                    <Line X1="18" Y1="12" X2="18" Y2="22" Stroke="Black"/>
-                    <Line X1="18" Y1="22" X2="8" Y2="22" Stroke="Black"/>
-                    <Line X1="8" Y1="22" X2="8" Y2="12" Stroke="Black"/>
+                    <Line X1="8" Y1="15" X2="22" Y2="15" Stroke="Black"/>
                 </Grid>
             </Border>
         </Button>

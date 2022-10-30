@@ -6,37 +6,23 @@
       xmlns:local="clr-namespace:Currency_Converter"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="550"
-      Title="Settings" FontSize="15">
+      Title="Settings" FontSize="15"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.FontWeight="Regular">
 
     <Grid MaxWidth="900"  x:Name="loll"
           MaxHeight="550"
           Margin="100">
-        <Grid VerticalAlignment="Top" Margin="0,-40,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Padding="0"
-                    Grid.Column="0"
-                    Background="#2ecc71"
-                   BorderBrush="#2ecc71">
-                <Label Content="Настройки валют"
+        <materialDesign:ColorZone Grid.Row="0"
+                                  Height="50" Width="300" 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                  CornerRadius="5"
+                                  Margin="0,-50,0,0">
+            <Label VerticalAlignment="Center"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="13"/>
-            </Button>
-            <Button Click="Button_Click"
-                    Grid.Column="1"
-                    Padding="0"
-                    Background="#2ecc71"
-                   BorderBrush="#2ecc71">
-                <Label Content="Настройки приложения"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="13"/>
-            </Button>
-        </Grid>
-
+                   FontSize="30"
+                   Content="Настройки валют"/>
+        </materialDesign:ColorZone> 
         <Grid Margin="0,0,0,50">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="30*"/>

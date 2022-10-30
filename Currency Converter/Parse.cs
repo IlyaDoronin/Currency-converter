@@ -13,10 +13,10 @@ namespace Currency_Converter
         //public Parse() : this("Минск") { }
         //public Parse(string City) { this.City = City; }
 
-        public string link = "https://belarusbank.by/api/kursExchange?city=Минск";//Главная ссылка для парсинга
+        public static string link = "https://belarusbank.by/api/kursExchange?city=Минск";//Главная ссылка для парсинга
         public static string USD_IN = "200", USD_OUT;// in - покупка валюты банком out - продажа валюты банком
-        public string BYN_IN, BYN_OUT;
-        public string RUB_IN, RUB_OUT;
+        public static string BYN_IN, BYN_OUT;
+        public static string RUB_IN, RUB_OUT;
         public void Pars(string shedule_in, string shedule_out) //Парсинг информации
         {
             //Task.Run(() =>

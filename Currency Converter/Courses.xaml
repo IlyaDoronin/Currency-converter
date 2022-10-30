@@ -8,7 +8,7 @@
       d:DesignHeight="500" d:DesignWidth="550"
       Title="Courses">
 
-    <Grid MaxHeight="550"
+    <Grid MaxHeight="550" Background="White"
                       MaxWidth="900">
         <UniformGrid x:Name="Table"
                       Rows="11"
@@ -42,6 +42,11 @@
                        FontSize="20">USD</Label>
                 </Border>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                    <Label x:Name="G0_L1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Content=""></Label>
                 </Border>
                 <Border BorderBrush="Black">
                     <Label x:Name="G0_L2"
@@ -66,6 +71,10 @@
                        FontSize="20"></Label>
                 </Border>
                 <Border>
+                    <Label x:Name="G1_L2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
                 </Border>
             </UniformGrid>
             <UniformGrid x:Name="Grid_2" Columns="3"
@@ -236,6 +245,69 @@
                        FontSize="20"></Label>
                 </Border>
             </UniformGrid>
+        <UniformGrid x:Name="Grid_10" Columns="3" Visibility="Collapsed"
+                  Height="50" VerticalAlignment="Top" >
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                <Label x:Name="G10_L0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">JPY</Label>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                <Label x:Name="G10_L1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+            </Border>
+            <Border>
+                <Label x:Name="G10_L2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+            </Border>
         </UniformGrid>
+            <UniformGrid x:Name="Grid_11" Columns="3" Visibility="Collapsed"
+                  Height="50" VerticalAlignment="Top" >
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                <Label x:Name="G11_L0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">JPY</Label>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                <Label x:Name="G11_L1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+            </Border>
+            <Border>
+                <Label x:Name="G11_L2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+            </Border>
+        </UniformGrid>
+        <UniformGrid x:Name="Grid_12" Columns="3" Visibility="Collapsed"
+                  Height="50" VerticalAlignment="Top" >
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                <Label x:Name="G12_L0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">JPY</Label>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                <Label x:Name="G12_L1"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+            </Border>
+            <Border>
+                <Label x:Name="G12_L2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"></Label>
+            </Border>
+            </UniformGrid>
+       </UniformGrid>
     </Grid>
 </Page>

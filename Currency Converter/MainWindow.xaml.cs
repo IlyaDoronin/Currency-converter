@@ -10,10 +10,11 @@ namespace Currency_Converter
 {
     public partial class MainWindow : Window
     {
+        //Создание экземпляров классов
         Courses Page_Cources = new Courses();
-        Settings Page_Settings = new Settings();
         Calcutator Page_Calcutator = new Calcutator();
-        public static AppSettings Page_AppSettings = new AppSettings();
+        public Settings Page_Settings = new Settings();
+        public AppSettings Page_AppSettings = new AppSettings();
         public MainWindow()
         {
             InitializeComponent();
@@ -21,18 +22,18 @@ namespace Currency_Converter
         }
         void date()
         {
-            Task.Factory.StartNew(() =>
-            {
+            //Task.Factory.StartNew(() =>
+            //{
                 try
                 {
-                    while (true)
-                    {
+                    //while (true)
+                    //{
                         Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
                         Task.Delay(60000);
                         GC.Collect();
-                    }
+                //    }
                 } catch { }
-            });
+            //});
         }
         void TrayOff()
         {
@@ -44,7 +45,6 @@ namespace Currency_Converter
         {
             City.Content = "Минск"; //Реестр
             date();
-            Parse qq = new Parse();
 
         }
         private void DragForm(object sender, MouseButtonEventArgs e)
@@ -57,17 +57,6 @@ namespace Currency_Converter
         private void Close(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-        private void FullScreen(object sender, RoutedEventArgs e)
-        {
-            if (MainForm.WindowState == WindowState.Maximized)
-            {
-                MainForm.WindowState = WindowState.Normal;
-            }
-            else
-            {
-                MainForm.WindowState = WindowState.Maximized;
-            }
         }
         private void Minimized(object sender, RoutedEventArgs e)
         {
@@ -103,6 +92,12 @@ namespace Currency_Converter
         {
             TrayOff();
             Page_Loader.Navigate(Page_Calcutator);
+        }
+
+        private void AppSettings(object sender, RoutedEventArgs e)
+        {
+            TrayOff();
+            Page_Loader.Navigate(Page_AppSettings);
         }
     }
 }
