@@ -47,7 +47,7 @@
             </tb:TaskbarIcon.ContextMenu>
         </tb:TaskbarIcon>
         <Border CornerRadius="20" Background="White">
-                <!--Триггер-->
+            <!--Триггер-->
                 <!--<Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Margin" Value="100"/>
@@ -196,12 +196,6 @@
                        FontSize="20">USD</Label>
                     </Border>
                 <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                    <Label x:Name="G0_L1"
-                       x:FieldModifier="public"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"
-                       Content="{Binding Path=USD_IN}"></Label>
                 </Border>
                 <Border BorderBrush="Black">
                 <Label x:Name="G0_L2"
@@ -226,10 +220,6 @@
                        FontSize="20"></Label>
                     </Border>
                 <Border>
-                    <Label x:Name="G1_L2"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    FontSize="20"></Label>
                 </Border>
             </UniformGrid>
             <UniformGrid x:Name="Grid_2" Columns="3"
@@ -467,8 +457,7 @@
 </Window>
 
 
-<!--
-    
+<!--    
     Изменение цвета кнопки при наведении
     
     <Button Height="25" Width="25">
