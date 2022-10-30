@@ -93,7 +93,6 @@ namespace Currency_Converter
         {
             TrayOff();
             Table.Visibility = Visibility.Visible;
-            G0_L1.Content = Parse.USD_IN;
         }
         void Calcutater_Click(object sender, RoutedEventArgs e)
         {
