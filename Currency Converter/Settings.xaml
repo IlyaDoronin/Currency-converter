@@ -11,6 +11,11 @@
     <Grid MaxWidth="900" 
           MaxHeight="550"
           Margin="100">
+        <Label Content="Настройки приложения"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"
+               Margin="0,-40,0,0"
+               FontSize="30"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="85*"/>
@@ -23,16 +28,59 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label Content="Включить настройки по умолчанию"
+            <!--<Label Content="Выбор города"
+                   Background="Red"
                    Grid.Column="0"
-                   Grid.Row="6"
+                   Grid.Row="0"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Left"/>
-            <local:TuggleButton  Height="20"
+            <local:TuggleButton  Height="30"
                                  Grid.Column="1"
-                                 Grid.Row="6"/>
+                                 Grid.Row="0"/>
+            <Label Content="Выбор показываемых валют"
+                   Background="Red"
+                   Grid.Column="0"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 Grid.Column="1"
+                                 Grid.Row="1"/>
+            <Label Content="Тёмная тема"
+                   Grid.Column="0"
+                   Grid.Row="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 Grid.Column="1"
+                                 Grid.Row="2"/>
+            <Label Content="Автозапуск приложения в трее"
+                   Grid.Column="0"
+                   Grid.Row="3"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 Grid.Column="1"
+                                 Grid.Row="3"/>
+            <Label Content="Изменить иконку сворачивания в трей"
+                   Grid.Column="0"
+                   Grid.Row="4"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+            <local:TuggleButton  Height="30"
+                                 Grid.Column="1"
+                                 Grid.Row="4"/>
+            <Label Content="Сброс настроек"
+                   Background="Red"
+                   Grid.Column="0"
+                   Grid.Row="5"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>-->
+            <local:TuggleButton  Height="30"
+                                 IsEnabled="False"
+                                 Grid.Column="1"
+                                 Grid.Row="5"/>
         </Grid>
     </Grid>
 </Page>
