@@ -16,16 +16,18 @@ namespace Currency_Converter
         }
         void date()
         {
-            try
+            Task.Factory.StartNew(() =>
             {
-                //while (true)
-                //{
-                    //Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
-                      Date.Content= (DateTime.Now.Date).ToString("dd.MM.yyyy");
-                //    Task.Delay(60000);
-                //    GC.Collect();
-                //}
-            } catch { }
+                try
+                {
+                    while (true)
+                    {
+                        Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
+                        Task.Delay(60000);
+                        GC.Collect();
+                    }
+                } catch { }
+            });
         }
         void TrayOff()
         {

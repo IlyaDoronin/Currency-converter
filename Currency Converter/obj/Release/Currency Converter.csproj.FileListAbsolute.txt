@@ -132,7 +132,6 @@ D:\Документы\Develop\Серьёзные проекты\Калькуля
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_2\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.xml
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_2\Currency Converter\obj\Release\MainWindow.g.cs
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_2\Currency Converter\obj\Release\App.g.cs
-D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_2\Currency Converter\obj\Release\GeneratedInternalTypeHelper.g.cs
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_2\Currency Converter\obj\Release\Currency Converter_MarkupCompile.cache
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_2\Currency Converter\obj\Release\Currency Converter_MarkupCompile.lref
 D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter_2\Currency Converter\obj\Release\MainWindow.baml

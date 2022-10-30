@@ -87,6 +87,7 @@
                 Style="{StaticResource TabButton}">
             <Border BorderBrush="Black" BorderThickness="0,0,1,0">
                 <Grid Panel.ZIndex="1"
+                      Background="Red"
                       VerticalAlignment="Top"
                       HorizontalAlignment="Left"
                       Height="30" Width="30">
@@ -461,7 +462,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="City" Content="Город"
+            <Label x:Name="City" Content="{Binding Path=USD}"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="18"></Label>
