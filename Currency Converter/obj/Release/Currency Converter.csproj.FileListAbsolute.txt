@@ -1,7 +1,6 @@
 C:\Users\ryletd\Desktop\Currency Converter\Currency Converter\bin\Release\Currency Converter.exe.config
 C:\Users\ryletd\Desktop\Currency Converter\Currency Converter\bin\Release\Currency Converter.exe
 C:\Users\ryletd\Desktop\Currency Converter\Currency Converter\bin\Release\Currency Converter.pdb
-C:\Users\ryletd\Desktop\Currency Converter\Currency Converter\obj\Release\Currency Converter.csprojAssemblyReference.cache
 C:\Users\ryletd\Desktop\Currency Converter\Currency Converter\obj\Release\MainWindow.g.cs
 C:\Users\ryletd\Desktop\Currency Converter\Currency Converter\obj\Release\App.g.cs
 C:\Users\ryletd\Desktop\Currency Converter\Currency Converter\obj\Release\Currency Converter_MarkupCompile.cache
@@ -37,3 +36,53 @@ C:\Users\ryletd\Desktop\Currency Convertersd\Currency Converter\obj\Release\Curr
 C:\Users\ryletd\Desktop\Currency Convertersd\Currency Converter\obj\Release\Currency Converter.csproj.CoreCompileInputs.cache
 C:\Users\ryletd\Desktop\Currency Convertersd\Currency Converter\obj\Release\Currency Converter.exe
 C:\Users\ryletd\Desktop\Currency Convertersd\Currency Converter\obj\Release\Currency Converter.pdb
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\bin\Release\Currency Converter.exe.config
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\bin\Release\Currency Converter.exe
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\bin\Release\Currency Converter.pdb
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\Currency Converter.csprojAssemblyReference.cache
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\MainWindow.baml
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\MainWindow.g.cs
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\App.g.cs
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\Currency Converter_MarkupCompile.cache
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\Currency Converter.g.resources
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\Currency_Converter.Properties.Resources.resources
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\Currency Converter.csproj.GenerateResource.cache
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\Currency Converter.csproj.CoreCompileInputs.cache
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\Currency Converter.exe
+C:\Users\rylet\OneDrive\Рабочий стол\Currency Converter\Currency Converter\obj\Release\Currency Converter.pdb
+C:\Users\ryletd\Desktop\Currency Converter\Currency Converter\obj\Release\Currency Converter.csprojAssemblyReference.cache
+C:\Stud\Курсовая\Currency Converter\Currency Converter\bin\Release\Currency Converter.exe.config
+C:\Stud\Курсовая\Currency Converter\Currency Converter\bin\Release\Currency Converter.exe
+C:\Stud\Курсовая\Currency Converter\Currency Converter\bin\Release\Currency Converter.pdb
+C:\Stud\Курсовая\Currency Converter\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.dll
+C:\Stud\Курсовая\Currency Converter\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.pdb
+C:\Stud\Курсовая\Currency Converter\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.xml
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\MainWindow.baml
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\MainWindow.g.cs
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\App.g.cs
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\Currency Converter_MarkupCompile.cache
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\Currency Converter.g.resources
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\Currency_Converter.Properties.Resources.resources
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\Currency Converter.csproj.GenerateResource.cache
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\Currency Converter.csproj.CoreCompileInputs.cache
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\Currency Converter.csproj.CopyComplete
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\Currency Converter.exe
+C:\Stud\Курсовая\Currency Converter\Currency Converter\obj\Release\Currency Converter.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\bin\Release\Currency Converter.exe
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.dll
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\bin\Release\Currency Converter.exe.config
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\bin\Release\Currency Converter.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\bin\Release\Hardcodet.Wpf.TaskbarNotification.xml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\MainWindow.baml
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\MainWindow.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\App.g.cs
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\Currency Converter_MarkupCompile.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\Currency Converter.g.resources
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\Currency_Converter.Properties.Resources.resources
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\Currency Converter.csproj.GenerateResource.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\Currency Converter.csproj.CoreCompileInputs.cache
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\Currency Converter.csproj.CopyComplete
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\Currency Converter.exe
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\Currency Converter.pdb
+D:\Документы\Develop\Серьёзные проекты\Калькулятр валют\Currency Converter\Currency Converter\obj\Release\Currency Converter.csprojAssemblyReference.cache
