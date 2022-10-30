@@ -1,10 +1,7 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Net;
+﻿using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace Currency_Converter
 {
@@ -23,7 +20,7 @@ namespace Currency_Converter
             Link = $"https://belarusbank.by/api/kursExchange?city={town}";
             content = GetContent();
             City_Update(town);
-            Update();
+            //Update();
         }
         public static string city
         {

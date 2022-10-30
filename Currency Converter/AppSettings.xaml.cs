@@ -3,10 +3,6 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using MainWindow;
-using System.Windows.Media;
-using System.Threading.Tasks;
-using System;
 
 namespace Currency_Converter
 {
@@ -14,13 +10,15 @@ namespace Currency_Converter
     {
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            MainGrid.Visibility = Visibility.Visible;
+            About.Visibility = Visibility.Collapsed;
         }
         Cities city;
         public AppSettings()
         {
-            Reg();
             city = new Cities();
             InitializeComponent();
+            Reg();
         }
 
         private void ColorZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -37,13 +35,6 @@ namespace Currency_Converter
                 else
                     AutoRun.IsChecked = false;
             } catch { }
-            try
-            {
-                if (Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").GetValue("Theme")?.ToString() == "Dark")
-                    Theme.IsChecked = true;
-                else
-                    Theme.IsChecked = false;
-            } catch { }
         }
 
             string path = "\"" + Assembly.GetExecutingAssembly().Location + "\"";
@@ -59,6 +50,7 @@ namespace Currency_Converter
             } catch { }
         }
 
+
         private void Theme_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -66,7 +58,6 @@ namespace Currency_Converter
                 if (Theme.IsChecked == true)
                 {
                     Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").SetValue("Theme", "Dark");
-                    //MainWindow.MainForm = new SolidColorBrush(Color.FromRgb(50, 50, 50));
                 }
                 else
                 {
@@ -74,6 +65,11 @@ namespace Currency_Converter
                 }
             }
             catch { }
+        }
+        private void About_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainGrid.Visibility = Visibility.Collapsed;
+            About.Visibility = Visibility.Visible;
         }
     }
 }

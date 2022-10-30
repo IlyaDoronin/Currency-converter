@@ -1,14 +1,9 @@
-﻿
+﻿using MaterialDesignThemes.Wpf;
 using Microsoft.Win32;
 using System;
 using System.Diagnostics;
-using System.Net;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
 
 namespace Currency_Converter
 {
@@ -23,12 +18,6 @@ namespace Currency_Converter
         {
             InitializeComponent();
             Load();
-        }
-        Brush back = (Brush)new BrushConverter().ConvertFromString("#0E1621");
-        public Brush color
-        {
-            get { return back; }
-            set { back = value; }
         }
         void Load()
         {
@@ -79,6 +68,19 @@ namespace Currency_Converter
         {
             TrayOff();
         }
+        private void Pin(object sender, RoutedEventArgs e)
+        {
+            if (App.Current.MainWindow.Topmost)
+            {
+                App.Current.MainWindow.Topmost = false;
+                pin.Kind = PackIconKind.PinOffOutline;
+            }
+            else
+            {
+                App.Current.MainWindow.Topmost = true;
+                pin.Kind = PackIconKind.Pin;
+            }
+        }
         void Settings(object sender, RoutedEventArgs e)
         {
             TrayOff();
@@ -106,5 +108,6 @@ namespace Currency_Converter
         {
             Process.GetCurrentProcess().Kill();
         }
+
     }
 }

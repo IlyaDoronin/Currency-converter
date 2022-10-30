@@ -74,6 +74,8 @@ namespace MainWindow {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
+            SplashScreen splashScreen = new SplashScreen("resources/splashscreen.png");
+            splashScreen.Show(true);
             MainWindow.App app = new MainWindow.App();
             app.InitializeComponent();
             app.Run();

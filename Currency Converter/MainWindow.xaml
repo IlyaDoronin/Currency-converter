@@ -78,7 +78,7 @@
             </tb:TaskbarIcon.ContextMenu>
         </tb:TaskbarIcon>
         <!--Задний фон-->
-        <Rectangle x:Name="Back" RadiusX="20" RadiusY="20" Fill="{Binding color}"/>
+        <Rectangle x:Name="Back" RadiusX="20" RadiusY="20" Fill="{Binding color, FallbackValue=White}"/>
 
         <!--Верхняя панель-->
         <!--Кнопки-->
@@ -87,8 +87,23 @@
                 BorderThickness="0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Height="30" Width="405"
+                Height="30" Width="375"
                 Margin="0,0,0,0"/>
+        <Button BorderBrush="Black"
+                Cursor="Hand"
+                Grid.Column="1" Click="Pin"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0,0,150,0"
+                Style="{StaticResource TabButton}">
+            <Border BorderBrush="Black" BorderThickness="1,0,0,0">
+                <Label FontSize="14"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                    <materialDesign:PackIcon x:Name="pin" Kind="PinOffOutline" Height="20" Width="20"/>
+                </Label>
+            </Border>
+        </Button>
         <Button BorderBrush="Black"
                 Cursor="Hand"
                 Grid.Column="1" Click="Settings"
@@ -202,17 +217,17 @@
                                                     BorderThickness="0,0,1,0"
                                                     BorderBrush="Black"
                                                     Width="275" Height="50" Grid.Column="1">
-                                <Label
+                            <Label
                                     Foreground="Black"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Center"
                                     FontSize="20">Курсы валют
-                                </Label>
-                            </materialDesign:ColorZone>
+                            </Label>
+                        </materialDesign:ColorZone>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="Calcutator" 
+            <Button x:Name="Calcutator"
                     Height="50"
                     Grid.Row="1" Margin="0"
                     Grid.Column="1"
@@ -226,7 +241,7 @@
                                 Background="#2ecc71"
                                 BorderThickness="1,0,0,0"
                                 BorderBrush="Black"
-                                Width="275" Height="50" Grid.Column="1">                            
+                                Width="275" Height="50" Grid.Column="1">
                             <Label
                                 Foreground="Black"
                                 VerticalAlignment="Center"
@@ -241,37 +256,3 @@
     </Grid>
 </Window>
 
-
-<!--    
-    Изменение цвета кнопки при наведении
-    
-    <Button Height="25" Width="25">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border x:Name="Bd" Background="Transparent">
-                        <Path x:Name="Pt" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1"
-                      Stretch="Uniform" Stroke="Black" StrokeThickness="2"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Bd" Property="Background" Value="Red"/>
-                            <Setter TargetName="Pt" Property="Stroke" Value="White"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>-->
-
-
-<!--
-    
-    Гардиент
-    
-    <Rectangle>
-    <Rectangle.Fill>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-            <GradientStop Color="#C0FFE5" Offset="0" />
-            <GradientStop Color="#FF4A2D" Offset="1" />
-        </LinearGradientBrush>
-    </Rectangle.Fill>
-</Rectangle>-->

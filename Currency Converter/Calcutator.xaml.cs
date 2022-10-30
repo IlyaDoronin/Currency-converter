@@ -1,6 +1,5 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.IO;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -426,43 +425,6 @@ namespace Currency_Converter
             }
             else
                 Output.Text = "";
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("usd  " + usd.ToString() + "\n" +
-                            "rub  " + rub.ToString() + "\n" +
-                            "eur  " + eur.ToString() + "\n" +
-                            "uah  " + uah.ToString() + "\n" +
-                            "gbp  " + gbp.ToString() + "\n" +
-                            "cny  " + cny.ToString() + "\n" +
-                            "jpy  " + jpy.ToString() + "\n" +
-                            "nok  " + nok.ToString() + "\n" +
-                            "cad  " + cad.ToString() + "\n" +
-                            "pln  " + pln.ToString() + "\n" +
-                            "sek  " + sek.ToString() + "\n" +
-                            "chf  " + chf.ToString() + "\n" +
-                            "czk  " + czk.ToString() + "\n"+
-                            "from  " + from.ToString() + "\n"+
-                            "to  " + to.ToString() + "\n");
-        }
-
-        private void Buton_Click(object sender, RoutedEventArgs e)
-        {
-            string l = "";
-            try
-            {
-                using (WebClient wc = new WebClient())
-                {
-                    wc.Encoding = Encoding.UTF8;
-                    l = wc.DownloadString("https://www.nbrb.by/api/exrates/rates?periodicity=0");
-                }
-            MessageBox.Show(l);
-            }
-            catch
-            {
-                MessageBox.Show("ЕЕЕ исключение словилось");
-            }
         }
     }
 }

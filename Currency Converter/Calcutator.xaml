@@ -234,9 +234,6 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontSize="20"/>
-            </materialDesign:ColorZone>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="88,360,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" RenderTransformOrigin="1.112,0.587"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="163,360,0,0" VerticalAlignment="Top" Width="75" Click="Buton_Click" RenderTransformOrigin="1.112,0.587"/>
-        
+            </materialDesign:ColorZone>       
     </Grid>
 </Page>

@@ -7,7 +7,6 @@ namespace Currency_Converter
 {
     public partial class Settings : Page
     {
-        public byte Currency_Count;
         string currency_path = @"Software\Currency converter\Currency";
 
         public Settings()
