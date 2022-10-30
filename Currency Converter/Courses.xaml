@@ -10,7 +10,7 @@
       Style="{DynamicResource PageStyle}"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       TextElement.FontWeight="Regular" Loaded="Page_Loaded">
-    
+
     <Page.Resources>
         <Style x:Key="PageStyle" TargetType="Page">
             <Style.Triggers>
@@ -31,7 +31,7 @@
                 </EventTrigger>
             </Style.Triggers>
         </Style>
-        
+
         <Style x:Key="{x:Type Label}">
             <Setter Property="Label.HorizontalAlignment" Value="Center"/>
             <Setter Property="Label.VerticalAlignment" Value="Center"/>
@@ -46,226 +46,292 @@
             <Setter Property="materialDesign:ColorZone.Height" Value="38"/>
         </Style>
     </Page.Resources>
-    
-    
+
+
     <Grid>
-    <Grid Height="600" Margin="0,-55,0,0"
-        Width="550">
-                    <materialDesign:ColorZone Height="45" Margin="0,0,0,0">
-                        <UniformGrid x:Name="Row0"
-                        Columns="3" Width="350"
+        <Grid Height="600" Width="550"
+              Margin="0,-55,0,0">
+            <materialDesign:ColorZone Height="40" Margin="0,-5,0,0">
+                <UniformGrid x:Name="Row0"
+                        Columns="3" Width="370"
                         VerticalAlignment="Center" >
-                            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                <Label>Валюта</Label>
-                            </Border>
-                            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                <Label>Покупка</Label>
-                            </Border>
-                            <Border BorderBrush="Black">
-                                <Label>Продажа</Label>
-                            </Border>
-                        </UniformGrid>
-                    </materialDesign:ColorZone>
-                    <UniformGrid x:Name="Table"
-                                 Columns="1"
-                                 Margin="0,50,0,5">
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_0"
-                                         VerticalAlignment="Center"
-                                         Columns="3" 
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G0_L0">USD</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G0_L1"></Label>
-                                </Border>
-                                <Border BorderBrush="Black">
-                                    <Label x:Name="G0_L2" x:FieldModifier="public"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_1" Columns="3"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G1_L0" Content="RUB"/>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G1_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G1_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_2" Columns="3"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G2_L0">EUR</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G2_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G2_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_3" Columns="3"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G3_L0">UAH</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G3_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G3_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_4" Columns="3"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G4_L0">GBP</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G4_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G4_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_5" Columns="3"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G5_L0">CNY</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G5_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G5_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_6" Columns="3"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G6_L0">JPY</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G6_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G6_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_7" Columns="3"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G7_L0">NOK</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G7_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G7_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_8" Columns="3"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G8_L0">CAD</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G8_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G8_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_9" Columns="3"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G9_L0">PLN</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G9_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G9_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_10" Columns="3" Visibility="Visible"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G10_L0">SEK</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G10_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G10_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_11" Columns="3" Visibility="Visible"
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G11_L0">CHF</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G11_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G11_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
-                        <materialDesign:ColorZone>
-                            <UniformGrid x:Name="Grid_12" Columns="3" Visibility="Visible" 
-                                         Margin="10,0,10,0">
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G12_L0">CZK</Label>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Label x:Name="G12_L1"></Label>
-                                </Border>
-                                <Border>
-                                    <Label x:Name="G12_L2"></Label>
-                                </Border>
-                            </UniformGrid>
-                        </materialDesign:ColorZone>
+                    <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                        <Label>Валюта</Label>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                        <Label>Покупка</Label>
+                    </Border>
+                    <Border BorderBrush="Black">
+                        <Label>Продажа</Label>
+                    </Border>
+                </UniformGrid>
+            </materialDesign:ColorZone>
+                         <!--Height="545"-->
+            <UniformGrid x:Name="Table"
+                         Columns="1"
+                         Margin="0,40,0,0"
+                         VerticalAlignment="Top">
+                <materialDesign:ColorZone x:Name="Grid_0"
+                                          Margin="0,0,0,5">
+                    <UniformGrid VerticalAlignment="Center"
+                                 Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G0_L0">USD</Label>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G0_L1"
+                                   Content="{Binding usd_in}"></Label>
+                        </Border>
+                        <Border BorderBrush="Black">
+                            <Label x:Name="G0_L2" x:FieldModifier="public"
+                                   Content="{Binding usd_out}"></Label>
+                        </Border>
                     </UniformGrid>
-    </Grid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_1"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Grid>                                
+                            <Label x:Name="G1_L0" Content="RUB"/>
+                            <Label Content="(100)" Width="40"
+                                   Margin="70,4,0,0"
+                                   FontSize="13"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G1_L1"
+                                   Content="{Binding rub_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G1_L2"
+                                   Content="{Binding rub_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_2"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G2_L0">EUR</Label>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G2_L1"
+                                   Content="{Binding eur_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G2_L2"
+                                   Content="{Binding eur_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_3"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Grid>
+                                <Label x:Name="G3_L0">UAH</Label>
+                                <Label Content="(100)" Width="40"
+                                       Margin="70,4,0,0"
+                                       FontSize="13"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G3_L1"
+                                   Content="{Binding uah_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G3_L2"
+                                   Content="{Binding uah_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_4"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G4_L0">GBP</Label>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G4_L1"
+                                   Content="{Binding gbp_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G4_L2"
+                                   Content="{Binding gbp_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_5"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Grid>
+                                <Label x:Name="G5_L0">CNY</Label>
+                                <Label Content="(10)" Width="40"
+                                       Margin="70,4,0,0"
+                                       FontSize="13"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G5_L1"
+                                   Content="{Binding cny_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G5_L2"
+                                   Content="{Binding cny_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_6"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Grid>
+                                <Label x:Name="G6_L0">JPY</Label>
+                                <Label Content="(100)" Width="40"
+                                       Margin="65,4,0,0"
+                                       FontSize="13"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G6_L1"
+                                   Content="{Binding jpy_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G6_L2"
+                                   Content="{Binding jpy_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_7"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Grid>
+                                <Label x:Name="G7_L0">NOK</Label>
+                                <Label Content="(10)" Width="40"
+                                       Margin="75,4,0,0"
+                                       FontSize="13"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G7_L1"
+                                   Content="{Binding nok_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G7_L2"
+                                   Content="{Binding nok_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_8"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G8_L0">CAD</Label>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G8_L1"
+                                   Content="{Binding cad_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G8_L2"
+                                   Content="{Binding cad_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_9"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G9_L0">PLN</Label>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G9_L1"
+                                   Content="{Binding pln_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G9_L2"
+                                   Content="{Binding pln_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_10"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Grid>
+                                <Label x:Name="G10_L0">SEK</Label>
+                                <Label Content="(10)" Width="40"
+                                       Margin="65,4,0,0"
+                                       FontSize="13"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G10_L1"
+                                   Content="{Binding sek_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G10_L2"
+                                   Content="{Binding sek_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_11"
+                                          Margin="0,0,0,5">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Grid>
+                                <Label x:Name="G11_L0">CHF</Label>
+                                <Label Content="(10)" Width="40"
+                                       Margin="70,4,0,0"
+                                       FontSize="13"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G11_L1"
+                                   Content="{Binding chf_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G11_L2"
+                                   Content="{Binding chf_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+                <materialDesign:ColorZone x:Name="Grid_12">
+                    <UniformGrid Columns="3">
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Grid>
+                                <Label x:Name="G12_L0">CZK</Label>
+                                <Label Content="(100)" Width="40"
+                                       Margin="70,4,0,0"
+                                       FontSize="13"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                            <Label x:Name="G12_L1"
+                                   Content="{Binding czk_in}"></Label>
+                        </Border>
+                        <Border>
+                            <Label x:Name="G12_L2"
+                                   Content="{Binding czk_out}"></Label>
+                        </Border>
+                    </UniformGrid>
+                </materialDesign:ColorZone>
+            </UniformGrid>
+        </Grid>
 
 
         <Grid Height="50" VerticalAlignment="Bottom" Margin="50">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>
             <materialDesign:ColorZone HorizontalAlignment="Right" Margin="0,5,5,0"
                                 Width="220" Height="40" Grid.Column="0">
-            <Label x:Name="City"
-                    Content="Минск"/>
+                <Label x:Name="City"
+                    Content="{Binding city, FallbackValue=Минск}"/>
             </materialDesign:ColorZone>
             <materialDesign:ColorZone HorizontalAlignment="Left" Margin="5,5,0,0"
                                 Width="220" Height="40" Grid.Column="1">
@@ -273,5 +339,7 @@
                     Content="Дата"/>
             </materialDesign:ColorZone>
         </Grid>
+        <!--<Button Click="Button_Click" Margin="0,450,0,0" Content="Тест, скоро удалю"/>-->
+        <!--<Button Click="Button_Click2" Margin="0,500,0,0" Content="Тест2, скоро удалю"/>-->
     </Grid>
 </Page>

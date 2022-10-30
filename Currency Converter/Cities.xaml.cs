@@ -8,25 +8,24 @@ namespace Currency_Converter
     /// </summary>
     public partial class Cities : Window
     {
-        void сlose()
-        {
-            Close();
-        }
-
         public Cities()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        }           
+        private void Border_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            //сlose();
             Hide();
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)
         {
             GC.Collect();
+        }
+
+        private void Change_City_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Hide();
+            Date_City.City = "Жлобин";
         }
     }
 }

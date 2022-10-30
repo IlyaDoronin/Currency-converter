@@ -60,7 +60,10 @@
                                               Margin="50,0,0,0"
                                               VerticalAlignment="Center"
                                               Height="50" Width="170">
-                        <TextBox Margin="15,10,15,10"/>
+                        <TextBox x:Name="BYN_Field"
+                                 FontSize="18"
+                                 Margin="15,8,15,8"
+                                 TextChanged="BYN_Field_TextChanged"/>
                     </materialDesign:ColorZone>
                 </Grid>
                 <Grid>
@@ -70,7 +73,10 @@
                                               Margin="50,0,0,0"
                                               VerticalAlignment="Center"
                                               Height="50" Width="170">
-                        <TextBox Margin="15,10,15,10"/>
+                        <TextBox x:Name="USD_Field"
+                                 FontSize="18"
+                                 Margin="15,8,15,8"
+                                 TextChanged="USD_Field_TextChanged"/>
                     </materialDesign:ColorZone>
                 </Grid>
                 <Grid>
@@ -80,7 +86,9 @@
                                               Margin="50,0,0,0"
                                               VerticalAlignment="Center"
                                               Height="50" Width="170">
-                        <TextBox Margin="15,10,15,10"/>
+                        <TextBox x:Name="RUB_Field"
+                                 FontSize="18"
+                                 Margin="15,8,15,8" TextChanged="RUB_Field_TextChanged"/>
                     </materialDesign:ColorZone>
                 </Grid>
                 <Grid>
@@ -90,7 +98,9 @@
                                               Margin="50,0,0,0"
                                               VerticalAlignment="Center"
                                               Height="50" Width="170">
-                        <TextBox Margin="15,10,15,10"/>
+                        <TextBox x:Name="EUR_Field"
+                                 FontSize="18"
+                                 Margin="15,8,15,8" TextChanged="EUR_Field_TextChanged"/>
                     </materialDesign:ColorZone>
                 </Grid>
                 <Grid>
@@ -100,7 +110,9 @@
                                               Margin="50,0,0,0"
                                               VerticalAlignment="Center"
                                               Height="50" Width="170">
-                        <TextBox Margin="15,10,15,10"/>
+                        <TextBox x:Name="UAH_Field"
+                                 FontSize="18"
+                                 Margin="15,8,15,8" TextChanged="UAH_Field_TextChanged"/>
                     </materialDesign:ColorZone>
                 </Grid>
             </UniformGrid>
@@ -141,7 +153,10 @@
                                           VerticalAlignment="Bottom"
                                           HorizontalAlignment="Left"
                                           Height="50" Width="170">
-                    <TextBox Margin="15,10,15,10"/>
+                    <TextBox x:Name="Input"
+                             FontSize="18"
+                             Margin="15,8,15,8"
+                             TextChanged="Input_TextChanged"/>
                 </materialDesign:ColorZone>
                 
 
@@ -174,7 +189,10 @@
                                           VerticalAlignment="Bottom"
                                           HorizontalAlignment="Right"
                                           Height="50" Width="170">
-                    <TextBox Margin="15,10,15,10"/>
+                    <TextBox x:Name="Output"
+                             FontSize="18"
+                             Margin="15,8,15,8"
+                             TextChanged="Output_TextChanged"/>
                 </materialDesign:ColorZone>
             </Grid>
         </materialDesign:ColorZone>
@@ -190,7 +208,7 @@
                                 Width="220" Height="40" Grid.Column="0">
                 <Label x:Name="City"
                         Padding="0"
-                        Content="Минск"
+                        Content="{Binding city, Mode=OneWay,FallbackValue=Минск}"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
                         FontSize="20"/>

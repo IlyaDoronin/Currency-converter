@@ -82,17 +82,17 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Бобруйск"/>
-                                    <materialDesign:ColorZone Content="Барановичи"/>
-                                    <materialDesign:ColorZone Content="Борисов"/>
-                                    <materialDesign:ColorZone Content="Барань"/>
-                                    <materialDesign:ColorZone Content="Белоозерск"/>
-                                    <materialDesign:ColorZone Content="Береза"/>
-                                    <materialDesign:ColorZone Content="Березино"/>
-                                    <materialDesign:ColorZone Content="Березовка"/>
-                                    <materialDesign:ColorZone Content="Браслав"/>
-                                    <materialDesign:ColorZone Content="Буда-Кошелево"/>
-                                    <materialDesign:ColorZone Content="Быхов"/>
+                                    <materialDesign:ColorZone Content="Бобруйск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Барановичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Борисов" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Барань" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Белоозерск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Береза" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Березино" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Березовка" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Браслав" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Буда-Кошелево" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Быхов" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -109,12 +109,12 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Верхнедвинск"/>
-                                    <materialDesign:ColorZone Content="Ветка"/>
-                                    <materialDesign:ColorZone Content="Вилейка"/>
-                                    <materialDesign:ColorZone Content="Волковыск"/>
-                                    <materialDesign:ColorZone Content="Воложин"/>
-                                    <materialDesign:ColorZone Content="Высокое"/>
+                                    <materialDesign:ColorZone Content="Верхнедвинск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Ветка" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Вилейка" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Волковыск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Воложин" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Высокое" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -131,7 +131,7 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Шклов"/>
+                                    <materialDesign:ColorZone Content="Шклов" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -149,10 +149,10 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Ганцевичи"/>
-                                    <materialDesign:ColorZone Content="Глубокое"/>
-                                    <materialDesign:ColorZone Content="Горки"/>
-                                    <materialDesign:ColorZone Content="Городок"/>
+                                    <materialDesign:ColorZone Content="Ганцевичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Глубокое" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Горки" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Городок" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -169,13 +169,13 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Давид-Городок"/>
-                                    <materialDesign:ColorZone Content="Дзержинск"/>
-                                    <materialDesign:ColorZone Content="Добруш"/>
-                                    <materialDesign:ColorZone Content="Докшицы"/>
-                                    <materialDesign:ColorZone Content="Дрогичин"/>
-                                    <materialDesign:ColorZone Content="Дубровно"/>
-                                    <materialDesign:ColorZone Content="Дятлово"/>
+                                    <materialDesign:ColorZone Content="Давид-Городок" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Дзержинск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Добруш" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Докшицы" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Дрогичин" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Дубровно" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Дятлово" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -192,7 +192,7 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Ельск"/>
+                                    <materialDesign:ColorZone Content="Ельск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -209,10 +209,10 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Жодино"/>
-                                    <materialDesign:ColorZone Content="Жабинка"/>
-                                    <materialDesign:ColorZone Content="Житковичи"/>
-                                    <materialDesign:ColorZone Content="Жлобин"/>
+                                    <materialDesign:ColorZone Content="Жодино" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Жабинка" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Житковичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Жлобин" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -231,7 +231,7 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Заславль"/>
+                                    <materialDesign:ColorZone Content="Заславль" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -248,9 +248,9 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Иваново"/>
-                                    <materialDesign:ColorZone Content="Ивацевичи"/>
-                                    <materialDesign:ColorZone Content="Ивье"/>
+                                    <materialDesign:ColorZone Content="Иваново" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Ивацевичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Ивье" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -267,17 +267,17 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Калинковичи"/>
-                                    <materialDesign:ColorZone Content="Каменец"/>
-                                    <materialDesign:ColorZone Content="Кировск"/>
-                                    <materialDesign:ColorZone Content="Клецк"/>
-                                    <materialDesign:ColorZone Content="Климовичи"/>
-                                    <materialDesign:ColorZone Content="Кличев"/>
-                                    <materialDesign:ColorZone Content="Кобрин"/>
-                                    <materialDesign:ColorZone Content="Копыль"/>
-                                    <materialDesign:ColorZone Content="Костюковичи"/>
-                                    <materialDesign:ColorZone Content="Кричев"/>
-                                    <materialDesign:ColorZone Content="Крупки"/>
+                                    <materialDesign:ColorZone Content="Калинковичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Каменец" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Кировск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Клецк" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Климовичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Кличев" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Кобрин" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Копыль" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Костюковичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Кричев" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Крупки" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -294,7 +294,7 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Щучин"/>
+                                    <materialDesign:ColorZone Content="Щучин" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -312,12 +312,12 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Лепель"/>
-                                    <materialDesign:ColorZone Content="Лида"/>
-                                    <materialDesign:ColorZone Content="Логойск"/>
-                                    <materialDesign:ColorZone Content="Лунинец"/>
-                                    <materialDesign:ColorZone Content="Любань"/>
-                                    <materialDesign:ColorZone Content="Ляховичи"/>
+                                    <materialDesign:ColorZone Content="Лепель" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Лида" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Логойск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Лунинец" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Любань" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Ляховичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -334,15 +334,15 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Мозырь"/>
-                                    <materialDesign:ColorZone Content="Малорита"/>
-                                    <materialDesign:ColorZone Content="Марьина Горка"/>
-                                    <materialDesign:ColorZone Content="Микашевичи"/>
-                                    <materialDesign:ColorZone Content="Миоры"/>
-                                    <materialDesign:ColorZone Content="Молодечно"/>
-                                    <materialDesign:ColorZone Content="Мосты"/>
-                                    <materialDesign:ColorZone Content="Мстиславль"/>
-                                    <materialDesign:ColorZone Content="Мядель"/>
+                                    <materialDesign:ColorZone Content="Мозырь" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Малорита" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Марьина Горка" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Микашевичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Миоры" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Молодечно" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Мосты" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Мстиславль" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Мядель" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -359,11 +359,11 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Новополоцк"/>
-                                    <materialDesign:ColorZone Content="Наровля"/>
-                                    <materialDesign:ColorZone Content="Несвиж"/>
-                                    <materialDesign:ColorZone Content="Новогрудок"/>
-                                    <materialDesign:ColorZone Content="Новолукомль"/>
+                                    <materialDesign:ColorZone Content="Новополоцк" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Наровля" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Несвиж" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Новогрудок" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Новолукомль" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -381,9 +381,9 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Орша"/>
-                                    <materialDesign:ColorZone Content="Осиповичи"/>
-                                    <materialDesign:ColorZone Content="Ошмяны"/>
+                                    <materialDesign:ColorZone Content="Орша" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Осиповичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Ошмяны" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -400,11 +400,11 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Пинск"/>
-                                    <materialDesign:ColorZone Content="Полоцк"/>
-                                    <materialDesign:ColorZone Content="Петриков"/>
-                                    <materialDesign:ColorZone Content="Поставы"/>
-                                    <materialDesign:ColorZone Content="Пружаны"/>
+                                    <materialDesign:ColorZone Content="Пинск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Полоцк" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Петриков" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Поставы" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Пружаны" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -421,8 +421,8 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Речица"/>
-                                    <materialDesign:ColorZone Content="Рогачев"/>
+                                    <materialDesign:ColorZone Content="Речица" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Рогачев" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -439,8 +439,8 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Толочин"/>
-                                    <materialDesign:ColorZone Content="Туров"/>
+                                    <materialDesign:ColorZone Content="Толочин" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Туров" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -457,7 +457,7 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Узда"/>
+                                    <materialDesign:ColorZone Content="Узда" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -474,7 +474,7 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Фаниполь"/>
+                                    <materialDesign:ColorZone Content="Фаниполь" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -492,19 +492,19 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Светлогорск"/>
-                                    <materialDesign:ColorZone Content="Свислочь"/>
-                                    <materialDesign:ColorZone Content="Сенно"/>
-                                    <materialDesign:ColorZone Content="Скидель"/>
-                                    <materialDesign:ColorZone Content="Славгород"/>
-                                    <materialDesign:ColorZone Content="Слоним"/>
-                                    <materialDesign:ColorZone Content="Слуцк"/>
-                                    <materialDesign:ColorZone Content="Смолевичи"/>
-                                    <materialDesign:ColorZone Content="Сморгонь"/>
+                                    <materialDesign:ColorZone Content="Светлогорск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Свислочь" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Сенно" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Скидель" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Славгород" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Слоним" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Слуцк" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Смолевичи" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Сморгонь" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                     <materialDesign:ColorZone Content="Солигорск"/>
-                                    <materialDesign:ColorZone Content="Старые Дороги"/>
-                                    <materialDesign:ColorZone Content="Столбцы"/>
-                                    <materialDesign:ColorZone Content="Столин"/>
+                                    <materialDesign:ColorZone Content="Старые Дороги" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Столбцы" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Столин" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -521,7 +521,7 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Хойники"/>
+                                    <materialDesign:ColorZone Content="Хойники" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -538,11 +538,11 @@
                                     VerticalAlignment="Top"
                                     Margin="5"/>
                                 <UniformGrid Columns="1" Margin="0,40,0,5">
-                                    <materialDesign:ColorZone Content="Чаусы"/>
-                                    <materialDesign:ColorZone Content="Чашники"/>
-                                    <materialDesign:ColorZone Content="Червень"/>
-                                    <materialDesign:ColorZone Content="Чериков"/>
-                                    <materialDesign:ColorZone Content="Чечерск"/>
+                                    <materialDesign:ColorZone Content="Чаусы" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Чашники" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Червень" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Чериков" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
+                                    <materialDesign:ColorZone Content="Чечерск" MouseLeftButtonDown="Change_City_MouseLeftButtonDown"/>
                                 </UniformGrid>
                             </Grid>
                         </materialDesign:ColorZone>
@@ -551,12 +551,12 @@
             </materialDesign:ColorZone>
 
         </Grid>
-        <Button Background="Black"
+        <Border Background="Black"
             Opacity="0.7"
             Height="80" Width="80"
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
-            BorderBrush="Black" Click="Button_Click">
+            BorderBrush="Black" MouseLeftButtonDown="Border_MouseLeftButtonDown" >
             <materialDesign:PackIcon Kind="Close"
                                     Opacity="0.8"
                                     Foreground="White"
@@ -564,6 +564,6 @@
                                     Width="60"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"/>
-        </Button>
+        </Border>
     </Grid>
 </Window>

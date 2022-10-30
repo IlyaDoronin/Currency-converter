@@ -72,121 +72,7 @@
                                       VerticalContentAlignment="Center"
                                       HorizontalContentAlignment="Center"
                                       Content="Выбрать город"
-                                      Cursor="Hand" MouseLeftButtonDown="ColorZone_MouseLeftButtonDown">
-                    <!--<ComboBox Width="170"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Center" SelectedIndex="0"
-                          Text="ДааД">
-                        <ComboBoxItem Background="#E1E1E1">Минск</ComboBoxItem>
-                        <ComboBoxItem Background="#E1E1E1">Брест</ComboBoxItem>
-                        <ComboBoxItem Background="#E1E1E1">Гродно</ComboBoxItem>
-                        <ComboBoxItem Background="#E1E1E1">Гомель</ComboBoxItem>
-                        <ComboBoxItem Background="#E1E1E1">Витебск</ComboBoxItem>
-                        <ComboBoxItem Background="#E1E1E1">Могилёв</ComboBoxItem>
-                        <ComboBoxItem>Бобруйск</ComboBoxItem>
-                        <ComboBoxItem>Барановичи</ComboBoxItem>
-                        <ComboBoxItem>Борисов</ComboBoxItem>
-                        <ComboBoxItem>Барань</ComboBoxItem>
-                        <ComboBoxItem>Белоозерск</ComboBoxItem>
-                        <ComboBoxItem>Береза</ComboBoxItem>
-                        <ComboBoxItem>Березино</ComboBoxItem>
-                        <ComboBoxItem>Березовка</ComboBoxItem>
-                        <ComboBoxItem>Браслав</ComboBoxItem>
-                        <ComboBoxItem>Буда-Кошелево</ComboBoxItem>
-                        <ComboBoxItem>Быхов</ComboBoxItem>
-                        <ComboBoxItem>Верхнедвинск</ComboBoxItem>
-                        <ComboBoxItem>Ветка</ComboBoxItem>
-                        <ComboBoxItem>Вилейка</ComboBoxItem>
-                        <ComboBoxItem>Волковыск</ComboBoxItem>
-                        <ComboBoxItem>Воложин</ComboBoxItem>
-                        <ComboBoxItem>Высокое</ComboBoxItem>
-                        <ComboBoxItem>Ганцевичи</ComboBoxItem>
-                        <ComboBoxItem>Глубокое</ComboBoxItem>
-                        <ComboBoxItem>Горки</ComboBoxItem>
-                        <ComboBoxItem>Городок</ComboBoxItem>
-                        <ComboBoxItem>Давид-Городок</ComboBoxItem>
-                        <ComboBoxItem>Дзержинск</ComboBoxItem>
-                        <ComboBoxItem>Добруш</ComboBoxItem>
-                        <ComboBoxItem>Докшицы</ComboBoxItem>
-                        <ComboBoxItem>Дрогичин</ComboBoxItem>
-                        <ComboBoxItem>Дубровно</ComboBoxItem>
-                        <ComboBoxItem>Дятлово</ComboBoxItem>
-                        <ComboBoxItem>Ельск</ComboBoxItem>
-                        <ComboBoxItem>Жодино</ComboBoxItem>
-                        <ComboBoxItem>Жабинка</ComboBoxItem>
-                        <ComboBoxItem>Житковичи</ComboBoxItem>
-                        <ComboBoxItem>Жлобин</ComboBoxItem>
-                        <ComboBoxItem>Заславль</ComboBoxItem>
-                        <ComboBoxItem>Иваново</ComboBoxItem>
-                        <ComboBoxItem>Ивацевичи</ComboBoxItem>
-                        <ComboBoxItem>Ивье</ComboBoxItem>
-                        <ComboBoxItem>Калинковичи</ComboBoxItem>
-                        <ComboBoxItem>Каменец</ComboBoxItem>
-                        <ComboBoxItem>Кировск</ComboBoxItem>
-                        <ComboBoxItem>Клецк</ComboBoxItem>
-                        <ComboBoxItem>Климовичи</ComboBoxItem>
-                        <ComboBoxItem>Кличев</ComboBoxItem>
-                        <ComboBoxItem>Кобрин</ComboBoxItem>
-                        <ComboBoxItem>Копыль</ComboBoxItem>
-                        <ComboBoxItem>Костюковичи</ComboBoxItem>
-                        <ComboBoxItem>Кричев</ComboBoxItem>
-                        <ComboBoxItem>Крупки</ComboBoxItem>
-                        <ComboBoxItem>Лепель</ComboBoxItem>
-                        <ComboBoxItem>Лида</ComboBoxItem>
-                        <ComboBoxItem>Логойск</ComboBoxItem>
-                        <ComboBoxItem>Лунинец</ComboBoxItem>
-                        <ComboBoxItem>Любань</ComboBoxItem>
-                        <ComboBoxItem>Ляховичи</ComboBoxItem>
-                        <ComboBoxItem>Мозырь</ComboBoxItem>
-                        <ComboBoxItem>Малорита</ComboBoxItem>
-                        <ComboBoxItem>Марьина Горка</ComboBoxItem>
-                        <ComboBoxItem>Микашевичи</ComboBoxItem>
-                        <ComboBoxItem>Миоры</ComboBoxItem>
-                        <ComboBoxItem>Молодечно</ComboBoxItem>
-                        <ComboBoxItem>Мосты</ComboBoxItem>
-                        <ComboBoxItem>Мстиславль</ComboBoxItem>
-                        <ComboBoxItem>Мядель</ComboBoxItem>
-                        <ComboBoxItem>Новополоцк</ComboBoxItem>
-                        <ComboBoxItem>Наровля</ComboBoxItem>
-                        <ComboBoxItem>Несвиж</ComboBoxItem>
-                        <ComboBoxItem>Новогрудок</ComboBoxItem>
-                        <ComboBoxItem>Новолукомль</ComboBoxItem>
-                        <ComboBoxItem>Орша</ComboBoxItem>
-                        <ComboBoxItem>Осиповичи</ComboBoxItem>
-                        <ComboBoxItem>Ошмяны</ComboBoxItem>
-                        <ComboBoxItem>Пинск</ComboBoxItem>
-                        <ComboBoxItem>Полоцк</ComboBoxItem>
-                        <ComboBoxItem>Петриков</ComboBoxItem>
-                        <ComboBoxItem>Поставы</ComboBoxItem>
-                        <ComboBoxItem>Пружаны</ComboBoxItem>
-                        <ComboBoxItem>Речица</ComboBoxItem>
-                        <ComboBoxItem>Рогачев</ComboBoxItem>
-                        <ComboBoxItem>Светлогорск</ComboBoxItem>
-                        <ComboBoxItem>Свислочь</ComboBoxItem>
-                        <ComboBoxItem>Сенно</ComboBoxItem>
-                        <ComboBoxItem>Скидель</ComboBoxItem>
-                        <ComboBoxItem>Славгород</ComboBoxItem>
-                        <ComboBoxItem>Слоним</ComboBoxItem>
-                        <ComboBoxItem>Слуцк</ComboBoxItem>
-                        <ComboBoxItem>Смолевичи</ComboBoxItem>
-                        <ComboBoxItem>Сморгонь</ComboBoxItem>
-                        <ComboBoxItem>Солигорск</ComboBoxItem>
-                        <ComboBoxItem>Старые Дороги</ComboBoxItem>
-                        <ComboBoxItem>Столбцы</ComboBoxItem>
-                        <ComboBoxItem>Столин</ComboBoxItem>
-                        <ComboBoxItem>Толочин</ComboBoxItem>
-                        <ComboBoxItem>Туров</ComboBoxItem>
-                        <ComboBoxItem>Узда</ComboBoxItem>
-                        <ComboBoxItem>Фаниполь</ComboBoxItem>
-                        <ComboBoxItem>Хойники</ComboBoxItem>
-                        <ComboBoxItem>Чаусы</ComboBoxItem>
-                        <ComboBoxItem>Чашники</ComboBoxItem>
-                        <ComboBoxItem>Червень</ComboBoxItem>
-                        <ComboBoxItem>Чериков</ComboBoxItem>
-                        <ComboBoxItem>Чечерск</ComboBoxItem>
-                        <ComboBoxItem>Шклов</ComboBoxItem>
-                        <ComboBoxItem>Щучин</ComboBoxItem>
-                    </ComboBox>-->
+                                      Cursor="Hand" MouseLeftButtonDown="ColorZone_MouseLeftButtonDown">                  
                 </materialDesign:ColorZone>
             </Grid>
             <Grid>                        
@@ -229,6 +115,5 @@
             </Grid>
         </UniformGrid>
         </materialDesign:ColorZone>
-
     </Grid>
 </Page>

@@ -20,6 +20,7 @@ namespace Currency_Converter
                 Theme.IsChecked = true;
             else
                 Theme.IsChecked = false;
+            //static Cities c = new Cities();
         }
         public AppSettings()
         {
@@ -29,6 +30,7 @@ namespace Currency_Converter
          Cities city = new Cities();
         private void ColorZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            //c = null;
             //MainWindow.Visibility = Visibility.Hidden;
             city.Show();
         }

@@ -13,8 +13,8 @@ namespace Currency_Converter
     public partial class MainWindow : Window
     {
         //Создание экземпляров классов
-        Courses Page_Cources = new Courses();
-        Calcutator Page_Calcutator = new Calcutator();
+        public static Courses Page_Cources = new Courses();
+        public Calcutator Page_Calcutator = new Calcutator();
         public Settings Page_Settings = new Settings();
         public AppSettings Page_AppSettings = new AppSettings();
         public MainWindow()
@@ -63,11 +63,7 @@ namespace Currency_Converter
             TrayOff();
             Page_Loader.Navigate(Page_Settings);
         }
-                
-        void MainForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            Course.Content += e.Key.ToString();
-        }
+
         void Course_Click(object sender, RoutedEventArgs e)
         {
             TrayOff();

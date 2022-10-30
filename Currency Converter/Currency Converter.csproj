@@ -102,6 +102,7 @@
       <DependentUpon>Courses.xaml</DependentUpon>
     </Compile>
     <Compile Include="Date_City.cs" />
+    <Compile Include="Net.cs" />
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
