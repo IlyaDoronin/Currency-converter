@@ -3,49 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:tb="http://www.hardcodet.net/taskbar"
-        xmlns:local="clr-namespace:Currency_Converter"
-        mc:Ignorable="d" 
-        AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal" 
-        TextOptions.TextRenderingMode="Auto"
-        FontFamily="{DynamicResource MaterialDesignFont}"
-        Style="{DynamicResource WindowStyle}"
-        Title="MainForm" Height="780" Width="580"
-        Background="{x:Null}" MinWidth="550"
-        MinHeight="750" WindowStartupLocation="CenterScreen"
-        Visibility="Visible" Activated="MainForm_Activated" Closed="MainForm_Closed">
+        mc:Ignorable="d"
+        Title="MainForm" Height="750" Width="550" Background="{x:Null}" MinWidth="550" MinHeight="750" Opacity="0.97" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Visibility="Visible" Topmost="True">
     <Window.Resources>
-        <Style x:Key="WindowStyle" TargetType="Window">
-            <Style.Triggers>
-                <EventTrigger RoutedEvent="Loaded">
-                    <!--Триггер при открытие окна-->
-                    <EventTrigger.Actions>
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation
-                                Storyboard.TargetProperty="Opacity"
-                                From="0"
-                                To="1"
-                                Duration="0:0:0.5"/>
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger.Actions>
-                </EventTrigger>
-            </Style.Triggers>
-        </Style>
-
         <Style TargetType="Button" x:Key="TabButton">
-            <Setter Property="Background" Value="Red"/>
+            <Setter Property="Background" Value="Red" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="0" Background="#2ecc71"
-                                BorderThickness="0" Height="30" Width="30">
+                        <Border CornerRadius="0" Background="Red" BorderThickness="0" >
                             <ContentPresenter x:Name="contentPresenter"/>
                         </Border>
                     </ControlTemplate>
@@ -53,225 +19,33 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Window.Effect>
-        <DropShadowEffect BlurRadius="15" RenderingBias="Quality" ShadowDepth="0" Opacity="0.5"/>
-    </Window.Effect>
-
-    <Grid x:Name="MainGrid" x:FieldModifier="public"
-          MouseLeftButtonDown="DragForm" Margin="15">
-        <!--Сворачивание в трей-->
-        <tb:TaskbarIcon x:Name="Tray"
-                        Visibility="Hidden"
-                        ToolTipText="Currency converter"
-                        IconSource="Resources/Logo.ico"
-                        TrayLeftMouseDown="TaskbarIcon_TrayLeftMouseDown">
-            <tb:TaskbarIcon.ContextMenu>
-                <ContextMenu>
-                    <MenuItem Header="Курсы валют" Click="Course_Click" />
-                    <MenuItem Header="Калькулятор валют" Click="Calcutator_Click" />
-                    <Separator/>
-                    <MenuItem Header="Настройки валют" Click="Settings" />
-                    <MenuItem Header="Настройки приложения" Click="AppSettings" />
-                    <Separator/>
-                    <MenuItem Header="Выход"  Click="Close"/>
-                </ContextMenu>
-            </tb:TaskbarIcon.ContextMenu>
-        </tb:TaskbarIcon>
-        <!--Задний фон-->
-        <Rectangle x:Name="Back" RadiusX="20" RadiusY="20" Fill="{Binding color, FallbackValue=White}"/>
-
-        <!--Верхняя панель-->
-        <!--Кнопки-->
-        <Border Background="#2ecc71"
-                CornerRadius="20,0,0,0"
-                BorderThickness="0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Height="30" Width="405"
-                Margin="0,0,0,0"/>
-        <Button BorderBrush="Black"
-                Cursor="Hand"
-                Grid.Column="1" Click="Settings"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right"
-                Margin="0,0,120,0"
-                Style="{StaticResource TabButton}">
-            <Border BorderBrush="Black" BorderThickness="1,0,0,0">
-                <Label FontSize="14"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center">
-                    <materialDesign:PackIcon Kind="Money" Height="20" Width="20"/>
-                </Label>
-            </Border>
-        </Button>
-        <Button BorderBrush="Black"
-                Cursor="Hand"
-                Grid.Column="1" Click="AppSettings"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right"
-                Margin="0,0,90,0"
-                Style="{StaticResource TabButton}">
-            <Border BorderBrush="Black" BorderThickness="1,0,1,0">
-                <!--⚙-->
-                <Label FontSize="14"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center">
-                    <materialDesign:PackIcon Kind="Settings" Height="18" Width="18"/>
-                </Label>
-            </Border>
-        </Button>
-        <Button BorderThickness="0"
-                Cursor="Hand"
-                Grid.Column="2" Click="TrayMinimized"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right"
-                Margin="0,0,60,0"
-                Style="{StaticResource TabButton}">
-            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Grid Panel.ZIndex="1"
-                      VerticalAlignment="Top"
-                      HorizontalAlignment="Left"
-                      Height="30" Width="30">
-                    <!--<Line X1="21" Y1="15" X2="22" Y2="22" Stroke="Black"/>
-                    <Line X1="15" Y1="21" X2="22" Y2="22" Stroke="Black"/>
-                    <Line X1="8" Y1="8" X2="22" Y2="22" Stroke="Black"/>-->
-                    <Line X1="8" Y1="12" X2="15" Y2="18" Stroke="Black"/>
-                    <Line X1="22" Y1="12" X2="15" Y2="18" Stroke="Black"/>
-                </Grid>
-            </Border>
-        </Button>
-        <Button BorderThickness="0"
-                Cursor="Hand"
-                Grid.Column="3"
-                Click="Minimized"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right"
-                Margin="0,0,30,0"
-                Style="{StaticResource TabButton}">
-            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Grid Panel.ZIndex="1"
-                      VerticalAlignment="Top"
-                      HorizontalAlignment="Left"
-                      Height="30" Width="30">
-                    <Line X1="8" Y1="15" X2="22" Y2="15" Stroke="Black"/>
-                </Grid>
-            </Border>
-        </Button>
-        <Button x:Name="CloseForm"
-                Width="30" Height="30"
-                Margin="0,0,0,0" Click="Close"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right">
+    <Grid MouseLeftButtonDown="DragForm" Opacity="0.97">
+        <Border CornerRadius="20" Background="White"/>        
+        <Grid Height="30" VerticalAlignment="Top"  Background="#147E4B" Margin="30,0,30,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button BorderThickness="0" Grid.Column="1" Click="Settings" Style="{StaticResource TabButton}"></Button>
+            <Button BorderThickness="0" Grid.Column="2" Click="TrayMinimized" Style="{StaticResource TabButton}"></Button>
+            <Button BorderThickness="0" Grid.Column="3" Click="Minimized" Style="{StaticResource TabButton}"></Button>
+            <Button BorderThickness="0" Grid.Column="4" Click="FullScreen" Style="{StaticResource TabButton}"></Button>
+        </Grid>
+        <Button x:Name="CloseForm" Width="30" Height="30" Margin="520,0,0,720" Click="Close" MouseEnter="CloseForm_MouseEnter" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Button.Template>
                 <ControlTemplate>
-                    <Border CornerRadius="0,20,0,0" Background="#2ecc71">
-                        <Grid  Panel.ZIndex="1"
-                              VerticalAlignment="Bottom"
-                              HorizontalAlignment="Left"
-                              Height="30" Width="30">
-                            <Line X1="8" Y1="8" X2="22" Y2="22" Stroke="Black"/>
-                            <Line X1="22" Y1="8" X2="8" Y2="22" Stroke="Black"/>
-                        </Grid>
-                    </Border>
+                    <Border CornerRadius="0,20,0,0" Background="Red"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-
-        <!--Страницы-->
-        <Grid x:FieldModifier="public" x:Name="Loader">
-            <Frame x:FieldModifier="public" x:Name="Page_Loader" NavigationUIVisibility="Hidden"/>
-        </Grid>
-        <Grid Height="50" VerticalAlignment="Bottom" Background="Transparent">
-
-            <!--Нжний кусок-->
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button x:Name="Course"
-                    Height="50"
-                    Grid.Row="1" Grid.Column="0"
-                    MaxWidth="500"
-                    Click="Course_Click">
-                <Button.Template>
-                    <ControlTemplate>
-                        <materialDesign:ColorZone HorizontalAlignment="Left"
-                                                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                                                    CornerRadius="20,0,0,20"
-                                                    Background="#2ecc71"
-                                                    BorderThickness="0,0,1,0"
-                                                    BorderBrush="Black"
-                                                    Width="275" Height="50" Grid.Column="1">
-                            <Label
-                                    Foreground="Black"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                    FontSize="20">Курсы валют
-                            </Label>
-                        </materialDesign:ColorZone>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="Calcutator" Visibility="Collapsed" 
-                    Height="50"
-                    Grid.Row="1" Margin="0"
-                    Grid.Column="1"
-                    MaxWidth="500"
-                    Click="Calcutator_Click">
-                <Button.Template>
-                    <ControlTemplate>
-                        <materialDesign:ColorZone HorizontalAlignment="Left"
-                                materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                                CornerRadius="0,20,20,0"
-                                Background="#2ecc71"
-                                BorderThickness="1,0,0,0"
-                                BorderBrush="Black"
-                                Width="275" Height="50" Grid.Column="1">
-                            <Label
-                                Foreground="Black"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                FontSize="20">Калькулятор валют
-                            </Label>
-                        </materialDesign:ColorZone>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-        </Grid>
+        <Border Background="#147E4B" CornerRadius="20,0,0,0" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="30" Margin="0,0,0,0"/>
     </Grid>
 </Window>
 
-
-<!--    
-    Изменение цвета кнопки при наведении
-    
-    <Button Height="25" Width="25">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border x:Name="Bd" Background="Transparent">
-                        <Path x:Name="Pt" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1"
-                      Stretch="Uniform" Stroke="Black" StrokeThickness="2"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Bd" Property="Background" Value="Red"/>
-                            <Setter TargetName="Pt" Property="Stroke" Value="White"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>-->
-
-
-<!--
-    
-    Гардиент
-    
-    <Rectangle>
-    <Rectangle.Fill>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-            <GradientStop Color="#C0FFE5" Offset="0" />
-            <GradientStop Color="#FF4A2D" Offset="1" />
-        </LinearGradientBrush>
-    </Rectangle.Fill>
-</Rectangle>-->
