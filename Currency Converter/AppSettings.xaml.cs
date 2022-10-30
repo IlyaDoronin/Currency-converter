@@ -3,11 +3,16 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using MainWindow;
 
 namespace Currency_Converter
 {
     public partial class AppSettings : Page
     {
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
         public AppSettings()
         {
             InitializeComponent();
@@ -16,12 +21,12 @@ namespace Currency_Converter
             else
                 AutoRun.IsChecked = false;
         }
-        Cities city = new Cities();
 
+         Cities city = new Cities();
         private void ColorZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            city.Show();
             //MainWindow.Visibility = Visibility.Hidden;
+            city.Show();
         }
 
             string path = "\"" + Assembly.GetExecutingAssembly().Location + "\"";
@@ -39,6 +44,11 @@ namespace Currency_Converter
             {
                 MessageBox.Show("Что-то пошло не так", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void Theme_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

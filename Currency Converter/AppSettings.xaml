@@ -9,7 +9,7 @@
       Title="Settings" FontSize="20"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       TextElement.FontWeight="Regular"
-      Style="{DynamicResource PageStyle}">
+      Style="{DynamicResource PageStyle}" Loaded="Page_Loaded">
     
     <Page.Resources>
         <Style x:Key="PageStyle" TargetType="Page">
@@ -202,9 +202,10 @@
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"
                                Margin="10,0,0,0"/>
-                            <ToggleButton Height="30"
+                            <ToggleButton x:Name="Theme" 
+                                          Height="30"
                                           HorizontalAlignment="Right"
-                                          Margin="0,0,10,0"/>
+                                          Margin="0,0,10,0" Click="Theme_Click"/>
                         </Grid>
                     </materialDesign:ColorZone>
             </Grid>
@@ -215,11 +216,11 @@
                                   CornerRadius="5"
                                       VerticalAlignment="Center">
                     <Grid VerticalAlignment="Center">
-                        <Label Content="Автозапуск приложения в трее"
+                        <Label Content="Запускать с системой"
                            VerticalAlignment="Center"
                                Margin="10,0,0,0"
                            HorizontalAlignment="Left"/>
-                        <ToggleButton x:Name="AutoRun"                            
+                        <ToggleButton x:Name="AutoRun" x:FieldModifier="public"                         
                                       Height="30"
                                       HorizontalAlignment="Right"
                                       Margin="0,0,10,0" Click="AutoRun_Click"/>

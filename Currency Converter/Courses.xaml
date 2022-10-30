@@ -9,7 +9,7 @@
       Title="Courses"
       Style="{DynamicResource PageStyle}"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      TextElement.FontWeight="Regular">
+      TextElement.FontWeight="Regular" Loaded="Page_Loaded">
     
     <Page.Resources>
         <Style x:Key="PageStyle" TargetType="Page">
@@ -81,7 +81,7 @@
                                     <Label x:Name="G0_L1"></Label>
                                 </Border>
                                 <Border BorderBrush="Black">
-                                    <Label x:Name="G0_L2"></Label>
+                                    <Label x:Name="G0_L2" x:FieldModifier="public"></Label>
                                 </Border>
                             </UniformGrid>
                         </materialDesign:ColorZone>

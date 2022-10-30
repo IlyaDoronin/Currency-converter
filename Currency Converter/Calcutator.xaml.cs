@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using Microsoft.Win32;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Currency_Converter
 {
@@ -23,6 +11,9 @@ namespace Currency_Converter
         public Calcutator()
         {
             InitializeComponent();
+            Date_City dc = new Date_City();
+            Date.Content = Date_City.Date;
+            City.Content = Date_City.City;
         }
     }
 }

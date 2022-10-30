@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Diagnostics;
 using System.Net;
 using System.Text.RegularExpressions;
@@ -21,21 +22,6 @@ namespace Currency_Converter
             InitializeComponent();
             Page_Loader.Navigate(Page_Cources);
         }
-        void date()
-        {
-            ////Task.Factory.StartNew(() =>
-            ////{
-            //    try
-            //    {
-            //        //while (true)
-            //        //{
-            //            Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
-            //            Task.Delay(60000);
-            //            GC.Collect();
-            //    //    }
-            //    } catch { }
-            ////});
-        }
         void TrayOff()
         {
             Show();
@@ -44,8 +30,6 @@ namespace Currency_Converter
         
         void MainForm_Activated(object sender, EventArgs e)
         {
-            date();
-
         }
         private void DragForm(object sender, MouseButtonEventArgs e)
         {
