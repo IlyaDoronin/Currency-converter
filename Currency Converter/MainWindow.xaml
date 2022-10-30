@@ -38,7 +38,7 @@
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Курсы валют" Click="Course_Click" />
-                    <MenuItem Header="Калькулятор валют" Click="Calcutater_Click" />
+                    <MenuItem Header="Калькулятор валют" Click="Calcutator_Click" />
                     <Separator />
                     <MenuItem Header="Настройки" Click="Settings" />
                     <Separator />
@@ -164,233 +164,10 @@
                 Height="30" Width="30"
                 Margin="0,0,0,0"/>
         <!--Таблица-->
-        <UniformGrid x:Name="Table"
-                      Rows="11"
-                      Margin="100"
-                      MaxWidth="900">
-            <UniformGrid x:Name="Row0"
-                         Columns="3"
-                         Height="50"
-                  VerticalAlignment="Top" >
-                <Border BorderBrush="Black" BorderThickness="0,0,1,1">
-                    <Label FontSize="18" 
-                           HorizontalAlignment="Center">Валюта</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,1">
-                    <Label FontSize="18" 
-                           HorizontalAlignment="Center">Покупка</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,0,1">
-                    <Label FontSize="18"
-                           HorizontalAlignment="Center">Продажа</Label>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_0"
-                  Height="50"
-                  VerticalAlignment="Top"
-                         Columns="3"><!--ИСЧЕЗАЮЩИЙ ГРИД Visibility="Collapsed"-->
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G0_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
-                    </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                </Border>
-                <Border BorderBrush="Black">
-                <Label x:Name="G0_L2"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_1" Columns="3"
-                  Height="50" VerticalAlignment="Top">
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                    <Label x:Name="G1_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"
-                       Content="RUB"/>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                        <Label x:Name="G1_L1"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                    </Border>
-                <Border>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_2" Columns="3"
-                  Height="50" VerticalAlignment="Top">
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G2_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20">EUR</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G2_L1"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-                <Border>
-                <Label x:Name="G2_L2"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_3" Columns="3"
-                  Height="50" VerticalAlignment="Top">
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G3_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20">UAH</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G3_L1"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-                <Border>
-                <Label x:Name="G3_L2"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_4" Columns="3"
-                  Height="50" VerticalAlignment="Top">
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G4_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G4_L1"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-                <Border>
-                    <Label x:Name="G4_L2"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_5" Columns="3"
-                  Height="50" VerticalAlignment="Top">
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G5_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20">CAD</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G5_L1"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-                <Border>
-                <Label x:Name="G5_L2"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_6" Columns="3"
-                  Height="50" VerticalAlignment="Top">
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G6_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20">PLN</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G6_L1"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-                <Border>
-                <Label x:Name="G6_L2"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_7" Columns="3"
-                  Height="50" VerticalAlignment="Top">
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G7_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20">SEK</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G7_L1"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-                <Border>
-                <Label x:Name="G7_L2"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_8" Columns="3"
-                  Height="50" VerticalAlignment="Top">
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G8_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20">CHF</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G8_L1"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-                <Border>
-                <Label x:Name="G8_L2"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-            </UniformGrid>
-            <UniformGrid x:Name="Grid_9" Columns="3"
-                  Height="50" VerticalAlignment="Top" >
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G9_L0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20">JPY</Label>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="0,0,1,0">
-                <Label x:Name="G9_L1"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-                <Border>
-                <Label x:Name="G9_L2"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="20"></Label>
-                </Border>
-            </UniformGrid>
-        </UniformGrid>
+        <Grid x:Name="Loader">
+            <Frame x:Name="Page_Loader" NavigationUIVisibility="Hidden"/>
+        </Grid>
+        <!--Сюда загружаются все страницы-->
         <Grid Height="100" MaxWidth="1000" VerticalAlignment="Bottom" Background="Transparent">
             
             <!--Нжний кусок-->
@@ -431,11 +208,11 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="Calcutater"
+            <Button x:Name="Calcutator"
                     Grid.Row="1" Margin="0"
                     Grid.Column="1"
                     MaxWidth="500"
-                    Click="Calcutater_Click">
+                    Click="Calcutator_Click">
                 <Button.Template>
                     <ControlTemplate>
                         <Border CornerRadius="0,20,20,0"

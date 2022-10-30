@@ -26,31 +26,31 @@ namespace Currency_Converter
         SolidColorBrush Off = new SolidColorBrush(Color.FromRgb(154, 154, 154));
         SolidColorBrush on = new SolidColorBrush(Color.FromRgb(50, 50, 50));
         SolidColorBrush off = new SolidColorBrush(Color.FromRgb(247, 247, 247));
-        private bool Toggled = false;
+        private bool Toggled1 = false;
         public TuggleButton()
         {
             InitializeComponent();
             Back.Fill = Off;
-            Toggled = false;
+            Toggled1 = false;
             Dot.Fill = on;
             Dot.Margin = LeftSide;
         }
 
-        public bool Toggled1 { get => Toggled; set => Toggled = value; }
+        public bool Toggled { get => Toggled1; set => Toggled1 = value; }
 
         void Change()
         {
-            if (!Toggled)
+            if (!Toggled1)
             {
                 Back.Fill = On;
-                Toggled = true;
+                Toggled1 = true;
                 Dot.Fill = off;
                 Dot.Margin = RightSide;
             }
             else
             {
                 Back.Fill = Off;
-                Toggled = false;
+                Toggled1 = false;
                 Dot.Fill = on;
                 Dot.Margin = LeftSide;
             }

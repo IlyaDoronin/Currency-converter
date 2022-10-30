@@ -10,9 +10,13 @@ namespace Currency_Converter
 {
     public partial class MainWindow : Window
     {
+        Courses Page_Cources = new Courses();
+        Settings Page_Settings = new Settings();
+        Calcutator Page_Calcutator = new Calcutator();
         public MainWindow()
         {
             InitializeComponent();
+            Page_Loader.Navigate(Page_Cources);
         }
         void date()
         {
@@ -82,22 +86,22 @@ namespace Currency_Converter
         void Settings(object sender, RoutedEventArgs e)
         {
             TrayOff();
+            Page_Loader.Navigate(Page_Settings);
         }
                 
         void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             Course.Content += e.Key.ToString();
         }
-
         void Course_Click(object sender, RoutedEventArgs e)
         {
             TrayOff();
-            Table.Visibility = Visibility.Visible;
+            Page_Loader.Navigate(Page_Cources);
         }
-        void Calcutater_Click(object sender, RoutedEventArgs e)
+        void Calcutator_Click(object sender, RoutedEventArgs e)
         {
             TrayOff();
-            Table.Visibility = Visibility.Hidden;
+            Page_Loader.Navigate(Page_Calcutator);
         }
     }
 }
