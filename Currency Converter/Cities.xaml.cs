@@ -25,7 +25,6 @@ namespace Currency_Converter
             Hide();
             string town = "Орша";
             MainWindow.Page_Cources.Update(town);
-            MainWindow.Page_Calcutator.Update(town);
             Registry.CurrentUser.CreateSubKey(@"Software\Currency converter").SetValue("City", town);
         }
     }

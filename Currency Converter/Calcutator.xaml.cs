@@ -15,31 +15,46 @@ namespace Currency_Converter
         static double rub = 0;
         static double eur = 0;
         static double uah = 0;
+        static double gbp = 0;
+        static double cny = 0;
+        static double jpy = 0;
+        static double nok = 0;
+        static double cad = 0;
+        static double pln = 0;
+        static double sek = 0;
+        static double chf = 0;
+        static double czk = 0;
         public Calcutator()
         {
             InitializeComponent();          
             Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
             Content = GetContent();
-            usd = Reg("\"Доллар США\",\"Cur_OfficialRate\":(.*?)}");
-            rub = Reg("\"Российских рублей\",\"Cur_OfficialRate\":(.*?)}") / 100;
-            eur = Reg("\"Евро\",\"Cur_OfficialRate\":(.*?)}");
-            uah = Reg("\"Гривен\",\"Cur_OfficialRate\":(.*?)}") / 100;
+            Update();
         }
-        
+
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
             //Update();
         }
 
         Parse pr = Courses.p;
-        async public void Update(string town = "Минск")
+        void Update(string town = "Минск")
         {
-            Parallel.Invoke(() =>
-            {
-                while (true)
-                {
-                    DataContext = pr;
-                }
+            Task.Factory.StartNew(() =>
+            {                 
+                usd = Reg("\"Доллар США\",\"Cur_OfficialRate\":(.*?)}");
+                rub = Reg("\"Российских рублей\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                eur = Reg("\"Евро\",\"Cur_OfficialRate\":(.*?)}");
+                uah = Reg("\"Гривен\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                gbp = Reg("\"Фунт стерлингов\",\"Cur_OfficialRate\":(.*?)}");
+                cny = Reg("\"Китайских юаней\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                jpy = Reg("\"Йен\",\"Cur_OfficialRate\":(.*?)}") / 100;
+                nok = Reg("\"Норвежских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                cad = Reg("\"Канадский доллар\",\"Cur_OfficialRate\":(.*?)}");
+                pln = Reg("\"Злотых\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                sek = Reg("\"Шведских крон\",\"Cur_OfficialRate\":(.*?)}") / 10;
+                chf = Reg("\"Швейцарский франк\",\"Cur_OfficialRate\":(.*?)}");
+                czk = Reg("\"Чешских крон\",\"Cur_OfficialRate\":(.*?)}") / 100;
             });
         }
         void Correct(TextBox Input)
@@ -48,6 +63,14 @@ namespace Currency_Converter
             {
                 Input.Text = Input.Text.Remove(Input.Text.Length - 1);
                 Input.SelectionStart = Input.Text.Length;
+            }
+            if(Input.Text == "")
+            {
+                BYN_Field.Text = "";
+                USD_Field.Text = "";
+                RUB_Field.Text = "";
+                EUR_Field.Text = "";
+                UAH_Field.Text = "";
             }
         }
         static string Content = "";
@@ -74,14 +97,106 @@ namespace Currency_Converter
                 result = "0";
             return Convert.ToDouble(result.Replace(".",","));
         }
-        void Input_TextChanged(object sender, TextChangedEventArgs e)
+        double Convert_From()
+        {
+            double currency = 1;
+            switch (Cur_Input.Text)
+            {
+                case "BYN": currency = 1;
+                    break;
+                case "USD": currency = usd;
+                    break;
+                case "RUB": currency = rub;
+                    break;
+                case "EUR": currency = eur;
+                    break;
+                case "UAH": currency = uah;
+                    break;
+                case "GBP": currency = gbp;
+                    break;
+                case "CNY": currency = cny;
+                    break;
+                case "JPY": currency = jpy;
+                    break;
+                case "NOK": currency = nok;
+                    break;
+                case "CAD": currency = cad;
+                    break;
+                case "PLN": currency = pln;
+                    break;
+                case "SEK": currency = sek;
+                    break;
+                case "CHF": currency = chf;
+                    break;
+                case "CZK": currency = czk;
+                    break;
+            }
+            return currency;
+        }
+        double Convert_To()
+        {
+            double currency = 1;
+            switch (Cur_Output.Text)
+            {
+                case "BYN": currency = 1;
+                    break;
+                case "USD": currency = usd;
+                    break;
+                case "RUB": currency = rub;
+                    break;
+                case "EUR": currency = eur;
+                    break;
+                case "UAH": currency = uah;
+                    break;
+                case "GBP": currency = gbp;
+                    break;
+                case "CNY": currency = cny;
+                    break;
+                case "JPY": currency = jpy;
+                    break;
+                case "NOK": currency = nok;
+                    break;
+                case "CAD": currency = cad;
+                    break;
+                case "PLN": currency = pln;
+                    break;
+                case "SEK": currency = sek;
+                    break;
+                case "CHF": currency = chf;
+                    break;
+                case "CZK": currency = czk;
+                    break;
+            }
+            return currency;
+        }
+        static double from = 1;
+        static double to = 1;
+        static double BYN_from = 1;
+        static double BYN_to = 1;
+        void Input_TextChanged(object sender, TextChangedEventArgs e) // Поле конвертации из
         {
             Correct(Input);
+            if (input_activate != false)
+            {
+                if (Input.Text != "")
+                {
+                    double content = Convert.ToDouble(Input.Text);
+                    Output.Text = (content * to).ToString("F" + 4);
+                }
+            }
         }
 
-        void Output_TextChanged(object sender, TextChangedEventArgs e)
+        void Output_TextChanged(object sender, TextChangedEventArgs e) // Поле конвертации в
         {
             Correct(Output);
+            if (output_activate != false)
+            {
+                if (Output.Text != "")
+                {
+                    double content = Convert.ToDouble(Output.Text);
+                    content = 0;
+                }
+            }
         }
         void convert(double value = 0, bool BYN = true, bool USD = true, bool RUB = true, bool EUR = true, bool UAH = true)
         {
@@ -211,6 +326,41 @@ namespace Currency_Converter
         void UAH_Field_LostFocus(object sender, RoutedEventArgs e)
         {
             uah_activate = false;
+        }
+
+        static bool input_activate = false;
+        static bool output_activate = false;
+        private void Input_GotFocus(object sender, RoutedEventArgs e)
+        {
+            input_activate = true;
+        }
+        private void Input_LostFocus(object sender, RoutedEventArgs e)
+        {
+            input_activate = false;
+        }
+
+        private void Output_GotFocus(object sender, RoutedEventArgs e)
+        {
+            output_activate = true;
+        }
+        private void Output_LostFocus(object sender, RoutedEventArgs e)
+        {
+            output_activate = false;
+        }
+        
+        private void Cur_Input_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            from = Convert_From();
+        }
+        private void Cur_Output_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            to = Convert_To();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(from + "\n" + to);
+            //to = usd;
         }
     }
 }

@@ -45,10 +45,10 @@
 
 
     <Grid MaxWidth="900"
-          MaxHeight="550">
+          MaxHeight="600">
 
         <materialDesign:ColorZone Grid.Row="0"
-                                  Margin="0,-40,0,0"
+                                  Margin="0,-20,0,0"
                                   Height="380" Width="300" 
                                   VerticalAlignment="Top"
                                   materialDesign:ShadowAssist.ShadowDepth="Depth4">
@@ -129,7 +129,7 @@
             <materialDesign:ColorZone Grid.Row="0"
                                   Height="170" Width="400" 
                                   VerticalAlignment="Bottom"
-                                  Margin="0,0,0,20"
+                                  Margin="0,0,0,50"
                                   materialDesign:ShadowAssist.ShadowDepth="Depth4">
             <Grid>
                 <materialDesign:ColorZone Grid.Row="0"
@@ -140,7 +140,9 @@
                     <ComboBox x:Name="Cur_Input"
                               Width="140"
                               HorizontalAlignment="Center" 
-                              VerticalAlignment="Center" SelectedIndex="1">
+                              VerticalAlignment="Center"
+                              SelectedIndex="1"
+                              SelectionChanged="Cur_Input_SelectionChanged">
                         <ComboBoxItem>USD</ComboBoxItem>
                         <ComboBoxItem>BYN</ComboBoxItem>
                         <ComboBoxItem>RUB</ComboBoxItem>
@@ -165,10 +167,10 @@
                     <TextBox x:Name="Input"
                              FontSize="18"
                              Margin="15,8,15,8"
-                             TextChanged="Input_TextChanged"/>
+                             TextChanged="Input_TextChanged"
+                             GotFocus="Input_GotFocus" LostFocus="Input_LostFocus"/>
                 </materialDesign:ColorZone>
                 
-
                 <materialDesign:ColorZone Grid.Row="0"
                                           Margin="0,20,20,0"
                                           VerticalAlignment="Top"
@@ -177,7 +179,9 @@
                     <ComboBox  x:Name="Cur_Output"
                                Width="140"
                                HorizontalAlignment="Center"
-                               VerticalAlignment="Center" SelectedIndex="0">
+                               VerticalAlignment="Center"
+                               SelectedIndex="0"
+                               SelectionChanged="Cur_Output_SelectionChanged">
                         <ComboBoxItem>USD</ComboBoxItem>
                         <ComboBoxItem>BYN</ComboBoxItem>
                         <ComboBoxItem>RUB</ComboBoxItem>
@@ -202,37 +206,24 @@
                     <TextBox x:Name="Output"
                              FontSize="18"
                              Margin="15,8,15,8"
-                             TextChanged="Output_TextChanged"/>
+                             TextChanged="Output_TextChanged"
+                             GotFocus="Output_GotFocus" LostFocus="Output_LostFocus"/>
                 </materialDesign:ColorZone>
             </Grid>
         </materialDesign:ColorZone>
 
-<!--Нижние куски-->
-        <Grid Height="50" VerticalAlignment="Bottom"
-                  Margin="0,0,0,-50">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <materialDesign:ColorZone HorizontalAlignment="Right" Margin="0,5,5,0"
-                                Width="220" Height="40" Grid.Column="0">
-                <Label x:Name="City"
-                        Padding="0"
-                        Content="{Binding city,FallbackValue=Минск}"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontSize="20"/>
-            </materialDesign:ColorZone>
-            <materialDesign:ColorZone HorizontalAlignment="Left" Margin="5,5,0,0"
-                                Width="220" Height="40" Grid.Column="1">
+<!--Нижний кусок-->
+            <materialDesign:ColorZone Margin="0,0,0,-10"
+                                      Width="220" Height="40"
+                                      VerticalAlignment="Bottom"
+                                      HorizontalAlignment="Center">
                 <Label x:Name="Date" 
-                        Padding="0"
-                        Content="Дата"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontSize="20"/>
+                       Padding="0"
+                       Content="00.00.0000"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="20"/>
             </materialDesign:ColorZone>
-            
-        </Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="75,5,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Page>
