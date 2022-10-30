@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:tb="http://www.hardcodet.net/taskbar"
+        xmlns:local="clr-namespace:Currency_Converter"
         mc:Ignorable="d" 
         Title="MainForm" Height="750" Width="550"
         Background="{x:Null}" MinWidth="550"
@@ -185,7 +186,10 @@
                     <Label FontSize="18" HorizontalAlignment="Center">Продажа</Label>
                 </Border>
             </Grid>
-            <Grid x:Name="Grid_0" Height="50" VerticalAlignment="Top" Margin="0,50,0,0">
+            <Grid x:Name="Grid_0"
+                  Height="50"
+                  VerticalAlignment="Top"
+                  Margin="0,50,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                     </ColumnDefinition>
@@ -200,10 +204,12 @@
                        VerticalAlignment="Center"
                        FontSize="20">USD</Label>
                 <Label x:Name="G0_L1"
+                       x:FieldModifier="public"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20"></Label>
+                       FontSize="20"
+                       Content="{Binding Path=USD_IN}"></Label>
                 <Label x:Name="G0_L2"
                        Grid.Column="2"
                        HorizontalAlignment="Center"
@@ -224,7 +230,7 @@
                        Grid.Column="0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
+                       FontSize="20">RUB</Label>
                 <Label x:Name="G1_L1"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
@@ -250,7 +256,7 @@
                        Grid.Column="0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
+                       FontSize="20">EUR</Label>
                 <Label x:Name="G2_L1"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
@@ -276,7 +282,7 @@
                        Grid.Column="0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
+                       FontSize="20">UAH</Label>
                 <Label x:Name="G3_L1"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
@@ -328,7 +334,7 @@
                        Grid.Column="0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
+                       FontSize="20">CAD</Label>
                 <Label x:Name="G5_L1"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
@@ -354,7 +360,7 @@
                        Grid.Column="0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
+                       FontSize="20">PLN</Label>
                 <Label x:Name="G6_L1"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
@@ -380,7 +386,7 @@
                        Grid.Column="0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
+                       FontSize="20">SEK</Label>
                 <Label x:Name="G7_L1"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
@@ -406,7 +412,7 @@
                        Grid.Column="0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
+                       FontSize="20">CHF</Label>
                 <Label x:Name="G8_L1"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
@@ -432,7 +438,7 @@
                        Grid.Column="0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20">USD</Label>
+                       FontSize="20">JPY</Label>
                 <Label x:Name="G9_L1"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
@@ -455,7 +461,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="Time" Content="Время"
+            <Label x:Name="City" Content="Город"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="18"></Label>

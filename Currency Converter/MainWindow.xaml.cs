@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Net;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-
 
 namespace Currency_Converter
 {
@@ -12,46 +14,36 @@ namespace Currency_Converter
         {
             InitializeComponent();
         }
-        async void time()
-        {
-            while (true)
-            {
-                Time.Content = (DateTime.Now).ToString().Remove(0,11);
-                await Task.Delay(1000);
-                GC.Collect();
-            }
-        }
-        async void date()
+        void date()
         {
             try
             {
-                while (true)
-                {
-                    Date.Content = (DateTime.Now).ToString().Remove(11, 8);
-                    await Task.Delay(60000);
-                    GC.Collect();
-                }
+                //while (true)
+                //{
+                    //Date.Content = (DateTime.Now.Date).ToString("dd.MM.yyyy");
+                      Date.Content= (DateTime.Now.Date).ToString("dd.MM.yyyy");
+                //    Task.Delay(60000);
+                //    GC.Collect();
+                //}
             } catch { }
         }
-        
         void TrayOff()
         {
             Show();
             Tray.Visibility = Visibility.Hidden;
         }
-
-
-        private void MainForm_Activated(object sender, EventArgs e)
+        
+        void MainForm_Activated(object sender, EventArgs e)
         {
-            time();
+            City.Content = "Минск"; //Реестр
             date();
-    }
+            Parse qq = new Parse();
+
+        }
         private void DragForm(object sender, MouseButtonEventArgs e)
         {
             try
-            {
-                DragMove();
-            }
+            { DragMove(); }
             catch { }
         }
 
@@ -92,12 +84,14 @@ namespace Currency_Converter
                 
         void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
+            Course.Content += e.Key.ToString();
         }
 
         void Course_Click(object sender, RoutedEventArgs e)
         {
             TrayOff();
             Table.Visibility = Visibility.Visible;
+            G0_L1.Content = Parse.USD_IN;
         }
         void Calcutater_Click(object sender, RoutedEventArgs e)
         {
